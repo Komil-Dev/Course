@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Academy - Premium Online Courses</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						primary: '#10B981',
+						secondary: '#059669',
+						accent: '#FBBF24'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		.gradient-bg {
+			background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+		}
+
+		.card-hover {
+			transition: all 0.3s ease;
+		}
+
+		.card-hover:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+		}
+
+		.animate-float {
+			animation: float 6s ease-in-out infinite;
+		}
+
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+	</style>
+</head>
+
+<body class="bg-gray-50">
+	<!-- Navigation -->
+	<nav class="bg-white shadow-lg sticky top-0 z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<div class="flex items-center">
+					<div class="bg-primary text-white p-2 rounded-lg mr-3">
+						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+							<path
+								d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+						</svg>
+					</div>
+					<span class="text-xl sm:text-2xl font-bold text-gray-800">Academy</span>
+				</div>
+
+				<!-- Desktop Menu -->
+				<div class="hidden md:block">
+					<div class="ml-10 flex items-baseline space-x-4">
+						<a href="#"
+							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+						<a href="#courses"
+							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Courses</a>
+						<a href="#about"
+							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
+						<a href="#contact"
+							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+						<button
+							class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Buy
+							Course</button>
+					</div>
+				</div>
+
+				<!-- Mobile Menu Button -->
+				<div class="md:hidden">
+					<button id="mobile-menu-button"
+						class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+				<div class="px-2 pt-2 pb-3 space-y-1">
+					<a href="#"
+						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+					<a href="#courses"
+						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Courses</a>
+					<a href="#about"
+						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">About</a>
+					<a href="#contact"
+						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+					<a href="#buy-course"
+						class="bg-primary text-white block px-3 py-2 rounded-lg text-base font-medium text-center mt-4 mx-3">Buy
+						Course</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="gradient-bg text-white py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h1 class="text-5xl font-bold mb-6 leading-tight">Master New Skills with Premium Online Courses</h1>
+					<p class="text-xl mb-8 text-green-100">Join thousands of students learning from expert instructors
+						in various fields including technology, languages, and professional development.</p>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<button
+							class="bg-accent text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition duration-300">Browse
+							Courses</button>
+						<button
+							class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Watch
+							Demo</button>
+					</div>
+				</div>
+				<div class="animate-float">
+					<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+						<div class="text-center">
+							<div
+								class="bg-accent text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
+								Featured Categories</div>
+							<div class="space-y-4">
+								<div class="bg-white/20 rounded-lg p-4 text-left">
+									<h3 class="font-semibold mb-2">Programming & Tech</h3>
+									<p class="text-sm text-green-100">Python, JavaScript, Web Development</p>
+								</div>
+								<div class="bg-white/20 rounded-lg p-4 text-left">
+									<h3 class="font-semibold mb-2">Languages</h3>
+									<p class="text-sm text-green-100">English, Arabic, Turkish</p>
+								</div>
+								<div class="bg-white/20 rounded-lg p-4 text-left">
+									<h3 class="font-semibold mb-2">Sciences</h3>
+									<p class="text-sm text-green-100">Mathematics, Physics, Biology</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">50K+</div>
+					<div class="text-gray-600">Active Students</div>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">200+</div>
+					<div class="text-gray-600">Expert Instructors</div>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">500+</div>
+					<div class="text-gray-600">Premium Courses</div>
+				</div>
+				<div>
+					<div class="text-4xl font-bold text-primary mb-2">98%</div>
+					<div class="text-gray-600">Success Rate</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Courses -->
+	<section id="courses" class="py-20 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<div class="relative inline-block">
+					<h2
+						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+						Featured Courses</h2>
+					<div
+						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
+					</div>
+				</div>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">Discover our most popular courses designed by
+					industry experts to help you achieve your learning goals.</p>
+			</div>
+
+			<!-- Religious Studies -->
+			<div class="mb-12">
+				<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+					<div
+						class="bg-transparent text-[#10B981] px-2 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold w-full sm:w-auto text-center">
+						✨ Religious Studies
+					</div>
+					<button
+						class="bg-white border-2 border-primary text-primary px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-primary hover:text-white transition duration-300 w-full sm:w-auto text-center">
+						View More →
+					</button>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+						<div class="relative">
+							<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBDgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xABEEAACAQMDAQQHBQUFBgcAAAABAgMABBEFEiExBhNBURQiMmFxgZFCUqHB0RUjU5KxBzNUYvAkJURygqIWNENjssLx/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACURAAICAgIBBAMBAQAAAAAAAAABAhEDIRIxUQQTMkEUImFxUv/aAAwDAQACEQMRAD8Axwp4xQca9bfw5v5R+tL/AMQWv8Ob+UfrXZzj5OThLwGaQ60HGv2v8Of+UfrXf2/bfw5/oP1o9yPkOEvAXJpUI/b1t/Cn+g/Wl+3bbwim+eP1p84+Q4SC2abmhR1yD+FL+H61ZtL6O69lHUE4yRxmjkhcWXM0t1OEak475Rxmoj8aGA4v7hTC1cJppoA45qu5qZzVd6ljRE5qM05+tNNZss4SaIaX/eof81Dav2J2BW99VD5Cl0el6ZzEvlirNzbCRAc1S0Nw9upHlRsqCoAFdMmYpGVvodkh91B50bvPVB+labV4TuY0DMbtKQCeK07RHRBoxMerIW3c+dbm5uVZRgchOaxVjEW1WMEnC9ea1BgYO5VyVIAxUNFJkgdYrSSRjgmotLiDQNMR7RqtqxZjHbRn2sUWgjEEEcfgF5oekC2RRja5x0qhdS+kXYRPYX+tT3s/d5VOpplhbEYdvHmgB0NvulywzRUMEXYRwaiiTDknpTywdwBUMpEtw6xWEpYkccVj9NmhivWlOTgEDNaTXWYac454FYm3LGLIU5LcmrxkzZp47gzSF88Hxona7Gjzjf8AGs5DJs2p0z5+dGrNmEAPQmiSBM+fdx865k+dKlXmnePWnj/XFNjkZegGameZpMA4x7qYDBXRXK7TEOFXbGZljkjViOjj4iqageeKnttiyqxkwAeePCmuyWaZGDorL0IyK7mq9kf3Pdg57slc1LnFdCZg+xxNNNLNNJoENaoWqRqiapbKSIX61Gae1Rk1BZzxohAPUAqgOtEYuEFVHsmXRueyswa1ANaaJq8+7P3xt22E4Ga2lrdI4HNdPaMemT30AkGcdaATW/cs74rSs+UoBqMwa5SL7zU4MUkRaDp8ktzJcyAhTwvvrROgij2Acnlj5VNp6osCBAMKKp6jOY4HZernAqbtlJUijar397JMR6qcL8auXM4RTnnjpUFsBDCi+IGTTSrTyc+yKpkojt4Wnk7x+h8KIOvdphaUCgOFx0qeUYDcUmxpEMJZuKmhgKvuzkUyE5OKvKuFAqGyqB2vt/u9/hWAtJj3ske44DZAzW47SNttCPOvNZJzb3jHPBbBq06SJe2aJLj96OctRWK6PdgM2KzsTbfW8KO6Pa+kI0s3s9BmtNMimeK4pKm7xrtcxXl0eiSrD5sv1po6GowKkWgB4p1JVyDyBiplgGGIkXAA/GmIiWnZ/pV6TTREk5W5ibu9vOfaz4D31FeWnolw0PeLJjnctAgjpsn7wj76g/McVfoLZSbChP2H5+Bo/wCjOYFlV0O/OFBORg48sVvDZhPRDXDUwtpB5VN+zXKb/SIcbc59cnPl7PX8PfVtNEKSB7VE1XDbP0yv41GLMs4DyKik8tgnHy8alxZSnEoP1qOis2lKkbv6YDg4QdyfX4B+96vX31TNk3XevyBqOLZXOJDAu+UCiQXaMUyxsSZCTIOPIUXisIXikDzyiZUZlURgqcKTjOevyrWEJLbIlki3SB0L7HFHbHUHhIJ6VnXXxUiiUWSgPurSDJkjZWGprKApbGRUa23pOt5T1kjXP1rLRXDQuMHxrcdlisltJcv7THAPwqm6JW2Fsdzb+yOBis9dz9/cIg9hOfnRTU5XS1fnx4NBdNiaRi7g5Y5pRWrCT+i+B6gz16mpk4FRyJiTFSBgCBQNE8SYOaZO+XAqzuzHwOgqlBFIbhiR40kMvQpgA1ZVGfwwvnUccTg5IqViwByTUFAftDAGQDfXmesQ7J2r0HXZTnAY1gNXJM7VclUSY/Im0uT0iBAfaU4Na+K7itotidOKwWlymOZlLAbuaL983nVQdoUls83rtKlXnHcLHFJetPA4rm3mmA9eKcKSqTUyR5600iWxoXI586kC/OpFjp6qB1ppEsZGOSv3hitLpk3fWsZPh/r9azrYByKMaJIAssQPAOR862x/Iyy/E0TwSNZmVmO0ttVMYx8Ppj50PZ2DqufVIxiri3DMiLIx2J64A65HH51Ql9Vo8461v/WcoWt9GjubLvxeEOFBaIWzHBPQbs0Y7Udn1tOx+m3y3SSPau8EiKgHLPhufHD4A92aG6ZqkUGl3Fu9vI+xdzFJ1QPlseKHHH9KvS3cj/2WGGMKUTUykhI5ALd51/5in41nK7NI8aZi4TNcXS2yHe8hVUUsFGTwOTwK9O7N/wBlLOqT9op9o/w0B/q36V5VJxdfFK9l/s0N5Kuqw22rGX0ade7DMZIWVlDEAHleTjg/I1GRtLRpjjGUlZf1X+zPR5xv0stZTAeyDuQ/EGsH2g7MatoKPJcw/uQCBcRHK8+fl869jzqtwdgjgtNvBkLd5n/lHH4/SvJ+3XpX7eu7e5u7idYj+771+mQDwBgD5ClglJurDPGMVyoAx6HpQsbSe7vrxJLmHvCkUKsq+6kunW65W2uJJIceq0iBWPxFdeaOTSdPVHBkhSRHX7vr8fhV7s/Al5OYZDIsYVnZo1yQApP5V1Qiox5M5cmWXLiga2nZbiTp/lrYdmVa3sBGX3AqTVBbbSZmHc6lJFIT0uIML9VJo3YWUtraozbZIyDiWM7kPzqnxrZMZzT7KuooH2x7+Dz0qSzsiiJhxUN3/fRfCr8bYVfd1ptUhLJKyC4gIceuKakB79fWFXfQ7q5Ia3gd1+9jA+tPg0u4Vy0ktsPd368VFxXbKUsj6E0REZww5q5a6dAOfToyW5/uzVa7hltmjEhQrIMqUbINS27qCMHpUONq0aRyNOghJYqIZHS4V+7XJAUjNC5jtiINFoHDQ3Q/9hj/AEoFfybYayindG92rM/q5DZDMF54rEaqoEpIlB4rV6s7MePKsZqTnvDW2TSJj2U0fY6sPCjUZMirt5yM0AzRnSHDZVjyFrLGzSaMLXVFddCkjIw5UkGpYYmfG0ZrlOm9CRakERJHvqxHbSfcb6VKYmixuUg+GRVJENjIbWRl3LGSAM591WlsLnIXuWyWC/MjIqJZHAKq5Axjr4VMLmfdu7185B6+IqqJZCyFGKsCCDgg1zFOOSckknxJNcpiGsKsafMYblWAGGBQ/HwqGm5Kkn7pDD86Fp2D2qNCuoSBdnOz7obFS299bop75Zd5IGFQMMeJ5I591UUjZ0DKMgjIpdxKwYpFIwUZYqhO0eZxWtujFRjZcTUUgMqw5aORdpMkS9Phk4PwNOXW3i0W40lGT0WeYTtuU7g428g/9C/jQkncDjnnB56VBJxng/Gk5saxoLpbJMIWVkeWXvNipKpPCgjjPXIPBo92L7WTdkL+4V7QTwzECWLdtdSPFT0z8awbgNncMjy86sabCJJlD+qo6VHLk6K4cd2fQ0P9o2jy2wmWC9LEf3fdrkf92PxrA9o9UXWdWnvVgMKybQEZsngAc/Sg1rGYk4c4P2akMskL70IU4PUZ/CumGKMP2MJTnk/Vsqd0YHnhJGUfw94zWg7BykapcwA8S2rD8uf5qAIZ7uedyN7uQxIGPDH5Uc7G208HaK3d4mCFSCfmp/8ArTcl7Zlwl7hQDDd7jWq7OX8sFuFjOARgjqD8RQfRrK/OosLWOPejsgWVQQTkjoa1UFnhO5v7QWVx/EhXA+a+XvFEs0K2KGDJdorzwJqU6eggR3g/4Y8B/epPT4Gp+9tLBQIxHeXPi5/u0PuH2j76rW0Jt9ZsCTuHpCruHIOTiqtvGRHFEgJY4UDzPSmql96E7j9bJ9Rvrq4de9mdxjhc4A+AqKwj9ViRxnxq1PYW8J/23UIo3HBjiUyEe4kcA/OubLaGM+i3DzA9S8e3FUnGqSIaldthVLeK40VZG3iWAuUIPGMrnP1odav6p58aJ2DD9jXIJ6JN/wDAN+VAoZcxgg4qMfcka5H8WFYrp4Q5XB3oUIPkaCancfu+tWGlO08+dAL6csT4Cm4bsqE9MqXjknJJxjFZbUk9c/GtBK+7IHND7jT5rl/URvnUZpxS2zbFCTdpGcPXmiGmI7SOwBxtx1o5pvZaGR830z7fKIVuNJ7NaXFb4tokdfEnk1zwnBvTN5wku0eJ6vaFdQLgerIN3z8aZHGFHFG9Tt3eDfsb1Oc0HziiUKYRlaOjgYyfrSbnk8nzrmaVIZwcGnZptdXG5c9M848qQMeBkdaRFSu1pk7BNjwyR5j8s00mA8Jv6+OPOmIipY555pwpUAa7QPRb/s2sMiyLeWsvqsi5Loev44+WainjNvJnlsqQMgg9OfhXewU4W6nhIUkYlUHxGCp/rz8a1t9Z2sgbEO1A2VDZ9Uf64rphHRy5H+xirqVr5xLOWckfbYtgeQzUg7Mahcaet9FYOYHUuu1gHZB1YLnJX34o2dItXh2rxgEcGiGtaaW16S6guJIZIWUQshxsVQNoHuxjinKH0iYz8nn8dlbTRMoVxICh3hwQVLqp4x4Bs9fCrFrZQwXLmKVzHGcfvsA5+VaTtL2bE0rXVuwQXMYlKqMAN9rHzBPzqXTbXU9P0i4SyuCrG4Vm8QQVxgjoahY6dl+5aoFelPAm7AZz0wapPcXVxIAEdmY4CqMmjEiatLu7zR9PvMAsx9GMbAeJzEUNd09LS9EscWnXNpcJHJIuy57xCVUsAQy55x96sfUcpf4b+ncVuhaLIYJpISjCXaMh1II+RrSaM8kGpQPMSM7gB7yrVn7W3u5r23KRuWWEqxY9eePwrUw2s0txZAgI0dzGST5bhn8Kxg0o0bzTcrLFyq/tS7QHb/tMg9UZONx599ErB5e5Zbe5S+g+1bOCCvwU8g/Ch91bTwaxPIAjljGwXHUlFJB+dXZbaA3Qknt5NPuD0eMkxn/pPI+R+VJ0NEcEirfI5UqiyqyhvDDDFUtUiWHUJEztjWZ1yfD1qu3kU8kp7+XvHHrBk6HyOam1Wy36rckgsrSlsfHn86rFl9tkZcSyqgcRpUIXbHcXjDoQwjT5eNcmaFwgtrYwDncO83ZrSQJtUCxsYU49rZ3jH4k1Hew3ThfS4wADwREF/ECr/Kdma9IqplbRYmnspovvOw+sTigkVuyxqCB0rWaBGFkfjo6H65H50LS2UKvHh41P5E1bNPxsbpeAS1uxGM4oPJZBmO7mtf3A8hQx4AGIHnXN6jPk1s6cHp8ab0A0sUXolSrb4GMUWEIpGIVxOUn2zsSS6B6Q58KtwCWHJiZ0J6lT1qZUC04NjxNJNrobV9mWmtElt5Ytgw6kV5rcRtDM8T8MjFfpXpcd/F9o1hu16Rx6q8sRBjlAbjwPjX0OZas8DG9gnNLNQ766Hrms6CXNLNRhqdmnYDwacMVGDTgaYiQV2minCgQ6K6nsJlubV9jqCM+49RRGbtJPdqsbyG3GfWYsxBPmepx7hQyRd8RXxPFURkDK7vjjIo5NdCcFLs2+iXNlaarHcajLc3WmoW7wWz79z9VXPgORRpdebtDc/wCxvZafdg7UtbuTZFLEPZKvg4ZR6pBHPBHIIPlq9QcDI8R1FG+znaW40CdzHEkyye0snUfA0e41sFhTdHpeoXckk8VlDayzJbwhDcqNqO55JXPJXJ4PjT9B0u+fTbj0y4BLbXHB9UAmgUH9oFluWa6t5icgEooPOf8A9o9o2rajdCK8t5GtAVxsPD9fEEYx0rGXqciOiHpcffYW0S4lsZJ4oFW5gmQpIQRnocbfrTtLsI7adDP6u/1eR5gj86MWGp2Eif727gvj2kiwc+ZK1XRNLlu1nlNzC8R3D1xInyrKUm+2aRio6SBdtsluoo7aHbuVuSMdAT+VXYrYx4kdh6p3cnp41Rk1jT9O1axjkmRTNOIV3Nj2vVH9a6tvqE7LLfwyW0TcLGR/U0oLTseR7VBnXcLfkIpOVXOPd6vX/pqO1llUbH9eLxjf1lP6VJea9Y2hDXN49uW+xIokUnx4+NOs9Rsb0kwzWcpPjDL3bfytWnF1dGfJXVne4h3kwqVU84PhVq+29/uYe0qn/tFJ7CUgmHef8rrg/ofrUOouy92SjZ7lcjHTGR+VRRSZdbvTGplu44lx6q7/AA+AqrNtVPVuxNz7Prce/mgT6pFHxK4Vs+IqSK9WTlGDfA02n9haD+lOO9cDzQ/R1qnONssi/dYj6GuaVcDvZj4iBz8xg/lXL+QJfXKnwlf+ppNDTI8mhk2e9ce+iHer54ofcSIJ3GfGscy0b4nsjw3hn3Uxg3kamWZRwG4pwZT41zM3KhLiub2q4QhppRKQHnDRnwobqVotxhZBWjEX+TdVK4jUuQIx9a+nnG0fOxkZCfSXXJhbIHgapOkkR2yxlfjWza3qCW0DjBUMPIiueWFmyyGTDU7NF7jR0YkxZj/EUNnsbi3BLIWT7y8/hWThJdmikmMBpy1CGz0p6tQMnUE8AH6VJscAZUj3kfSoUkZTkNxUxuHcYZ2I8vhTEx4FD548O3D9eo/SiCHNVbxVDK2cZHNEuhIrMNzbcq2B0A2mmPxxkj4jNSnJA9ll93WmHrtBIP8AmBrMs0/YKzsr2+xe3KBom3RwswAJHia0+udprTSd4typLKQoTr8a80itld1JUn3oDkVObeNyf3mW8nXHFZSx8zaGXgqNhonb1Y7ExX5KuhJ7xV9YjwyPzqrq/wDaLcuncadCEQfbkrHywsrECPaB9ocineiAqCJFbPuxTWJJ2geZ1TL9/rEV5p0wee6a9keJsSKMDbuztIPvHlVux7f9oLGyW1s7plUDaCWJ48sdPrQQWgAJKn5EY/WmJBz1wvlVONkKVF1+0Go3EpkvZPSn+8/B/DijGjay8Um5d8P/AHCgUcUKclqtx3Eaewjt8BW8JNaMMkIs9J0ztdfRMoS8RfMoDn6ZrYaf2tWaLu7jU+9Ljq4MRHwZcH8a8L9LmY5W3A97tVywGr3b7bNxnwCLu/OtFw/5Mmsn1I97trmBxujur1c/du2mH0YmpWgt5+ZGs5yfGe3VW+oA/rWA7J6Fe2rR3epXUjSKciGMbFHx862auD1Df1FJwiClMtppcUO94rSRGaN0zDcMy+spGcEmq+rWKyalcP38y7mDbRjAyB7qfG5BHdsVP+U4NPYl2LsSzHqTUqFMHNsHHTsj/wAzP8eP0qndaQROc3NwucHkL+lHMeNLU1zJE33ol/Ciai+0VjlK20zPDSmH/Fy/yinrpsn+Lf8AkFE8U4LUe1Dwa+7PyDP2fJ/i3/lFdGnt/ipPoKJba4RR7MPA/dn5Ma9n7jVQ2ZWXcFzjnmtG0QwagMSn7NdqkcbiAmjfp3SdSennVN7ViOUAx7q1Ho6H7NcNoh+zT5IKZkXtT9yoHtOc4wa2LWCN4YqJ9LQ+FK0GzB3WkQzZJjw33l4NCp9DuY8mDdJ7jwa9KfSM+zxVeTSJB7JPyqHiiy1kkjy9oZ4W2ywSIfIqa4rc16JdaPLIpEisRjGKzt72VZfWg3IR9k8isXha6NI5U+wJG/vp0670Azj1hzXbmxu7I5mhbb95eRTUYSx9QfnU/wAZYyXTp1KsAsy49qM8n5VEBMm5XQ4HG11wRWg7K60dKtp7ZNPnuJnl3748ez4DzHj0pt5p2qazfzXcemTL3rZwx4HFTxQcn9mfCFG3Kdg8QDipFje59gFx5jkVpbbsRrMpXKW8KnruOaMWnYG46XOpyAHkrGOKpQYc0YQW845SJj548B513bJuCliMHkeNeo2nYbTIsd6ZpuP/AFJDj6UZttE062P7mzhU567BT4EuZ45Dpl5ctiG1uJATxiM/1NFrbsbq0xG+0WPPjK/5CvWxCg6CnLGSfVFVwRPNnnVp2Am/4m6RfdGmcfWjNp2G05Sonkmk97PtH0FbBYH91SJbbupqv1QrbAVt2Y0q1b93bQAgkZK5NXo7VEG2JFHuAxRLuVX7AJ+NOVfcKOQUV4EkXAPs1OR6xp+Kbg1N2UtHOlSRTSRNujYg+6m7TXQh8qBln04E4mt42P3l9U/hTL6eOdojEhUIm0gnPjUJQ+VcwR4UqA5SpUs0UI5XMU6ugZ6UACnFR4FcpVsZncCu4FcpUAdwKQApUqQHdopdKVKgDuwMOab3aeKA/EUqVMRC9lbSHDwIR8KGXnY7RbxyWtmjf78TlSa5SqZFRCWldndN0ZCLOJi0vLPI240TWJOm0UqVJDY4Io6CkQPKlSoAWK6BSpUhDgBUgUDkUqVDKHYqWMUqVSM6wFcWlSoA7jmlilSoGdpy0qVIDuKawGKVKgCB6iyaVKqQmOBqeMDFKlQwR//Z"
+								alt="Course Image" class="w-full h-48 object-cover">
+							<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+								<span class="text-sm font-medium text-gray-700">• Category tag</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2 text-gray-900">Course Title</h3>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-2xl font-bold text-gray-900">420 000 UZS</span>
+								<div class="flex items-center space-x-2">
+									<img src="data:image/png;base64,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"
+										alt="Provider" class="w-6 h-6 rounded">
+									<span class="text-sm text-gray-600">Provider Name</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="gradient-bg h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Arabic Language</div>
+								<div class="text-sm">Classical & Modern</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Arabic Grammar & Literature</h3>
+							<p class="text-gray-600 mb-4">Comprehensive Arabic course covering Sarf, Nahw, and
+								Muta'allaa (Durusul Luga 1-4)</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$129</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="gradient-bg h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Islamic Studies</div>
+								<div class="text-sm">Core Subjects</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Aqidah, Hadith, Fiqh & Biography</h3>
+							<p class="text-gray-600 mb-4">Essential Islamic knowledge with curriculum from renowned
+								scholars</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$149</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modern Languages -->
+			<div class="mb-12">
+				<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+					<div
+						class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg w-full sm:w-auto text-center">
+						🌍 Modern Languages
+					</div>
+					<button
+						class="bg-white border-2 border-blue-500 text-blue-500 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition duration-300 w-full sm:w-auto text-center">
+						View More →
+					</button>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-blue-500 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">English</div>
+								<div class="text-sm">A1 - A2 Level</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">English for Beginners</h3>
+							<p class="text-gray-600 mb-4">Build strong foundation in English grammar, vocabulary, and
+								conversation skills</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$79</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-red-500 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Turkish</div>
+								<div class="text-sm">A1 - B2 Level</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Complete Turkish Course</h3>
+							<p class="text-gray-600 mb-4">From beginner to intermediate level Turkish with cultural
+								insights</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$119</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-purple-500 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Russian</div>
+								<div class="text-sm">Basic Level</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Russian Language Basics</h3>
+							<p class="text-gray-600 mb-4">Learn Cyrillic alphabet, basic grammar, and essential phrases
+							</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$99</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Technology & Programming -->
+			<div class="mb-12">
+				<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+					<div
+						class="bg-gradient-to-r from-gray-800 to-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg w-full sm:w-auto text-center">
+						💻 Technology & Programming
+					</div>
+					<button
+						class="bg-white border-2 border-gray-800 text-gray-800 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-gray-800 hover:text-white transition duration-300 w-full sm:w-auto text-center">
+						View More →
+					</button>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-gray-800 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Robotics & IT</div>
+								<div class="text-sm">Beginner Friendly</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Introduction to Robotics</h3>
+							<p class="text-gray-600 mb-4">Learn robotics fundamentals and basic programming for
+								beginners</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$159</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-indigo-600 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Web Development</div>
+								<div class="text-sm">Full Stack</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Complete Web Development</h3>
+							<p class="text-gray-600 mb-4">HTML, CSS, JavaScript, React, and backend technologies</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$199</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-green-600 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Data Science</div>
+								<div class="text-sm">Python & AI</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Python for Data Science</h3>
+							<p class="text-gray-600 mb-4">Master Python, pandas, NumPy, and machine learning basics</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$179</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sciences -->
+			<div class="mb-12">
+				<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+					<div
+						class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg w-full sm:w-auto text-center">
+						🔬 Sciences & Academic Subjects
+					</div>
+					<button
+						class="bg-white border-2 border-orange-500 text-orange-500 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition duration-300 w-full sm:w-auto text-center">
+						View More →
+					</button>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-orange-500 h-24 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-xl font-bold">Mathematics</div>
+							</div>
+						</div>
+						<div class="p-4">
+							<h3 class="text-lg font-semibold mb-2">Advanced Mathematics</h3>
+							<p class="text-gray-600 text-sm mb-4">Calculus, Algebra, Geometry</p>
+							<div class="flex items-center justify-between">
+								<span class="text-xl font-bold text-primary">$69</span>
+								<button
+									class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-secondary transition duration-300">Enroll</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-blue-600 h-24 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-xl font-bold">Physics</div>
+							</div>
+						</div>
+						<div class="p-4">
+							<h3 class="text-lg font-semibold mb-2">Physics Fundamentals</h3>
+							<p class="text-gray-600 text-sm mb-4">Mechanics, Thermodynamics</p>
+							<div class="flex items-center justify-between">
+								<span class="text-xl font-bold text-primary">$79</span>
+								<button
+									class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-secondary transition duration-300">Enroll</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-green-600 h-24 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-xl font-bold">Biology</div>
+							</div>
+						</div>
+						<div class="p-4">
+							<h3 class="text-lg font-semibold mb-2">General Biology</h3>
+							<p class="text-gray-600 text-sm mb-4">Cell Biology, Genetics</p>
+							<div class="flex items-center justify-between">
+								<span class="text-xl font-bold text-primary">$74</span>
+								<button
+									class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-secondary transition duration-300">Enroll</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-purple-600 h-24 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-xl font-bold">Chemistry</div>
+							</div>
+						</div>
+						<div class="p-4">
+							<h3 class="text-lg font-semibold mb-2">Organic Chemistry</h3>
+							<p class="text-gray-600 text-sm mb-4">Reactions, Mechanisms</p>
+							<div class="flex items-center justify-between">
+								<span class="text-xl font-bold text-primary">$84</span>
+								<button
+									class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-secondary transition duration-300">Enroll</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Additional Subjects -->
+			<div class="mb-12">
+				<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+					<div
+						class="bg-gradient-to-r from-teal-500 to-green-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg w-full sm:w-auto text-center">
+						🌎 Geography, History & Economics
+					</div>
+					<button
+						class="bg-white border-2 border-teal-500 text-teal-500 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-teal-500 hover:text-white transition duration-300 w-full sm:w-auto text-center">
+						View More →
+					</button>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-teal-500 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Geography</div>
+								<div class="text-sm">World & Regional</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">World Geography</h3>
+							<p class="text-gray-600 mb-4">Physical and human geography with interactive maps</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$64</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-amber-600 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">History</div>
+								<div class="text-sm">World History</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">World History & Civilizations</h3>
+							<p class="text-gray-600 mb-4">From ancient civilizations to modern times</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$69</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+						<div class="bg-slate-600 h-32 flex items-center justify-center">
+							<div class="text-white text-center">
+								<div class="text-2xl font-bold mb-1">Economics</div>
+								<div class="text-sm">Micro & Macro</div>
+							</div>
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-semibold mb-2">Economics Fundamentals</h3>
+							<p class="text-gray-600 mb-4">Market principles, economic theories and applications</p>
+							<div class="flex items-center justify-between">
+								<span class="text-2xl font-bold text-primary">$89</span>
+								<button
+									class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Enroll
+									Now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us -->
+	<section class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<div class="relative inline-block">
+					<h2
+						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+						Why Choose Our Academy?</h2>
+					<div
+						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
+					</div>
+				</div>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">We provide comprehensive education with modern
+					teaching methods and expert instructors.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="text-center p-6">
+					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd"
+								d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+								clip-rule="evenodd" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold mb-3 text-gray-800">Expert Instructors</h3>
+					<p class="text-gray-600">Learn from industry professionals with years of experience in their
+						respective fields.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold mb-3 text-gray-800">Lifetime Access</h3>
+					<p class="text-gray-600">Get unlimited access to course materials and updates for life with one-time
+						payment.</p>
+				</div>
+				<div class="text-center p-6">
+					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+							<path fill-rule="evenodd"
+								d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h4v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm8 8a1 1 0 100-2 1 1 0 000 2zm-3-1a1 1 0 11-2 0 1 1 0 012 0z"
+								clip-rule="evenodd" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold mb-3 text-gray-800">Flexible Schedule</h3>
+					<p class="text-gray-600">Study at your own pace with 24/7 access to all course materials and
+						resources.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section class="py-20 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<div class="relative inline-block">
+					<h2
+						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+						What Our Students Say</h2>
+					<div
+						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
+					</div>
+				</div>
+				<p class="text-xl text-gray-600 mt-6">Hear from thousands of successful students who transformed their
+					careers.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-xl p-8 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div
+							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+							AH</div>
+						<div class="ml-4">
+							<h4 class="font-semibold text-gray-800">Ahmed Hassan</h4>
+							<p class="text-gray-600 text-sm">Software Engineer</p>
+						</div>
+					</div>
+					<p class="text-gray-600 mb-4">"The programming courses here are exceptional. I landed my dream job
+						as a software engineer after completing the full-stack development program."</p>
+					<div class="flex text-yellow-400">
+						★★★★★
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div
+							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+							FO</div>
+						<div class="ml-4">
+							<h4 class="font-semibold text-gray-800">Fatima Ozturk</h4>
+							<p class="text-gray-600 text-sm">Language Teacher</p>
+						</div>
+					</div>
+					<p class="text-gray-600 mb-4">"The Turkish and Arabic language courses helped me become fluent. The
+						instructors are native speakers and very patient."</p>
+					<div class="flex text-yellow-400">
+						★★★★★
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div
+							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+							MK</div>
+						<div class="ml-4">
+							<h4 class="font-semibold text-gray-800">Muhammad Khan</h4>
+							<p class="text-gray-600 text-sm">Islamic Scholar</p>
+						</div>
+					</div>
+					<p class="text-gray-600 mb-4">"The Islamic studies program is comprehensive and well-structured. I
+						improved my Arabic and Islamic knowledge significantly."</p>
+					<div class="flex text-yellow-400">
+						★★★★★
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Buy Course Form Section -->
+	<section id="buy-course" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<div class="relative inline-block">
+					<h2
+						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+						Buy Your Course</h2>
+					<div
+						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
+					</div>
+				</div>
+				<p class="text-xl text-gray-600 mt-6">Fill out the form below and we'll contact you via Telegram to
+					complete your enrollment.</p>
+			</div>
+
+			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+				<form id="courseForm" class="space-y-6">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name
+								*</label>
+							<input type="text" id="firstName" name="firstName" required
+								class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
+								placeholder="Enter your first name">
+						</div>
+						<div>
+							<label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name
+								*</label>
+							<input type="text" id="lastName" name="lastName" required
+								class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
+								placeholder="Enter your last name">
+						</div>
+					</div>
+
+					<div>
+						<label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+						<input type="tel" id="phone" name="phone" required
+							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
+							placeholder="+998 90 123 45 67">
+					</div>
+
+					<div>
+						<label for="courseType" class="block text-sm font-semibold text-gray-700 mb-2">Choose Course
+							Category *</label>
+						<select id="courseType" name="courseType" required
+							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300">
+							<option value="">Select a course category</option>
+							<optgroup label="Religious Studies">
+								<option value="quran-studies">Advanced Qur'an Recitation - $89</option>
+								<option value="arabic-language">Arabic Grammar & Literature - $129</option>
+								<option value="islamic-studies">Aqidah, Hadith, Fiqh & Biography - $149</option>
+							</optgroup>
+							<optgroup label="Modern Languages">
+								<option value="english-beginners">English for Beginners - $79</option>
+								<option value="turkish-complete">Complete Turkish Course - $119</option>
+								<option value="russian-basics">Russian Language Basics - $99</option>
+							</optgroup>
+							<optgroup label="Technology & Programming">
+								<option value="robotics-intro">Introduction to Robotics - $159</option>
+								<option value="web-development">Complete Web Development - $199</option>
+								<option value="data-science">Python for Data Science - $179</option>
+							</optgroup>
+							<optgroup label="Sciences">
+								<option value="mathematics">Advanced Mathematics - $69</option>
+								<option value="physics">Physics Fundamentals - $79</option>
+								<option value="biology">General Biology - $74</option>
+								<option value="chemistry">Organic Chemistry - $84</option>
+							</optgroup>
+							<optgroup label="Other Subjects">
+								<option value="geography">World Geography - $64</option>
+								<option value="history">World History & Civilizations - $69</option>
+								<option value="economics">Economics Fundamentals - $89</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<div>
+						<label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Additional Message
+							(Optional)</label>
+						<textarea id="message" name="message" rows="4"
+							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
+							placeholder="Any specific questions or requirements?"></textarea>
+					</div>
+
+					<button type="submit"
+						class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 px-8 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+						🚀 Send to Telegram & Buy Course
+					</button>
+				</form>
+
+				<div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+					<div class="flex items-center">
+						<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd"
+								d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+								clip-rule="evenodd" />
+						</svg>
+						<p class="text-blue-800 text-sm">
+							<strong>Note:</strong> After submitting, our team will contact you via Telegram within 24
+							hours to complete your course enrollment and payment process.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gradient-bg py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl font-bold text-white mb-4">Ready to Start Learning?</h2>
+			<p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Join thousands of successful students and start
+				your learning journey today with our premium courses.</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<button
+					class="bg-accent text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300">Browse
+					All Courses</button>
+				<button
+					class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition duration-300">Start
+					Free Trial</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="contact" class="bg-white py-16 border-t border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+				<div>
+					<div class="flex items-center mb-4">
+						<div class="bg-primary text-white p-2 rounded-lg mr-3">
+							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+								<path
+									d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3z" />
+							</svg>
+						</div>
+						<span class="text-2xl font-bold text-gray-800">Academy</span>
+					</div>
+					<p class="text-gray-600 mb-4">Empowering students worldwide with quality education and expert
+						instruction.</p>
+					<div class="flex space-x-4">
+						<div
+							class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+							</svg>
+						</div>
+						<div
+							class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+							</svg>
+						</div>
+						<div
+							class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02l5.75-3.27-5.75-3.27v6.54z" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3 class="text-lg font-semibold mb-4 text-gray-800">Quick Links</h3>
+					<ul class="space-y-2 text-gray-600">
+						<li><a href="#" class="hover:text-primary transition duration-300">All Courses</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Free Courses</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Premium Courses</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Become Instructor</a></li>
+						<li><a href="#buy-course" class="hover:text-primary transition duration-300">Buy Course</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="text-lg font-semibold mb-4 text-gray-800">Categories</h3>
+					<ul class="space-y-2 text-gray-600">
+						<li><a href="#" class="hover:text-primary transition duration-300">Islamic Studies</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Languages</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Programming</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Sciences</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Business</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="text-lg font-semibold mb-4 text-gray-800">Contact Info</h3>
+					<ul class="space-y-2 text-gray-600">
+						<li class="flex items-center">
+							<svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd"
+									d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+									clip-rule="evenodd" />
+							</svg>
+							Tashkent, Uzbekistan
+						</li>
+						<li class="flex items-center">
+							<svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+								<path
+									d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+							</svg>
+							+998 90 123 45 67
+						</li>
+						<li class="flex items-center">
+							<svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+							</svg>
+							info@academy.com
+						</li>
+						<li class="flex items-center">
+							<svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M19.077 4.928c-.851-.852-1.993-1.322-3.217-1.322-1.224 0-2.366.47-3.217 1.322l-4.294 4.292-4.294-4.292c-.851-.852-1.993-1.322-3.217-1.322s-2.366.47-3.217 1.322c-1.775 1.774-1.775 4.659 0 6.434l7.51 7.509 7.51-7.509c1.775-1.775 1.775-4.66 0-6.434z" />
+							</svg>
+							@AcademyBot
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
+				<p>&copy; 2025 Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<script>
+		// Smooth scrolling for navigation links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					target.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start'
+					});
+				}
+			});
+		});
+
+		// Add scroll effect to navbar
+		window.addEventListener('scroll', function () {
+			const navbar = document.querySelector('nav');
+			if (window.scrollY > 50) {
+				navbar.classList.add('shadow-xl');
+			} else {
+				navbar.classList.remove('shadow-xl');
+			}
+		});
+
+		// Mobile menu toggle
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
+
+		mobileMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+
+			// Toggle hamburger icon
+			const menuIcon = mobileMenuButton.querySelector('svg');
+			if (mobileMenu.classList.contains('hidden')) {
+				menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+			} else {
+				menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+			}
+		});
+
+		// Close mobile menu when clicking on links
+		document.querySelectorAll('#mobile-menu a').forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenu.classList.add('hidden');
+				const menuIcon = mobileMenuButton.querySelector('svg');
+				menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+			});
+		});
+
+		// Close mobile menu when clicking outside
+		document.addEventListener('click', (e) => {
+			if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+				mobileMenu.classList.add('hidden');
+				const menuIcon = mobileMenuButton.querySelector('svg');
+				menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+			}
+		});
+
+		// Course enrollment tracking
+		document.querySelectorAll('button').forEach(button => {
+			if (button.textContent.includes('Enroll')) {
+				button.addEventListener('click', function () {
+					// Simulate enrollment process
+					const originalText = this.textContent;
+					this.textContent = 'Enrolling...';
+					this.disabled = true;
+
+					setTimeout(() => {
+						this.textContent = 'Enrolled!';
+						this.classList.remove('bg-primary', 'hover:bg-secondary');
+						this.classList.add('bg-green-600');
+
+						setTimeout(() => {
+							this.textContent = originalText;
+							this.disabled = false;
+							this.classList.remove('bg-green-600');
+							this.classList.add('bg-primary', 'hover:bg-secondary');
+						}, 2000);
+					}, 1500);
+				});
+			}
+		});
+
+		// Course purchase form submission
+		document.getElementById('courseForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			const formData = new FormData(this);
+			const data = {
+				firstName: formData.get('firstName'),
+				lastName: formData.get('lastName'),
+				phone: formData.get('phone'),
+				courseType: formData.get('courseType'),
+				message: formData.get('message') || 'No additional message'
+			};
+
+			// Get course name and price from select option
+			const courseSelect = document.getElementById('courseType');
+			const selectedOption = courseSelect.options[courseSelect.selectedIndex];
+			const courseName = selectedOption.text;
+
+			// Format message for Telegram
+			const telegramMessage = `🎓 New Course Purchase Request!
+            
+👤 Student Information:
+• Name: ${data.firstName} ${data.lastName}
+• Phone: ${data.phone}
+
+📚 Course Details:
+• Course: ${courseName}
+
+💬 Message:
+${data.message}
+
+⏰ Submitted: ${new Date().toLocaleString()}`;
+
+			// Simulate sending to Telegram bot
+			const submitButton = document.querySelector('button[type="submit"]');
+			const originalText = submitButton.innerHTML;
+
+			submitButton.innerHTML = '📤 Sending to Telegram...';
+			submitButton.disabled = true;
+
+			setTimeout(() => {
+				submitButton.innerHTML = '✅ Sent Successfully!';
+				submitButton.classList.remove('from-primary', 'to-secondary');
+				submitButton.classList.add('from-green-500', 'to-green-600');
+
+				// Show success message
+				const successDiv = document.createElement('div');
+				successDiv.className = 'mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg';
+				successDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <strong>Success!</strong> Your course purchase request has been sent to our Telegram bot. We'll contact you within 24 hours!
+                    </div>
+                `;
+
+				document.getElementById('courseForm').appendChild(successDiv);
+
+				// Reset form after 3 seconds
+				setTimeout(() => {
+					this.reset();
+					submitButton.innerHTML = originalText;
+					submitButton.disabled = false;
+					submitButton.classList.remove('from-green-500', 'to-green-600');
+					submitButton.classList.add('from-primary', 'to-secondary');
+					successDiv.remove();
+				}, 3000);
+
+			}, 2000);
+
+			// In a real application, you would send this data to your Telegram bot API
+			console.log('Course purchase data:', data);
+			console.log('Telegram message:', telegramMessage);
+		});
+
+		// View More buttons functionality
+		document.querySelectorAll('button').forEach(button => {
+			if (button.textContent.includes('View More')) {
+				button.addEventListener('click', function () {
+					// Simulate loading more courses
+					const originalText = this.innerHTML;
+					this.innerHTML = 'Loading...';
+					this.disabled = true;
+
+					setTimeout(() => {
+						this.innerHTML = 'Show Less ←';
+						this.disabled = false;
+
+						// Toggle back after 3 seconds
+						setTimeout(() => {
+							this.innerHTML = originalText;
+						}, 3000);
+					}, 1000);
+				});
+			}
+		});
+	</script>
+</body>
+
+</html>

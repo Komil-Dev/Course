@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz" dir="ltr">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Academy - Premium Online Courses</title>
+	<title>Muhib Academy - Din va Dunyo Ilmi</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
 			theme: {
 				extend: {
 					colors: {
-						primary: '#10B981',
-						secondary: '#059669',
-						accent: '#FBBF24'
+						primary: '#00D084',
+						secondary: '#00B572',
+						accent: '#FFD700',
+						dark: '#1A1A1A',
+						lightGray: '#F8F9FA'
+					},
+					fontFamily: {
+						'arabic': ['Noto Naskh Arabic', 'serif'],
+						'uzbek': ['Inter', 'sans-serif']
 					}
 				}
 			}
 		}
 	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
 	<style>
 		.gradient-bg {
-			background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+			background: linear-gradient(135deg, #00D084 0%, #00B572 50%, #009F63 100%);
+		}
+
+		.hero-pattern {
+			background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+				radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 		}
 
 		.card-hover {
-			transition: all 0.3s ease;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 
 		.card-hover:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			transform: translateY(-12px) scale(1.02);
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 		}
 
 		.animate-float {
@@ -49,7 +64,22 @@
 			}
 		}
 
-		/* Modal Styles */
+		.animate-pulse-slow {
+			animation: pulse-slow 3s ease-in-out infinite;
+		}
+
+		@keyframes pulse-slow {
+
+			0%,
+			100% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.7;
+			}
+		}
+
 		.modal {
 			display: none;
 			position: fixed;
@@ -59,7 +89,7 @@
 			width: 100%;
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.8);
-			backdrop-filter: blur(5px);
+			backdrop-filter: blur(10px);
 		}
 
 		.modal.show {
@@ -81,8 +111,8 @@
 
 		.modal-content {
 			background: white;
-			border-radius: 20px;
-			max-width: 90vw;
+			border-radius: 24px;
+			max-width: 95vw;
 			max-height: 90vh;
 			overflow-y: auto;
 			transform: scale(0.7);
@@ -93,16 +123,60 @@
 			transform: scale(1);
 		}
 
-		.course-modal-card {
-			transition: all 0.3s ease;
+		.glass-effect {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(20px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
 		}
 
-		.course-modal-card:hover {
-			transform: translateY(-8px);
-			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+		.text-gradient {
+			background: linear-gradient(135deg, #00D084, #00B572);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 		}
 
-		/* Custom scrollbar for modal */
+		.bounce-in {
+			animation: bounceIn 0.6s ease-out;
+		}
+
+		@keyframes bounceIn {
+			0% {
+				transform: scale(0.3);
+				opacity: 0;
+			}
+
+			50% {
+				transform: scale(1.05);
+			}
+
+			70% {
+				transform: scale(0.9);
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		.slide-up {
+			animation: slideUp 0.8s ease-out;
+		}
+
+		@keyframes slideUp {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		/* Custom scrollbar */
 		.modal-content::-webkit-scrollbar {
 			width: 8px;
 		}
@@ -113,53 +187,64 @@
 		}
 
 		.modal-content::-webkit-scrollbar-thumb {
-			background: #10B981;
+			background: #00D084;
 			border-radius: 10px;
 		}
 
 		.modal-content::-webkit-scrollbar-thumb:hover {
-			background: #059669;
+			background: #00B572;
+		}
+
+		.section-divider {
+			background: linear-gradient(90deg, transparent, #00D084, transparent);
+			height: 2px;
+			margin: 2rem 0;
 		}
 	</style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-lightGray font-uzbek">
 	<!-- Navigation -->
-	<nav class="bg-white shadow-lg sticky top-0 z-50">
+	<nav class="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-primary/10">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex justify-between items-center h-16">
+			<div class="flex justify-between items-center h-20">
 				<div class="flex items-center">
-					<div class="bg-primary text-white p-2 rounded-lg mr-3">
-						<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+					<div class="bg-gradient-to-br from-primary to-secondary text-white p-3 rounded-2xl mr-4 shadow-lg">
+						<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
 							<path
-								d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3z" />
+								d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9l-11-6zM18.82 9L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
 						</svg>
 					</div>
-					<span class="text-xl sm:text-2xl font-bold text-gray-800">Academy</span>
+					<div>
+						<div class="text-2xl font-bold text-gradient">MUHIB ACADEMY</div>
+						<div class="text-sm text-primary font-medium">Din va Dunyo Ilmi</div>
+					</div>
 				</div>
 
 				<!-- Desktop Menu -->
 				<div class="hidden md:block">
-					<div class="ml-10 flex items-baseline space-x-4">
-						<a href="#"
-							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
-						<a href="#courses"
-							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Courses</a>
-						<a href="#about"
-							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
-						<a href="#contact"
-							class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-						<button
-							class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Buy
-							Course</button>
+					<div class="ml-10 flex items-center space-x-6">
+						<a href="#bosh"
+							class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Bosh
+							sahifa</a>
+						<a href="#kurslar"
+							class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Kurslar</a>
+						<a href="#biz-haqimizda"
+							class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Biz
+							haqimizda</a>
+						<a href="#aloqa"
+							class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Aloqa</a>
+						<button onclick="scrollToForm()"
+							class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+							Kurs sotib olish
+						</button>
 					</div>
 				</div>
 
 				<!-- Mobile Menu Button -->
 				<div class="md:hidden">
-					<button id="mobile-menu-button"
-						class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
-						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 								d="M4 6h16M4 12h16M4 18h16"></path>
 						</svg>
@@ -168,60 +253,115 @@
 			</div>
 
 			<!-- Mobile Menu -->
-			<div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-				<div class="px-2 pt-2 pb-3 space-y-1">
-					<a href="#"
-						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-					<a href="#courses"
-						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Courses</a>
-					<a href="#about"
-						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">About</a>
-					<a href="#contact"
-						class="text-gray-700 hover:text-primary hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-					<a href="#buy-course"
-						class="bg-primary text-white block px-3 py-2 rounded-lg text-base font-medium text-center mt-4 mx-3">Buy
-						Course</a>
+			<div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-primary/10">
+				<div class="px-4 pt-4 pb-6 space-y-2">
+					<a href="#bosh"
+						class="block px-4 py-3 rounded-xl text-gray-700 hover:text-primary hover:bg-primary/5 transition duration-300">Bosh
+						sahifa</a>
+					<a href="#kurslar"
+						class="block px-4 py-3 rounded-xl text-gray-700 hover:text-primary hover:bg-primary/5 transition duration-300">Kurslar</a>
+					<a href="#biz-haqimizda"
+						class="block px-4 py-3 rounded-xl text-gray-700 hover:text-primary hover:bg-primary/5 transition duration-300">Biz
+						haqimizda</a>
+					<a href="#aloqa"
+						class="block px-4 py-3 rounded-xl text-gray-700 hover:text-primary hover:bg-primary/5 transition duration-300">Aloqa</a>
+					<button onclick="scrollToForm()"
+						class="w-full mt-4 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold">
+						Kurs sotib olish
+					</button>
 				</div>
 			</div>
 		</div>
 	</nav>
 
 	<!-- Hero Section -->
-	<section class="gradient-bg text-white py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<section id="bosh"
+		class="gradient-bg hero-pattern text-white py-20 lg:py-32 relative overflow-hidden bg-no-repeat bg-cover bg-center"
+		style="background-image: url('./al-masjed-alharam-1_crop-760x570.webp')">
+
+		<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h1 class="text-5xl font-bold mb-6 leading-tight">Master New Skills with Premium Online Courses</h1>
-					<p class="text-xl mb-8 text-green-100">Join thousands of students learning from expert instructors
-						in various fields including technology, languages, and professional development.</p>
+				<div class="slide-up">
+					<div class="mb-6">
+						<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
+							🎓 Uyg'unligida Ta'lim Beruvchi Zamonaviy Akademiya
+						</span>
+					</div>
+					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+						MUHIB ACADEMY<br>
+						<span class="text-accent">DIN VA DUNYO ILMI</span>
+					</h1>
+
+					<div class="glass-effect rounded-2xl p-6 mb-8">
+						<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
+							بسم الله الرحمن الرحيم<br>
+							"مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى
+							الْجَنَّةِ"
+						</p>
+						<p class="text-green-100 text-center mt-2 text-sm">
+							"Kim ilm yo'lida chiqsa, Alloh unga jannat sari yo'lini oson qiladi." (Hadis)
+						</p>
+					</div>
+
+					<p class="text-xl mb-8 text-green-100 leading-relaxed">
+						Zamonaviy ta'lim usullari bilan din va dunyo ilmlarini o'rganing.
+						Malakali o'qituvchilar rahbarligida sifatli ta'lim oling.
+					</p>
+
 					<div class="flex flex-col sm:flex-row gap-4">
-						<button id="browse-courses-btn"
-							class="bg-accent text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition duration-300">Browse
-							Courses</button>
+						<button onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
+							class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
+							📚 Kurslarni Ko'rish
+						</button>
 						<button
-							class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">Watch
-							Demo</button>
+							class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
+							🎬 Demo Ko'rish
+						</button>
 					</div>
 				</div>
+
 				<div class="animate-float">
-					<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+					<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
 						<div class="text-center">
-							<div
-								class="bg-accent text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
-								Featured Categories</div>
+							<div class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
+								🌟 MUHIB ACADEMY'DA QABUL BOSHLANDI!
+							</div>
+
 							<div class="space-y-4">
-								<div class="bg-white/20 rounded-lg p-4 text-left">
-									<h3 class="font-semibold mb-2">Programming & Tech</h3>
-									<p class="text-sm text-green-100">Python, JavaScript, Web Development</p>
+								<div
+									class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+									<div class="flex items-center mb-3">
+										<div class="bg-white/20 p-2 rounded-lg mr-3">
+											<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+												<path
+													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+											</svg>
+										</div>
+										<h3 class="font-bold text-lg">Qizlar uchun yosh chegaralanmagan</h3>
+									</div>
+									<p class="text-green-100 text-sm">Barcha yoshdagi ayollar ta'lim olishlari mumkin
+									</p>
 								</div>
-								<div class="bg-white/20 rounded-lg p-4 text-left">
-									<h3 class="font-semibold mb-2">Languages</h3>
-									<p class="text-sm text-green-100">English, Arabic, Turkish</p>
+
+								<div
+									class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+									<div class="flex items-center mb-3">
+										<div class="bg-white/20 p-2 rounded-lg mr-3">
+											<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+												<path
+													d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7h-5c-.8 0-1.53.5-1.83 1.25l-2.92 7.38A2 2 0 0 0 10.6 18H16v4h4z" />
+											</svg>
+										</div>
+										<h3 class="font-bold text-lg">O'g'il bolalar uchun 12 yoshgacha</h3>
+									</div>
+									<p class="text-green-100 text-sm">12 yoshgacha bo'lgan o'g'il bolalar qabul qilinadi
+									</p>
 								</div>
-								<div class="bg-white/20 rounded-lg p-4 text-left">
-									<h3 class="font-semibold mb-2">Sciences</h3>
-									<p class="text-sm text-green-100">Mathematics, Physics, Biology</p>
-								</div>
+							</div>
+
+							<div class="mt-6 animate-pulse-slow">
+								<p class="text-accent font-bold text-lg">1 YILLIK TA'LIM REJASI</p>
 							</div>
 						</div>
 					</div>
@@ -234,176 +374,107 @@
 	<section class="py-16 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-				<div>
-					<div class="text-4xl font-bold text-primary mb-2">50K+</div>
-					<div class="text-gray-600">Active Students</div>
+				<div class="bounce-in" style="animation-delay: 0.1s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">1000+</div>
+					<div class="text-gray-600 font-medium">Faol O'quvchilar</div>
 				</div>
-				<div>
-					<div class="text-4xl font-bold text-primary mb-2">200+</div>
-					<div class="text-gray-600">Expert Instructors</div>
+				<div class="bounce-in" style="animation-delay: 0.2s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">50+</div>
+					<div class="text-gray-600 font-medium">Mutaxassis Ustozlar</div>
 				</div>
-				<div>
-					<div class="text-4xl font-bold text-primary mb-2">500+</div>
-					<div class="text-gray-600">Premium Courses</div>
+				<div class="bounce-in" style="animation-delay: 0.3s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">15+</div>
+					<div class="text-gray-600 font-medium">Ta'lim Yo'nalishlari</div>
 				</div>
-				<div>
-					<div class="text-4xl font-bold text-primary mb-2">98%</div>
-					<div class="text-gray-600">Success Rate</div>
+				<div class="bounce-in" style="animation-delay: 0.4s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">99%</div>
+					<div class="text-gray-600 font-medium">Muvaffaqiyat Darajasi</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Featured Courses Section -->
-	<section id="courses" class="py-20 bg-gray-50">
+	<!-- Courses Section -->
+	<section id="kurslar" class="py-20 bg-gradient-to-br from-lightGray to-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<div class="relative inline-block">
-					<h2
-						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-						Featured Courses</h2>
-					<div
-						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
-					</div>
+					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">Ta'lim Yo'nalishlari</h2>
+					<div class="section-divider"></div>
 				</div>
-				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">Discover our most popular courses designed by
-					industry experts to help you achieve your learning goals.</p>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+					Din va dunyo ilmlarini uyg'unlashtirgan holda, zamonaviy ta'lim usullari bilan o'qiting
+				</p>
 			</div>
 
 			<!-- Course Categories Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-				<!-- Religious Studies Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('religious')">
-					<div class="gradient-bg h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Religious Studies</div>
-							<div class="text-sm">Islamic Education</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Religious Studies -->
+				<div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover cursor-pointer group"
+					onclick="openCourseModal('diniy')">
+					<div class="gradient-bg h-40 flex items-center justify-center relative">
+						<div class="absolute inset-0 bg-black/20"></div>
+						<div class="text-white text-center relative z-10">
+							<div class="text-3xl font-bold mb-2">📿 Diniy Fanlar</div>
+							<div class="text-sm opacity-90">Islom Ta'limoti</div>
 						</div>
 					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">Islamic Studies & Arabic</h3>
-						<p class="text-gray-600 mb-4">Comprehensive courses covering Qur'an, Hadith, Fiqh, Arabic
-							language and Islamic history</p>
+					<div class="p-8">
+						<h3
+							class="text-2xl font-bold mb-4 text-gray-800 group-hover:text-primary transition duration-300">
+							Qur'on, Hadis va Arab tili
+						</h3>
+						<div class="space-y-3 text-gray-600 mb-6">
+							<div class="flex items-center">
+								<span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+								<span>Iqtisod asoslari</span>
+							</div>
+						</div>
 						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">15+ Courses</span>
+							<span class="text-3xl font-bold text-primary">8+ Kurs</span>
 							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
+								class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-secondary transition duration-300 shadow-lg">
+								Ko'rish
 							</button>
 						</div>
 					</div>
 				</div>
 
-				<!-- Languages Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('languages')">
-					<div class="bg-blue-500 h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Languages</div>
-							<div class="text-sm">Modern Languages</div>
+				<!-- Art & Creativity -->
+				<div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover cursor-pointer group"
+					onclick="openCourseModal('san_at')">
+					<div
+						class="bg-gradient-to-br from-pink-500 to-pink-600 h-40 flex items-center justify-center relative">
+						<div class="absolute inset-0 bg-black/20"></div>
+						<div class="text-white text-center relative z-10">
+							<div class="text-3xl font-bold mb-2">🎨 San'at</div>
+							<div class="text-sm opacity-90">Ijodiy Fanlar</div>
 						</div>
 					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">Modern Language Courses</h3>
-						<p class="text-gray-600 mb-4">Learn English, Turkish, Russian and other popular languages with
-							native speakers</p>
+					<div class="p-8">
+						<h3
+							class="text-2xl font-bold mb-4 text-gray-800 group-hover:text-primary transition duration-300">
+							Tasviriy San'at va Hattolik
+						</h3>
+						<div class="space-y-3 text-gray-600 mb-6">
+							<div class="flex items-center">
+								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+								<span>Arab xattotligi</span>
+							</div>
+							<div class="flex items-center">
+								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+								<span>Tasviriy san'at</span>
+							</div>
+							<div class="flex items-center">
+								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+								<span>Qo'l san'ati</span>
+							</div>
+						</div>
 						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">12+ Courses</span>
+							<span class="text-3xl font-bold text-primary">6+ Kurs</span>
 							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Technology Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('technology')">
-					<div class="bg-gray-800 h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Technology</div>
-							<div class="text-sm">Programming & IT</div>
-						</div>
-					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">Programming & IT Skills</h3>
-						<p class="text-gray-600 mb-4">Master programming languages, web development, robotics and data
-							science</p>
-						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">20+ Courses</span>
-							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Sciences Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('sciences')">
-					<div class="bg-green-600 h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Sciences</div>
-							<div class="text-sm">Math & Natural Sciences</div>
-						</div>
-					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">Science & Mathematics</h3>
-						<p class="text-gray-600 mb-4">Comprehensive courses in mathematics, physics, chemistry and
-							biology</p>
-						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">18+ Courses</span>
-							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Business Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('business')">
-					<div class="bg-purple-600 h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Business</div>
-							<div class="text-sm">Economics & Management</div>
-						</div>
-					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">Business & Economics</h3>
-						<p class="text-gray-600 mb-4">Learn economics, business management, marketing and
-							entrepreneurship</p>
-						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">10+ Courses</span>
-							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Other Subjects Category -->
-				<div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover cursor-pointer"
-					onclick="openCourseModal('others')">
-					<div class="bg-teal-500 h-32 flex items-center justify-center">
-						<div class="text-white text-center">
-							<div class="text-2xl font-bold mb-1">Other Subjects</div>
-							<div class="text-sm">History & Geography</div>
-						</div>
-					</div>
-					<div class="p-6">
-						<h3 class="text-xl font-semibold mb-2">History & Geography</h3>
-						<p class="text-gray-600 mb-4">World history, geography, culture and social studies courses</p>
-						<div class="flex items-center justify-between">
-							<span class="text-2xl font-bold text-primary">8+ Courses</span>
-							<button
-								class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">
-								View Courses
+								class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-secondary transition duration-300 shadow-lg">
+								Ko'rish
 							</button>
 						</div>
 					</div>
@@ -415,9 +486,10 @@
 	<!-- Course Modal -->
 	<div id="courseModal" class="modal">
 		<div class="modal-content p-8 m-4">
-			<div class="flex justify-between items-center mb-6">
-				<h2 id="modalTitle" class="text-3xl font-bold text-gray-800">Course Category</h2>
-				<button onclick="closeCourseModal()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">
+			<div class="flex justify-between items-center mb-8">
+				<h2 id="modalTitle" class="text-3xl lg:text-4xl font-bold text-gradient">Kurs Kategoriyasi</h2>
+				<button onclick="closeCourseModal()"
+					class="text-gray-500 hover:text-gray-700 text-4xl font-bold transition duration-300">
 					&times;
 				</button>
 			</div>
@@ -428,121 +500,174 @@
 	</div>
 
 	<!-- Why Choose Us -->
-	<section class="py-20 bg-white">
+	<section id="biz-haqimizda" class="py-20 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<div class="relative inline-block">
-					<h2
-						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-						Why Choose Our Academy?</h2>
-					<div
-						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
-					</div>
+					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">Nima uchun Muhib Academy?</h2>
+					<div class="section-divider"></div>
 				</div>
-				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">We provide comprehensive education with modern
-					teaching methods and expert instructors.</p>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+					Zamonaviy ta'lim usullari bilan diniy va dunyoviy ilmlarni uyg'unlashtirgan holda ta'lim beramiz
+				</p>
 			</div>
+
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<div class="text-center p-6">
-					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-							<path fill-rule="evenodd"
-								d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-								clip-rule="evenodd" />
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 card-hover">
+					<div
+						class="bg-gradient-to-br from-primary to-secondary w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
 						</svg>
 					</div>
-					<h3 class="text-xl font-semibold mb-3 text-gray-800">Expert Instructors</h3>
-					<p class="text-gray-600">Learn from industry professionals with years of experience in their
-						respective fields.</p>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Malakali Ustozlar</h3>
+					<p class="text-gray-600 leading-relaxed">
+						O'z sohalarida yillik tajribaga ega bo'lgan mutaxassis ustozlardan ta'lim oling
+					</p>
 				</div>
-				<div class="text-center p-6">
-					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-							<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 card-hover">
+					<div
+						class="bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
 						</svg>
 					</div>
-					<h3 class="text-xl font-semibold mb-3 text-gray-800">Lifetime Access</h3>
-					<p class="text-gray-600">Get unlimited access to course materials and updates for life with one-time
-						payment.</p>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Umrbod Ta'lim</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Bir marta to'lov qilib, umrbod o'qish va yangilanishlardan foydalanish imkoniyati
+					</p>
 				</div>
-				<div class="text-center p-6">
-					<div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-						<svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-							<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-							<path fill-rule="evenodd"
-								d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h4v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm8 8a1 1 0 100-2 1 1 0 000 2zm-3-1a1 1 0 11-2 0 1 1 0 012 0z"
-								clip-rule="evenodd" />
+
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-purple-50 to-purple-100 card-hover">
+					<div
+						class="bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
 						</svg>
 					</div>
-					<h3 class="text-xl font-semibold mb-3 text-gray-800">Flexible Schedule</h3>
-					<p class="text-gray-600">Study at your own pace with 24/7 access to all course materials and
-						resources.</p>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Moslashuvchan Jadval</h3>
+					<p class="text-gray-600 leading-relaxed">
+						O'z vaqtingizga mos ravishda, 24/7 barcha dars materiallariga kirish imkoniyati
+					</p>
+				</div>
+
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-green-50 to-green-100 card-hover">
+					<div
+						class="bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Sertifikat</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Kursni muvaffaqiyatli yakunlagach, rasmiy sertifikat olish imkoniyati
+					</p>
+				</div>
+
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-yellow-50 to-yellow-100 card-hover">
+					<div
+						class="bg-gradient-to-br from-yellow-500 to-yellow-600 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z" />
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Individual Yondashuv</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Har bir o'quvchiga alohida e'tibor va individual ta'lim rejasi
+					</p>
+				</div>
+
+				<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-red-50 to-red-100 card-hover">
+					<div
+						class="bg-gradient-to-br from-red-500 to-red-600 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+						<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+						</svg>
+					</div>
+					<h3 class="text-2xl font-bold mb-4 text-gray-800">Amaliy Bilimlar</h3>
+					<p class="text-gray-600 leading-relaxed">
+						Nazariy bilimlarni amaliyotda qo'llash va real loyihalar ustida ishlash
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Testimonials -->
-	<section class="py-20 bg-gray-50">
+	<section class="py-20 bg-gradient-to-br from-lightGray to-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<div class="relative inline-block">
-					<h2
-						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-						What Our Students Say</h2>
-					<div
-						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
-					</div>
+					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">O'quvchilarimiz Fikri</h2>
+					<div class="section-divider"></div>
 				</div>
-				<p class="text-xl text-gray-600 mt-6">Hear from thousands of successful students who transformed their
-					careers.</p>
+				<p class="text-xl text-gray-600 mt-6">Ming'lab muvaffaqiyatli o'quvchilardan eshiting</p>
 			</div>
+
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="bg-white rounded-xl p-8 shadow-lg">
-					<div class="flex items-center mb-4">
+				<div class="bg-white rounded-3xl p-8 shadow-xl card-hover">
+					<div class="flex items-center mb-6">
 						<div
-							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
-							AH</div>
+							class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
+							AF
+						</div>
 						<div class="ml-4">
-							<h4 class="font-semibold text-gray-800">Ahmed Hassan</h4>
-							<p class="text-gray-600 text-sm">Software Engineer</p>
+							<h4 class="font-bold text-gray-800 text-lg">Aziza Fayzullayeva</h4>
+							<p class="text-gray-600">Arab tili o'quvchisi</p>
 						</div>
 					</div>
-					<p class="text-gray-600 mb-4">"The programming courses here are exceptional. I landed my dream job
-						as a software engineer after completing the full-stack development program."</p>
-					<div class="flex text-yellow-400">
+					<p class="text-gray-600 mb-6 leading-relaxed">
+						"Arab tilini o'rganish orzu edi. Muhib Academy'da professional ustozlardan ta'lim olib,
+						Qur'onni tushunib o'qiy olmayapman. Juda minnatdorman!"
+					</p>
+					<div class="flex text-accent text-xl">
 						★★★★★
 					</div>
 				</div>
-				<div class="bg-white rounded-xl p-8 shadow-lg">
-					<div class="flex items-center mb-4">
+
+				<div class="bg-white rounded-3xl p-8 shadow-xl card-hover">
+					<div class="flex items-center mb-6">
 						<div
-							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
-							FO</div>
+							class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+							MR
+						</div>
 						<div class="ml-4">
-							<h4 class="font-semibold text-gray-800">Fatima Ozturk</h4>
-							<p class="text-gray-600 text-sm">Language Teacher</p>
+							<h4 class="font-bold text-gray-800 text-lg">Muhammad Rahmonov</h4>
+							<p class="text-gray-600">IT o'quvchisi</p>
 						</div>
 					</div>
-					<p class="text-gray-600 mb-4">"The Turkish and Arabic language courses helped me become fluent. The
-						instructors are native speakers and very patient."</p>
-					<div class="flex text-yellow-400">
+					<p class="text-gray-600 mb-6 leading-relaxed">
+						"Robotika kursi hayotimni o'zgartirdi. Endi dasturlashni bilamna va o'z loyihalarimni yarataman.
+						Ustozlar juda sabotli va tajribali."
+					</p>
+					<div class="flex text-accent text-xl">
 						★★★★★
 					</div>
 				</div>
-				<div class="bg-white rounded-xl p-8 shadow-lg">
-					<div class="flex items-center mb-4">
+
+				<div class="bg-white rounded-3xl p-8 shadow-xl card-hover">
+					<div class="flex items-center mb-6">
 						<div
-							class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
-							MK</div>
+							class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+							ZS
+						</div>
 						<div class="ml-4">
-							<h4 class="font-semibold text-gray-800">Muhammad Khan</h4>
-							<p class="text-gray-600 text-sm">Islamic Scholar</p>
+							<h4 class="font-bold text-gray-800 text-lg">Zarina Saidova</h4>
+							<p class="text-gray-600">Ingliz tili o'quvchisi</p>
 						</div>
 					</div>
-					<p class="text-gray-600 mb-4">"The Islamic studies program is comprehensive and well-structured. I
-						improved my Arabic and Islamic knowledge significantly."</p>
-					<div class="flex text-yellow-400">
+					<p class="text-gray-600 mb-6 leading-relaxed">
+						"Ingliz tilini mukammal o'rgandim. Endi chet elda ishlash imkoniyatim paydo bo'ldi.
+						Muhib Academy'ga katta rahmat!"
+					</p>
+					<div class="flex text-accent text-xl">
 						★★★★★
 					</div>
 				</div>
@@ -551,131 +676,127 @@
 	</section>
 
 	<!-- Buy Course Form Section -->
-	<section id="buy-course" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+	<section id="kurs-sotib-olish" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
 				<div class="relative inline-block">
-					<h2
-						class="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-						Buy Your Course</h2>
-					<div
-						class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full">
-					</div>
+					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">Kurs Sotib Olish</h2>
+					<div class="section-divider"></div>
 				</div>
-				<p class="text-xl text-gray-600 mt-6">Fill out the form below and we'll contact you via Telegram to
-					complete your enrollment.</p>
+				<p class="text-xl text-gray-600 mt-6">
+					Quyidagi formani to'ldiring va biz siz bilan Telegram orqali bog'lanamiz
+				</p>
 			</div>
 
-			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-				<form id="courseForm" class="space-y-6">
+			<div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+				<form id="courseForm" class="space-y-8">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div>
-							<label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name
-								*</label>
+							<label for="firstName" class="block text-sm font-bold text-gray-700 mb-3">Ism *</label>
 							<input type="text" id="firstName" name="firstName" required
-								class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
-								placeholder="Enter your first name">
+								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
+								placeholder="Ismingizni kiriting">
 						</div>
 						<div>
-							<label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name
-								*</label>
+							<label for="lastName" class="block text-sm font-bold text-gray-700 mb-3">Familiya *</label>
 							<input type="text" id="lastName" name="lastName" required
-								class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
-								placeholder="Enter your last name">
+								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
+								placeholder="Familiyangizni kiriting">
 						</div>
 					</div>
 
 					<div>
-						<label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+						<label for="phone" class="block text-sm font-bold text-gray-700 mb-3">Telefon raqam *</label>
 						<input type="tel" id="phone" name="phone" required
-							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
+							class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
 							placeholder="+998 90 123 45 67">
 					</div>
 
 					<div>
-						<label for="courseType" class="block text-sm font-semibold text-gray-700 mb-2">Choose Course
-							Category *</label>
+						<label for="courseType" class="block text-sm font-bold text-gray-700 mb-3">Kurs tanlang
+							*</label>
 						<select id="courseType" name="courseType" required
-							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300">
-							<option value="">Select a course category</option>
-							<optgroup label="Religious Studies">
-								<option value="quran-studies">Advanced Qur'an Recitation - $89</option>
-								<option value="arabic-language">Arabic Grammar & Literature - $129</option>
-								<option value="islamic-studies">Aqidah, Hadith, Fiqh & Biography - $149</option>
+							class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg">
+							<option value="">Kurs kategoriyasini tanlang</option>
+							<optgroup label="📿 Diniy Fanlar">
+								<option value="quran-tilovat">Qur'on Tilovat va Tajvid - 300,000 so'm</option>
+								<option value="arab-tili">Arab Tili (Sarf, Nahv) - 450,000 so'm</option>
+								<option value="hadis-fiqh">Hadis va Fiqh - 400,000 so'm</option>
+								<option value="siyrat">Siyrat va Islom Tarixi - 350,000 so'm</option>
 							</optgroup>
-							<optgroup label="Modern Languages">
-								<option value="english-beginners">English for Beginners - $79</option>
-								<option value="turkish-complete">Complete Turkish Course - $119</option>
-								<option value="russian-basics">Russian Language Basics - $99</option>
+							<optgroup label="🗣️ Zamonaviy Tillar">
+								<option value="ingliz-tili">Ingliz Tili (A1-A2) - 250,000 so'm</option>
+								<option value="turk-tili">Turk Tili (A1-B2) - 300,000 so'm</option>
+								<option value="rus-tili">Rus Tili Asoslari - 200,000 so'm</option>
 							</optgroup>
-							<optgroup label="Technology & Programming">
-								<option value="robotics-intro">Introduction to Robotics - $159</option>
-								<option value="web-development">Complete Web Development - $199</option>
-								<option value="data-science">Python for Data Science - $179</option>
+							<optgroup label="🤖 Texnologiya">
+								<option value="robotika">Robotika Asoslari - 500,000 so'm</option>
+								<option value="dasturlash">Dasturlash Tillari - 600,000 so'm</option>
+								<option value="web-development">Web Dasturlash - 550,000 so'm</option>
 							</optgroup>
-							<optgroup label="Sciences">
-								<option value="mathematics">Advanced Mathematics - $69</option>
-								<option value="physics">Physics Fundamentals - $79</option>
-								<option value="biology">General Biology - $74</option>
-								<option value="chemistry">Organic Chemistry - $84</option>
+							<optgroup label="🔬 Aniq Fanlar">
+								<option value="matematika">Matematika - 200,000 so'm</option>
+								<option value="fizika">Fizika - 250,000 so'm</option>
+								<option value="biologiya">Biologiya - 220,000 so'm</option>
+								<option value="kimyo">Kimyo - 240,000 so'm</option>
 							</optgroup>
-							<optgroup label="Other Subjects">
-								<option value="geography">World Geography - $64</option>
-								<option value="history">World History & Civilizations - $69</option>
-								<option value="economics">Economics Fundamentals - $89</option>
+							<optgroup label="🌍 Ijtimoiy Fanlar">
+								<option value="tarix">Jahon Tarixi - 180,000 so'm</option>
+								<option value="geografiya">Geografiya - 150,000 so'm</option>
+								<option value="iqtisod">Iqtisod Asoslari - 250,000 so'm</option>
+							</optgroup>
+							<optgroup label="🎨 San'at">
+								<option value="xattotlik">Arab Xattotligi - 300,000 so'm</option>
+								<option value="tasviriy-san-at">Tasviriy San'at - 200,000 so'm</option>
+								<option value="qol-san-ati">Qo'l San'ati - 180,000 so'm</option>
 							</optgroup>
 						</select>
 					</div>
 
 					<div>
-						<label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Additional Message
-							(Optional)</label>
+						<label for="age" class="block text-sm font-bold text-gray-700 mb-3">Yosh *</label>
+						<input type="number" id="age" name="age" required min="5" max="100"
+							class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
+							placeholder="Yoshingizni kiriting">
+					</div>
+
+					<div>
+						<label for="message" class="block text-sm font-bold text-gray-700 mb-3">Qo'shimcha xabar
+							(ixtiyoriy)</label>
 						<textarea id="message" name="message" rows="4"
-							class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition duration-300"
-							placeholder="Any specific questions or requirements?"></textarea>
+							class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
+							placeholder="Maxsus talablar yoki savollaringiz bormi?"></textarea>
 					</div>
 
 					<button type="submit"
-						class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 px-8 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
-						🚀 Send to Telegram & Buy Course
+						class="w-full bg-gradient-to-r from-primary to-secondary text-white py-5 px-8 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+						🚀 Telegram orqali yuborish va kurs sotib olish
 					</button>
 				</form>
 
-				<div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
-					<div class="flex items-center">
-						<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+				<div class="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-200">
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor"
+							viewBox="0 0 20 20">
 							<path fill-rule="evenodd"
 								d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
 								clip-rule="evenodd" />
 						</svg>
-						<p class="text-blue-800 text-sm">
-							<strong>Note:</strong> After submitting, our team will contact you via Telegram within 24
-							hours to complete your course enrollment and payment process.
-						</p>
+						<div>
+							<p class="text-blue-800 font-semibold mb-2">💡 Muhim ma'lumot:</p>
+							<p class="text-blue-700 text-sm leading-relaxed">
+								Formani yuborganingizdan so'ng, bizning jamoamiz 24 soat ichida Telegram orqali siz
+								bilan bog'lanadi
+								va kurs ro'yxatga olish hamda to'lov jarayonini yakunlaydi. Barcha kurslar 1 yillik
+								ta'lim rejasi asosida tashkil etilgan.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="gradient-bg py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-4xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-			<p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Join thousands of successful students and start
-				your learning journey today with our premium courses.</p>
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<button id="browse-courses-btn-2"
-					class="bg-accent text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300">Browse
-					All Courses</button>
-				<button
-					class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition duration-300">Start
-					Free Trial</button>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer -->
 	<footer id="contact" class="bg-white py-16 border-t border-gray-200">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -776,529 +897,107 @@
 		</div>
 	</footer>
 
+	<!-- Social Media Section -->
+	<!-- JavaScript: modal va forma yuborish -->
 	<script>
-		// Course data for different categories
-		const courseData = {
-			religious: {
-				title: "Religious Studies Courses",
-				courses: [
-					{
-						title: "Qur'an Recitation & Tajweed",
-						description: "Master proper Quranic recitation with authentic Tajweed rules",
-						price: "$89",
-						image: "https://images.unsplash.com/photo-1580661023534-944adb4a8d03?w=400&h=250&fit=crop&crop=center",
-						instructor: "Sheikh Ahmad",
-						rating: "★★★★★",
-						duration: "8 weeks"
-					},
-					{
-						title: "Arabic Grammar & Literature",
-						description: "Comprehensive Arabic course covering Sarf, Nahw, and classical texts",
-						price: "$129",
-						image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Fatima Al-Zahra",
-						rating: "★★★★★",
-						duration: "12 weeks"
-					},
-					{
-						title: "Islamic Studies & Hadith",
-						description: "Essential Islamic knowledge with authentic Hadith collections",
-						price: "$149",
-						image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center",
-						instructor: "Imam Abdullah",
-						rating: "★★★★★",
-						duration: "16 weeks"
-					},
-					{
-						title: "Islamic History & Biography",
-						description: "Stories of Prophets and Islamic civilization history",
-						price: "$99",
-						image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Muhammad Kahn",
-						rating: "★★★★☆",
-						duration: "10 weeks"
-					},
-					{
-						title: "Fiqh & Islamic Jurisprudence",
-						description: "Understanding Islamic law and jurisprudence",
-						price: "$119",
-						image: "https://images.unsplash.com/photo-1580661023534-944adb4a8d03?w=400&h=250&fit=crop&crop=center",
-						instructor: "Sheikh Omar",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					},
-					{
-						title: "Aqeedah & Islamic Beliefs",
-						description: "Core Islamic beliefs and theological foundations",
-						price: "$109",
-						image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Yusuf",
-						rating: "★★★★★",
-						duration: "12 weeks"
-					}
-				]
-			},
-			languages: {
-				title: "Language Learning Courses",
-				courses: [
-					{
-						title: "English for Beginners",
-						description: "Build strong foundation in English grammar and conversation",
-						price: "$79",
-						image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop&crop=center",
-						instructor: "Sarah Johnson",
-						rating: "★★★★★",
-						duration: "10 weeks"
-					},
-					{
-						title: "Advanced English Speaking",
-						description: "Perfect your English speaking and presentation skills",
-						price: "$109",
-						image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Michael Brown",
-						rating: "★★★★★",
-						duration: "8 weeks"
-					},
-					{
-						title: "Complete Turkish Course",
-						description: "From beginner to intermediate Turkish with cultural insights",
-						price: "$119",
-						image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop&crop=center",
-						instructor: "Ayşe Demir",
-						rating: "★★★★☆",
-						duration: "14 weeks"
-					},
-					{
-						title: "Russian Language Basics",
-						description: "Learn Cyrillic alphabet, grammar, and essential phrases",
-						price: "$99",
-						image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dmitri Volkov",
-						rating: "★★★★☆",
-						duration: "12 weeks"
-					},
-					{
-						title: "Spanish Conversation",
-						description: "Interactive Spanish speaking course for all levels",
-						price: "$89",
-						image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop&crop=center",
-						instructor: "Maria Garcia",
-						rating: "★★★★★",
-						duration: "10 weeks"
-					},
-					{
-						title: "French Language Fundamentals",
-						description: "Comprehensive French course from basics to intermediate",
-						price: "$129",
-						image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Pierre Dubois",
-						rating: "★★★★☆",
-						duration: "16 weeks"
-					}
-				]
-			},
-			technology: {
-				title: "Technology & Programming Courses",
-				courses: [
-					{
-						title: "Introduction to Robotics",
-						description: "Learn robotics fundamentals and basic programming",
-						price: "$159",
-						image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Alex Chen",
-						rating: "★★★★★",
-						duration: "12 weeks"
-					},
-					{
-						title: "Complete Web Development",
-						description: "HTML, CSS, JavaScript, React, and backend technologies",
-						price: "$199",
-						image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
-						instructor: "Jake Wilson",
-						rating: "★★★★★",
-						duration: "20 weeks"
-					},
-					{
-						title: "Python for Data Science",
-						description: "Master Python, pandas, NumPy, and machine learning basics",
-						price: "$179",
-						image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Lisa Wang",
-						rating: "★★★★★",
-						duration: "16 weeks"
-					},
-					{
-						title: "Mobile App Development",
-						description: "Build iOS and Android apps with React Native",
-						price: "$189",
-						image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop&crop=center",
-						instructor: "Emma Rodriguez",
-						rating: "★★★★☆",
-						duration: "18 weeks"
-					},
-					{
-						title: "Cybersecurity Fundamentals",
-						description: "Learn network security, ethical hacking basics",
-						price: "$169",
-						image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop&crop=center",
-						instructor: "Marcus Johnson",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					},
-					{
-						title: "AI & Machine Learning",
-						description: "Introduction to artificial intelligence and ML algorithms",
-						price: "$219",
-						image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Raj Patel",
-						rating: "★★★★★",
-						duration: "22 weeks"
-					}
-				]
-			},
-			sciences: {
-				title: "Science & Mathematics Courses",
-				courses: [
-					{
-						title: "Advanced Mathematics",
-						description: "Calculus, algebra, and advanced mathematical concepts",
-						price: "$69",
-						image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. Robert Smith",
-						rating: "★★★★★",
-						duration: "16 weeks"
-					},
-					{
-						title: "Physics Fundamentals",
-						description: "Classical mechanics, thermodynamics, and modern physics",
-						price: "$79",
-						image: "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Elena Petrov",
-						rating: "★★★★☆",
-						duration: "14 weeks"
-					},
-					{
-						title: "General Biology",
-						description: "Cell biology, genetics, evolution, and ecology",
-						price: "$74",
-						image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Amanda Green",
-						rating: "★★★★★",
-						duration: "12 weeks"
-					},
-					{
-						title: "Organic Chemistry",
-						description: "Chemical reactions, molecular structures, and synthesis",
-						price: "$84",
-						image: "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. David Lee",
-						rating: "★★★★☆",
-						duration: "18 weeks"
-					},
-					{
-						title: "Statistics & Probability",
-						description: "Statistical analysis, probability theory, and data interpretation",
-						price: "$89",
-						image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Sarah Kim",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					},
-					{
-						title: "Environmental Science",
-						description: "Climate change, sustainability, and environmental protection",
-						price: "$94",
-						image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Maria Santos",
-						rating: "★★★★☆",
-						duration: "12 weeks"
-					}
-				]
-			},
-			business: {
-				title: "Business & Economics Courses",
-				courses: [
-					{
-						title: "Economics Fundamentals",
-						description: "Market principles, economic theories and applications",
-						price: "$89",
-						image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. Thomas Wilson",
-						rating: "★★★★★",
-						duration: "12 weeks"
-					},
-					{
-						title: "Business Management",
-						description: "Leadership, strategy, and organizational behavior",
-						price: "$119",
-						image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center",
-						instructor: "Jennifer Adams",
-						rating: "★★★★☆",
-						duration: "14 weeks"
-					},
-					{
-						title: "Digital Marketing Mastery",
-						description: "SEO, social media marketing, and online advertising",
-						price: "$139",
-						image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center",
-						instructor: "Ryan Miller",
-						rating: "★★★★★",
-						duration: "10 weeks"
-					},
-					{
-						title: "Entrepreneurship Bootcamp",
-						description: "Start and grow your own business successfully",
-						price: "$149",
-						image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop&crop=center",
-						instructor: "Mark Thompson",
-						rating: "★★★★★",
-						duration: "16 weeks"
-					},
-					{
-						title: "Financial Planning",
-						description: "Personal and business financial management",
-						price: "$109",
-						image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center",
-						instructor: "Carol White",
-						rating: "★★★★☆",
-						duration: "12 weeks"
-					},
-					{
-						title: "Project Management",
-						description: "Agile, Scrum, and traditional project management methods",
-						price: "$129",
-						image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center",
-						instructor: "Kevin Brown",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					}
-				]
-			},
-			others: {
-				title: "History & Geography Courses",
-				courses: [
-					{
-						title: "World Geography",
-						description: "Physical and human geography of different continents",
-						price: "$64",
-						image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. James Taylor",
-						rating: "★★★★☆",
-						duration: "10 weeks"
-					},
-					{
-						title: "World History & Civilizations",
-						description: "Ancient civilizations to modern world history",
-						price: "$69",
-						image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Rebecca Davis",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					},
-					{
-						title: "Cultural Studies",
-						description: "World cultures, traditions, and social anthropology",
-						price: "$74",
-						image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. Maria Lopez",
-						rating: "★★★★☆",
-						duration: "12 weeks"
-					},
-					{
-						title: "Political Science",
-						description: "Government systems, political theory, and international relations",
-						price: "$79",
-						image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Andrew Clark",
-						rating: "★★★★☆",
-						duration: "16 weeks"
-					},
-					{
-						title: "Philosophy & Ethics",
-						description: "Introduction to philosophy, ethics, and critical thinking",
-						price: "$84",
-						image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=250&fit=crop&crop=center",
-						instructor: "Prof. Sophie Anderson",
-						rating: "★★★★★",
-						duration: "14 weeks"
-					},
-					{
-						title: "Art History",
-						description: "Journey through art movements and masterpieces",
-						price: "$69",
-						image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=250&fit=crop&crop=center",
-						instructor: "Dr. Isabella Martinez",
-						rating: "★★★★☆",
-						duration: "12 weeks"
-					}
-				]
-			}
+		const courses = {
+			diniy: [
+				{ title: "Qur'on Tilovat va Tajvid", price: "300,000 so'm" },
+				{ title: "Arab Tili (Sarf, Nahv)", price: "450,000 so'm" },
+				{ title: "Hadis va Fiqh", price: "400,000 so'm" },
+				{ title: "Siyrat va Islom Tarixi", price: "350,000 so'm" }
+			],
+			tillar: [
+				{ title: "Ingliz Tili (A1‑A2)", price: "250,000 so'm" },
+				{ title: "Turk Tili (A1‑B2)", price: "300,000 so'm" },
+				{ title: "Rus Tili Asoslari", price: "200,000 so'm" }
+			],
+			texnologiya: [
+				{ title: "Robotika Asoslari", price: "500,000 so'm" },
+				{ title: "Dasturlash Tillari", price: "600,000 so'm" },
+				{ title: "Web Dasturlash", price: "550,000 so'm" }
+			],
+			fanlar: [
+				{ title: "Matematika", price: "200,000 so'm" },
+				{ title: "Fizika, Biologiya", price: "250,000 so'm" },
+				{ title: "Kimyo", price: "240,000 so'm" }
+			],
+			ijtimoiy: [
+				{ title: "Jahon Tarixi", price: "180,000 so'm" },
+				{ title: "Geografiya", price: "150,000 so'm" },
+				{ title: "Iqtisod Asoslari", price: "250,000 so'm" }
+			],
+			san_at: [
+				{ title: "Arab Xattotligi", price: "300,000 so'm" },
+				{ title: "Tasviriy San'at", price: "200,000 so'm" },
+				{ title: "Qo'l San'ati", price: "180,000 so'm" }
+			]
 		};
 
-		// Mobile menu toggle
-		document.getElementById('mobile-menu-button').addEventListener('click', function () {
-			const mobileMenu = document.getElementById('mobile-menu');
-			mobileMenu.classList.toggle('hidden');
-		});
-
-		// Browse courses button functionality
-		document.getElementById('browse-courses-btn').addEventListener('click', function () {
-			document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
-		});
-
-		document.getElementById('browse-courses-btn-2').addEventListener('click', function () {
-			document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
-		});
-
-		// Course modal functions
 		function openCourseModal(category) {
 			const modal = document.getElementById('courseModal');
-			const modalTitle = document.getElementById('modalTitle');
-			const modalContent = document.getElementById('modalContent');
-
-			const categoryData = courseData[category];
-			modalTitle.textContent = categoryData.title;
-
-			modalContent.innerHTML = '';
-			categoryData.courses.forEach(course => {
-				const courseCard = `
-					<div class="bg-white rounded-xl shadow-lg overflow-hidden course-modal-card">
-						<img src="${course.image}" alt="${course.title}" class="w-full h-48 object-cover">
-						<div class="p-6">
-							<h3 class="text-xl font-semibold mb-2 text-gray-800">${course.title}</h3>
-							<p class="text-gray-600 mb-3 text-sm">${course.description}</p>
-							<div class="flex items-center justify-between mb-3">
-								<span class="text-2xl font-bold text-primary">${course.price}</span>
-								<span class="text-yellow-400 text-sm">${course.rating}</span>
-							</div>
-							<div class="text-sm text-gray-500 mb-3">
-								<p><strong>Instructor:</strong> ${course.instructor}</p>
-								<p><strong>Duration:</strong> ${course.duration}</p>
-							</div>
-							<button onclick="selectCourse('${course.title}', '${course.price}')" 
-								class="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-secondary transition duration-300">
-								Select This Course
-							</button>
-						</div>
-					</div>
-				`;
-				modalContent.innerHTML += courseCard;
+			const title = document.getElementById('modalTitle');
+			const content = document.getElementById('modalContent');
+			title.textContent = category === 'san_at' ? 'Sanʼat Kurslari' :
+				category === 'diniy' ? 'Diniy Fanlar' :
+					category === 'tillar' ? 'Zamonaviy Tillar' :
+						category === 'texnologiya' ? 'Texnologiya Kurslari' :
+							category === 'fanlar' ? 'Aniq Fanlar' :
+								category === 'ijtimoiy' ? 'Ijtimoiy Fanlar' : 'Kurslar';
+			content.innerHTML = '';
+			courses[category].forEach(c => {
+				const card = document.createElement('div');
+				card.className = 'bg-white rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition duration-300';
+				card.innerHTML = `
+        <h4 class="font-bold text-xl mb-2">${c.title}</h4>
+        <p class="text-gray-600 mb-4">${c.price}</p>
+        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Roʻyxatdan oʻtish</button>
+      `;
+				content.appendChild(card);
 			});
-
 			modal.classList.add('show');
-			document.body.style.overflow = 'hidden';
 		}
 
 		function closeCourseModal() {
+			document.getElementById('courseModal').classList.remove('show');
+		}
+
+		window.onclick = function (e) {
 			const modal = document.getElementById('courseModal');
-			modal.classList.remove('show');
-			document.body.style.overflow = 'auto';
-		}
+			if (e.target === modal) closeCourseModal();
+		};
 
-		function selectCourse(courseName, coursePrice) {
-			const courseSelect = document.getElementById('courseType');
-			const courseOptions = courseSelect.options;
-
-			for (let i = 0; i < courseOptions.length; i++) {
-				if (courseOptions[i].text.includes(courseName)) {
-					courseSelect.selectedIndex = i;
-					break;
-				}
-			}
-
-			closeCourseModal();
-			document.getElementById('buy-course').scrollIntoView({ behavior: 'smooth' });
-		}
-
-		// Close modal when clicking outside
-		document.getElementById('courseModal').addEventListener('click', function (e) {
-			if (e.target === this) {
-				closeCourseModal();
-			}
-		});
-
-		// Form submission
+		// Form yuborish handler
 		document.getElementById('courseForm').addEventListener('submit', function (e) {
 			e.preventDefault();
+			const data = {
+				firstName: this.firstName.value.trim(),
+				lastName: this.lastName.value.trim(),
+				phone: this.phone.value.trim(),
+				courseType: this.courseType.value,
+				age: this.age.value,
+				message: this.message.value.trim()
+			};
 
-			const firstName = document.getElementById('firstName').value;
-			const lastName = document.getElementById('lastName').value;
-			const phone = document.getElementById('phone').value;
-			const courseType = document.getElementById('courseType').value;
-			const message = document.getElementById('message').value;
-
-			if (!firstName || !lastName || !phone || !courseType) {
-				alert('Please fill in all required fields.');
-				return;
-			}
-
-			const selectedOption = document.getElementById('courseType').selectedOptions[0];
-			const courseName = selectedOption.text;
-
-			const telegramMessage = `🎓 NEW COURSE ENROLLMENT REQUEST 🎓
-
-👤 Student Information:
-• Name: ${firstName} ${lastName}
-• Phone: ${phone}
-
-📚 Selected Course:
-• ${courseName}
-
-💬 Message:
-${message || 'No additional message'}
-
-📱 Please contact this student via Telegram to complete the enrollment process.`;
-
-			const encodedMessage = encodeURIComponent(telegramMessage);
-			const telegramBotURL = `https://t.me/KomildevBot?start=${encodedMessage}`;
-
-			// Show success message
-			alert('✅ Your request has been submitted successfully!\n\nYou will be redirected to our Telegram bot where our team will contact you within 24 hours to complete your course enrollment.');
-
-			// Redirect to Telegram bot
-			window.open(telegramBotURL, '_blank');
-
-			// Reset form
-			this.reset();
+			// Masalan SRM API endpoint orqali yuborish
+			fetch('https://your-srm-api.endpoint/leads', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			})
+				.then(res => res.ok ? res.json() : Promise.reject(res))
+				.then(resData => {
+					alert('Arizangiz yuborildi. Brauzer orqali Telegram orqali bog‘lanamiz.');
+				})
+				.catch(err => {
+					console.error(err);
+					alert('Xatolik yuz berdi. Iltimos, birozdan keyin qayta urining.');
+				});
 		});
 
-		// Smooth scrolling for navigation links
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-				const target = document.querySelector(this.getAttribute('href'));
-				if (target) {
-					target.scrollIntoView({
-						behavior: 'smooth',
-						block: 'start'
-					});
-				}
-			});
-		});
-
-		// Add scroll effect to navbar
-		window.addEventListener('scroll', function () {
-			const navbar = document.querySelector('nav');
-			if (window.scrollY > 50) {
-				navbar.classList.add('shadow-xl');
-			} else {
-				navbar.classList.remove('shadow-xl');
-			}
-		});
-
-		// Add loading animation for course cards
-		document.addEventListener('DOMContentLoaded', function () {
-			const cards = document.querySelectorAll('.card-hover');
-			cards.forEach((card, index) => {
-				card.style.opacity = '0';
-				card.style.transform = 'translateY(20px)';
-				setTimeout(() => {
-					card.style.transition = 'all 0.6s ease';
-					card.style.opacity = '1';
-					card.style.transform = 'translateY(0)';
-				}, index * 100);
-			});
-		});
+		function scrollToForm() {
+			document.getElementById('kurs-sotib-olish').scrollIntoView({ behavior: 'smooth' });
+		}
 	</script>
 </body>
 

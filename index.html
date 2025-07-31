@@ -277,7 +277,7 @@
 	<!-- Hero Section -->
 	<section id="bosh"
 		class="gradient-bg hero-pattern text-white py-20 lg:py-32 relative overflow-hidden bg-no-repeat bg-cover bg-center"
-		style="background-image: url('./al-masjed-alharam-1_crop-760x570.webp')">
+		style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg')">
 
 		<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -395,107 +395,96 @@
 	</section>
 
 	<!-- Courses Section -->
-	<section id="kurslar" class="py-20 bg-gradient-to-br from-lightGray to-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center mb-16">
-				<div class="relative inline-block">
-					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">Ta'lim Yo'nalishlari</h2>
-					<div class="section-divider"></div>
-				</div>
-				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-					Din va dunyo ilmlarini uyg'unlashtirgan holda, zamonaviy ta'lim usullari bilan o'qiting
-				</p>
+	<script defer>
+		function showCourseDetail(course) {
+			document.getElementById('detailTitle').textContent = course.title;
+			document.getElementById('detailPrice').textContent = course.price;
+			document.getElementById('detailDescription').textContent = course.description;
+			document.getElementById('detailImage').src = course.image;
+			document.getElementById('courseDetailModal').classList.remove('hidden');
+		}
+
+		function closeCourseDetail() {
+			document.getElementById('courseDetailModal').classList.add('hidden');
+		}
+	</script>
+
+
+	<section class="py-16 px-6 max-w-7xl mx-auto">
+		<h2 class="text-4xl font-bold text-emerald-600 mb-10">Diniy Fanlar</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+			<!-- Qur'on Card -->
+			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+				onclick="showCourseDetail({
+             title: `Qur'on Tilovat va Tajvid`,
+             price: `300,000 so'm`,
+             description: `Qur'onni to'g'ri o'qish, tajvid qoidalari va tilovatni o'rganasiz.`,
+             image: 'images/quron.jpg'
+           })">
+				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Qur'on Tilovat"
+					class="rounded-xl w-full h-40 object-cover mb-4">
+				<h3 class="text-xl font-bold mb-2">Qur'on Tilovat va Tajvid</h3>
+				<p class="text-gray-600 mb-2">300,000 so'm</p>
+				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
 			</div>
 
-			<!-- Course Categories Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<!-- Religious Studies -->
-				<div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover cursor-pointer group"
-					onclick="openCourseModal('diniy')">
-					<div class="gradient-bg h-40 flex items-center justify-center relative">
-						<div class="absolute inset-0 bg-black/20"></div>
-						<div class="text-white text-center relative z-10">
-							<div class="text-3xl font-bold mb-2">📿 Diniy Fanlar</div>
-							<div class="text-sm opacity-90">Islom Ta'limoti</div>
-						</div>
-					</div>
-					<div class="p-8">
-						<h3
-							class="text-2xl font-bold mb-4 text-gray-800 group-hover:text-primary transition duration-300">
-							Qur'on, Hadis va Arab tili
-						</h3>
-						<div class="space-y-3 text-gray-600 mb-6">
-							<div class="flex items-center">
-								<span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-								<span>Iqtisod asoslari</span>
-							</div>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-primary">8+ Kurs</span>
-							<button
-								class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-secondary transition duration-300 shadow-lg">
-								Ko'rish
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Art & Creativity -->
-				<div class="bg-white rounded-3xl shadow-xl overflow-hidden card-hover cursor-pointer group"
-					onclick="openCourseModal('san_at')">
-					<div
-						class="bg-gradient-to-br from-pink-500 to-pink-600 h-40 flex items-center justify-center relative">
-						<div class="absolute inset-0 bg-black/20"></div>
-						<div class="text-white text-center relative z-10">
-							<div class="text-3xl font-bold mb-2">🎨 San'at</div>
-							<div class="text-sm opacity-90">Ijodiy Fanlar</div>
-						</div>
-					</div>
-					<div class="p-8">
-						<h3
-							class="text-2xl font-bold mb-4 text-gray-800 group-hover:text-primary transition duration-300">
-							Tasviriy San'at va Hattolik
-						</h3>
-						<div class="space-y-3 text-gray-600 mb-6">
-							<div class="flex items-center">
-								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-								<span>Arab xattotligi</span>
-							</div>
-							<div class="flex items-center">
-								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-								<span>Tasviriy san'at</span>
-							</div>
-							<div class="flex items-center">
-								<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-								<span>Qo'l san'ati</span>
-							</div>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-primary">6+ Kurs</span>
-							<button
-								class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-secondary transition duration-300 shadow-lg">
-								Ko'rish
-							</button>
-						</div>
-					</div>
-				</div>
+			<!-- Arab Tili -->
+			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+				onclick="showCourseDetail({
+             title: `Arab Tili (Sarf, Nahv)`,
+             price: `450,000 so'm`,
+             description: `Arab tili grammatikasi, sarf va nahv asoslari o'qitiladi.`,
+             image: 'images/arab.jpg'
+           })">
+				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Arab Tili"
+					class="rounded-xl w-full h-40 object-cover mb-4">
+				<h3 class="text-xl font-bold mb-2">Arab Tili (Sarf, Nahv)</h3>
+				<p class="text-gray-600 mb-2">450,000 so'm</p>
+				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
 			</div>
+
+			<!-- Hadis va Fiqh -->
+			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+				onclick="showCourseDetail({
+             title: `Hadis va Fiqh`,
+             price: `400,000 so'm`,
+             description: `Hadis ilmi va fiqh asoslari bo'yicha chuqur bilim beriladi.`,
+             image: 'images/hadis.jpg'
+           })">
+				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Hadis va Fiqh"
+					class="rounded-xl w-full h-40 object-cover mb-4">
+				<h3 class="text-xl font-bold mb-2">Hadis va Fiqh</h3>
+				<p class="text-gray-600 mb-2">400,000 so'm</p>
+				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+			</div>
+
+			<!-- Siyrat -->
+			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+				onclick="showCourseDetail({
+             title: `Siyrat va Islom Tarixi`,
+             price: `350,000 so'm`,
+             description: `Payg'ambarimiz (s.a.v.) hayoti va Islom tarixi chuqur o'rganiladi.`,
+             image: 'images/siyrat.jpg'
+           })">
+				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Siyrat"
+					class="rounded-xl w-full h-40 object-cover mb-4">
+				<h3 class="text-xl font-bold mb-2">Siyrat va Islom Tarixi</h3>
+				<p class="text-gray-600 mb-2">350,000 so'm</p>
+				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+			</div>
+
 		</div>
 	</section>
 
-	<!-- Course Modal -->
-	<div id="courseModal" class="modal">
-		<div class="modal-content p-8 m-4">
-			<div class="flex justify-between items-center mb-8">
-				<h2 id="modalTitle" class="text-3xl lg:text-4xl font-bold text-gradient">Kurs Kategoriyasi</h2>
-				<button onclick="closeCourseModal()"
-					class="text-gray-500 hover:text-gray-700 text-4xl font-bold transition duration-300">
-					&times;
-				</button>
-			</div>
-			<div id="modalContent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<!-- Course cards will be inserted here -->
-			</div>
+	<!-- Detail Modal -->
+	<div id="courseDetailModal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center">
+		<div class="bg-white rounded-2xl max-w-3xl w-full p-6 relative">
+			<button onclick="closeCourseDetail()" class="absolute top-4 right-6 text-gray-600 text-3xl">&times;</button>
+			<img id="detailImage" src="" class="rounded-xl w-full h-64 object-cover mb-6">
+			<h2 id="detailTitle" class="text-3xl font-bold mb-4"></h2>
+			<p id="detailDescription" class="text-gray-700 mb-4"></p>
+			<div class="text-xl font-semibold text-primary" id="detailPrice"></div>
 		</div>
 	</div>
 
@@ -644,7 +633,8 @@
 						</div>
 					</div>
 					<p class="text-gray-600 mb-6 leading-relaxed">
-						"Robotika kursi hayotimni o'zgartirdi. Endi dasturlashni bilamna va o'z loyihalarimni yarataman.
+						"Robotika kursi hayotimni o'zgartirdi. Endi dasturlashni bilamna va o'z loyihalarimni
+						yarataman.
 						Ustozlar juda sabotli va tajribali."
 					</p>
 					<div class="flex text-accent text-xl">
@@ -698,7 +688,8 @@
 								placeholder="Ismingizni kiriting">
 						</div>
 						<div>
-							<label for="lastName" class="block text-sm font-bold text-gray-700 mb-3">Familiya *</label>
+							<label for="lastName" class="block text-sm font-bold text-gray-700 mb-3">Familiya
+								*</label>
 							<input type="text" id="lastName" name="lastName" required
 								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
 								placeholder="Familiyangizni kiriting">
@@ -706,7 +697,8 @@
 					</div>
 
 					<div>
-						<label for="phone" class="block text-sm font-bold text-gray-700 mb-3">Telefon raqam *</label>
+						<label for="phone" class="block text-sm font-bold text-gray-700 mb-3">Telefon raqam
+							*</label>
 						<input type="tel" id="phone" name="phone" required
 							class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition duration-300 text-lg"
 							placeholder="+998 90 123 45 67">
@@ -842,8 +834,10 @@
 						<li><a href="#" class="hover:text-primary transition duration-300">All Courses</a></li>
 						<li><a href="#" class="hover:text-primary transition duration-300">Free Courses</a></li>
 						<li><a href="#" class="hover:text-primary transition duration-300">Premium Courses</a></li>
-						<li><a href="#" class="hover:text-primary transition duration-300">Become Instructor</a></li>
-						<li><a href="#buy-course" class="hover:text-primary transition duration-300">Buy Course</a></li>
+						<li><a href="#" class="hover:text-primary transition duration-300">Become Instructor</a>
+						</li>
+						<li><a href="#buy-course" class="hover:text-primary transition duration-300">Buy Course</a>
+						</li>
 					</ul>
 				</div>
 				<div>

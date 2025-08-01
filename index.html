@@ -275,100 +275,527 @@
 	</nav>
 
 	<!-- Hero Section -->
-	<section id="bosh"
-		class="gradient-bg hero-pattern text-white py-20 lg:py-32 relative overflow-hidden bg-no-repeat bg-cover bg-center"
-		style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg')">
+	<!-- Carousel Container -->
+	<div class="relative overflow-hidden">
+		<!-- Carousel Slides -->
+		<div id="carousel" class="flex transition-transform duration-500 ease-in-out">
 
-		<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div class="slide-up">
-					<div class="mb-6">
-						<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
-							🎓 Uyg'unligida Ta'lim Beruvchi Zamonaviy Akademiya
-						</span>
-					</div>
-					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-						MUHIB ACADEMY<br>
-						<span class="text-accent">DIN VA DUNYO ILMI</span>
-					</h1>
+			<!-- Slide 1 - Original -->
+			<section
+				class="min-w-full bg-no-repeat bg-cover bg-center text-white py-20 lg:py-32 relative overflow-hidden"
+				style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg');">
+				<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="slide-up">
+							<div class="mb-6">
+								<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
+									🎓 Uyg'unligida Ta'lim Beruvchi Zamonaviy Akademiya
+								</span>
+							</div>
+							<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+								MUHIB ACADEMY<br>
+								<span class="text-accent">DIN VA DUNYO ILMI</span>
+							</h1>
 
-					<div class="glass-effect rounded-2xl p-6 mb-8">
-						<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
-							بسم الله الرحمن الرحيم<br>
-							"مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى
-							الْجَنَّةِ"
-						</p>
-						<p class="text-green-100 text-center mt-2 text-sm">
-							"Kim ilm yo'lida chiqsa, Alloh unga jannat sari yo'lini oson qiladi." (Hadis)
-						</p>
-					</div>
-
-					<p class="text-xl mb-8 text-green-100 leading-relaxed">
-						Zamonaviy ta'lim usullari bilan din va dunyo ilmlarini o'rganing.
-						Malakali o'qituvchilar rahbarligida sifatli ta'lim oling.
-					</p>
-
-					<div class="flex flex-col sm:flex-row gap-4">
-						<button onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
-							class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
-							📚 Kurslarni Ko'rish
-						</button>
-						<button
-							class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
-							🎬 Demo Ko'rish
-						</button>
-					</div>
-				</div>
-
-				<div class="animate-float">
-					<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
-						<div class="text-center">
-							<div class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
-								🌟 MUHIB ACADEMY'DA QABUL BOSHLANDI!
+							<div class="glass-effect rounded-2xl p-6 mb-8">
+								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
+									بسم الله الرحمن الرحيم<br>
+									"مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا
+									إِلَى
+									الْجَنَّةِ"
+								</p>
+								<p class="text-green-100 text-center mt-2 text-sm">
+									"Kim ilm yo'lida chiqsa, Alloh unga jannat sari yo'lini oson qiladi." (Hadis)
+								</p>
 							</div>
 
-							<div class="space-y-4">
-								<div
-									class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
-									<div class="flex items-center mb-3">
-										<div class="bg-white/20 p-2 rounded-lg mr-3">
-											<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-												<path
-													d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-											</svg>
-										</div>
-										<h3 class="font-bold text-lg">Qizlar uchun yosh chegaralanmagan</h3>
-									</div>
-									<p class="text-green-100 text-sm">Barcha yoshdagi ayollar ta'lim olishlari mumkin
-									</p>
-								</div>
+							<p class="text-xl mb-8 text-green-100 leading-relaxed">
+								Zamonaviy ta'lim usullari bilan din va dunyo ilmlarini o'rganing.
+								Malakali o'qituvchilar rahbarligida sifatli ta'lim oling.
+							</p>
 
-								<div
-									class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
-									<div class="flex items-center mb-3">
-										<div class="bg-white/20 p-2 rounded-lg mr-3">
-											<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-												<path
-													d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7h-5c-.8 0-1.53.5-1.83 1.25l-2.92 7.38A2 2 0 0 0 10.6 18H16v4h4z" />
-											</svg>
-										</div>
-										<h3 class="font-bold text-lg">O'g'il bolalar uchun 12 yoshgacha</h3>
-									</div>
-									<p class="text-green-100 text-sm">12 yoshgacha bo'lgan o'g'il bolalar qabul qilinadi
-									</p>
-								</div>
+							<div class="flex flex-col sm:flex-row gap-4">
+								<button
+									onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
+									class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
+									📚 Kurslarni Ko'rish
+								</button>
+								<button
+									class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
+									🎬 Demo Ko'rish
+								</button>
 							</div>
+						</div>
 
-							<div class="mt-6 animate-pulse-slow">
-								<p class="text-accent font-bold text-lg">1 YILLIK TA'LIM REJASI</p>
+						<div class="animate-float">
+							<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
+								<div class="text-center">
+									<div
+										class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
+										🌟 MUHIB ACADEMY'DA QABUL BOSHLANDI!
+									</div>
+
+									<div class="space-y-4">
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Qizlar uchun yosh chegaralanmagan</h3>
+											</div>
+											<p class="text-green-100 text-sm">Barcha yoshdagi ayollar ta'lim olishlari
+												mumkin</p>
+										</div>
+
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7h-5c-.8 0-1.53.5-1.83 1.25l-2.92 7.38A2 2 0 0 0 10.6 18H16v4h4z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">O'g'il bolalar uchun 12 yoshgacha</h3>
+											</div>
+											<p class="text-green-100 text-sm">12 yoshgacha bo'lgan o'g'il bolalar qabul
+												qilinadi</p>
+										</div>
+									</div>
+
+									<div class="mt-6 animate-pulse-slow">
+										<p class="text-accent font-bold text-lg">1 YILLIK TA'LIM REJASI</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<!-- Slide 2 - Qur'on Kurslari -->
+			<section
+				class="min-w-full bg-no-repeat bg-cover bg-center text-white py-20 lg:py-32 relative overflow-hidden"
+				style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg');">
+
+				<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="slide-up">
+							<div class="mb-6">
+								<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
+									📖 Qur'oni Karim O'qish va O'rganish
+								</span>
+							</div>
+							<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+								QUR'ONI KARIM<br>
+								<span class="text-accent">NAZARIYA VA AMALIYOT</span>
+							</h1>
+
+							<div class="glass-effect rounded-2xl p-6 mb-8">
+								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
+									بسم الله الرحمن الرحيم<br>
+									"وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ"
+								</p>
+								<p class="text-green-100 text-center mt-2 text-sm">
+									"Biz Qur'onni eslatish uchun oson qildik. Shunday ekan, kimdir o'ylab ko'radimi?"
+									(Qamar surasi: 17)
+								</p>
+							</div>
+
+							<p class="text-xl mb-8 text-green-100 leading-relaxed">
+								Qur'oni Karimni to'g'ri talaffuz bilan o'qishni va mazmunini tushunishni o'rganing.
+								Tajvid qoidalari va hafizlik dasturi mavjud.
+							</p>
+
+							<div class="flex flex-col sm:flex-row gap-4">
+								<button
+									onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
+									class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
+									📖 Qur'on Kursi
+								</button>
+								<button
+									class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
+									🎧 Audio Darslar
+								</button>
+							</div>
+						</div>
+
+						<div class="animate-float">
+							<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
+								<div class="text-center">
+									<div
+										class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
+										📖 QUR'ON VA TAJVID KURSLARI
+									</div>
+
+									<div class="space-y-4">
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Harfdan Qur'ongacha</h3>
+											</div>
+											<p class="text-green-100 text-sm">Noldan boshlab Qur'on o'qishni to'liq
+												o'rganing</p>
+										</div>
+
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Tajvid va Hafizlik</h3>
+											</div>
+											<p class="text-green-100 text-sm">Qur'onni go'zal ovozda o'qish va yodlash
+											</p>
+										</div>
+									</div>
+
+									<div class="mt-6 animate-pulse-slow">
+										<p class="text-accent font-bold text-lg">INDIVIDUAL DARSLAR</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 3 - Arab Tili -->
+			<section
+				class="min-w-full bg-no-repeat bg-cover bg-center text-white py-20 lg:py-32 relative overflow-hidden"
+				style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg');">
+
+				<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="slide-up">
+							<div class="mb-6">
+								<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
+									🇸🇦 Arab Tili va Adabiyoti Kurslari
+								</span>
+							</div>
+							<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+								ARAB TILI<br>
+								<span class="text-accent">SARF VA NAHV</span>
+							</h1>
+
+							<div class="glass-effect rounded-2xl p-6 mb-8">
+								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
+									بسم الله الرحمن الرحيم<br>
+									"إِنَّا أَنزَلْنَاهُ قُرْآنًا عَرَبِيًّا لَّعَلَّكُمْ تَعْقِلُونَ"
+								</p>
+								<p class="text-green-100 text-center mt-2 text-sm">
+									"Biz uni arab tilidagi Qur'on qilib nozil qildik, shoyad aqllashingiz uchun."
+									(Yusuf: 2)
+								</p>
+							</div>
+
+							<p class="text-xl mb-8 text-green-100 leading-relaxed">
+								Qur'oni Karimning asl tilini o'rganing. Sarf va nahv qoidalarini mukammal egallang.
+								Islomiy kitoblarni asl nusxasida o'qish imkoniyati.
+							</p>
+
+							<div class="flex flex-col sm:flex-row gap-4">
+								<button
+									onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
+									class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
+									🇸🇦 Arab Tili
+								</button>
+								<button
+									class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
+									📚 Grammatika
+								</button>
+							</div>
+						</div>
+
+						<div class="animate-float">
+							<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
+								<div class="text-center">
+									<div
+										class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
+										🇸🇦 ARAB TILI DARAJALARI
+									</div>
+
+									<div class="space-y-4">
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Boshlang'ich Daraja</h3>
+											</div>
+											<p class="text-green-100 text-sm">Alifbo, so'z yasash va oddiy gaplar tuzish
+											</p>
+										</div>
+
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Yuqori Daraja</h3>
+											</div>
+											<p class="text-green-100 text-sm">Sarf-nahv, baloga va adabiyot o'qish</p>
+										</div>
+									</div>
+
+									<div class="mt-6 animate-pulse-slow">
+										<p class="text-accent font-bold text-lg">6 OYLIK DASTUR</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Slide 4 - Hunarmandchilik -->
+			<section
+				class="min-w-full bg-no-repeat bg-cover bg-center text-white py-20 lg:py-32 relative overflow-hidden"
+				style="background-image: url('./photo-1641989210602-7c1efb2ff66c.jpeg');">
+
+				<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="slide-up">
+							<div class="mb-6">
+								<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
+									✂️ Hunarmandchilik va Kasb-Hunar O'rgatish
+								</span>
+							</div>
+							<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+								HUNAR VA<br>
+								<span class="text-accent">KASB O'RGANISH</span>
+							</h1>
+
+							<div class="glass-effect rounded-2xl p-6 mb-8">
+								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
+									بسم الله الرحمن الرحيم<br>
+									"إِنَّ اللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلًا أَن يُتْقِنَهُ"
+								</p>
+								<p class="text-green-100 text-center mt-2 text-sm">
+									"Alloh sizlardan birortangiz biror ish qilganda, uni yaxshi qilishni yaxshi
+									ko'radi." (Hadis)
+								</p>
+							</div>
+
+							<p class="text-xl mb-8 text-green-100 leading-relaxed">
+								Qo'l hunarlarini o'rganib, mustaqil daromad topish yo'llarini egallang.
+								Tikuvchilik, oshpazlik va boshqa amaliy ko'nikmalar.
+							</p>
+
+							<div class="flex flex-col sm:flex-row gap-4">
+								<button
+									onclick="document.getElementById('kurslar').scrollIntoView({behavior: 'smooth'})"
+									class="bg-accent text-dark px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 hover:bg-yellow-300">
+									✂️ Tikuvchilik
+								</button>
+								<button
+									class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition duration-300">
+									🍰 Oshpazlik
+								</button>
+							</div>
+						</div>
+
+						<div class="animate-float">
+							<div class="glass-effect rounded-3xl p-8 border border-white/20 bounce-in">
+								<div class="text-center">
+									<div
+										class="bg-accent text-dark px-6 py-3 rounded-full text-lg font-bold mb-6 inline-block">
+										🎨 AMALIY HUNAR KURSLARI
+									</div>
+
+									<div class="space-y-4">
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Tikuvchilik va Dizayn</h3>
+											</div>
+											<p class="text-green-100 text-sm">Libos tikish, andoza yasash va dizayn</p>
+										</div>
+
+										<div
+											class="glass-effect rounded-xl p-6 text-left hover:scale-105 transition duration-300">
+											<div class="flex items-center mb-3">
+												<div class="bg-white/20 p-2 rounded-lg mr-3">
+													<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+														<path
+															d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1z" />
+													</svg>
+												</div>
+												<h3 class="font-bold text-lg">Oshpazlik va Nonvoylik</h3>
+											</div>
+											<p class="text-green-100 text-sm">Milliy taomlar, shirinliklar va nonlar</p>
+										</div>
+									</div>
+
+									<div class="mt-6 animate-pulse-slow">
+										<p class="text-accent font-bold text-lg">AMALIY MASHG'ULOTLAR</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</div>
-	</section>
+
+		<!-- Navigation Buttons -->
+		<button id="prevBtn"
+			class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition duration-300 z-20">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+			</svg>
+		</button>
+
+		<button id="nextBtn"
+			class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition duration-300 z-20">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+			</svg>
+		</button>
+
+		<!-- Dots Indicator -->
+		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+			<button class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+				data-slide="0"></button>
+			<button class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+				data-slide="1"></button>
+			<button class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+				data-slide="2"></button>
+			<button class="dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition duration-300"
+				data-slide="3"></button>
+		</div>
+	</div>
+
+	<script>
+		let currentSlide = 0;
+		const totalSlides = 4;
+		const carousel = document.getElementById('carousel');
+		const dots = document.querySelectorAll('.dot');
+
+		function updateCarousel() {
+			carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+			// Update dots
+			dots.forEach((dot, index) => {
+				if (index === currentSlide) {
+					dot.classList.add('opacity-100');
+					dot.classList.remove('opacity-50');
+				} else {
+					dot.classList.add('opacity-50');
+					dot.classList.remove('opacity-100');
+				}
+			});
+		}
+
+		function nextSlide() {
+			currentSlide = (currentSlide + 1) % totalSlides;
+			updateCarousel();
+		}
+
+		function prevSlide() {
+			currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+			updateCarousel();
+		}
+
+		// Event listeners
+		document.getElementById('nextBtn').addEventListener('click', nextSlide);
+		document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+		// Dots navigation
+		dots.forEach((dot, index) => {
+			dot.addEventListener('click', () => {
+				currentSlide = index;
+				updateCarousel();
+			});
+		});
+
+		// Auto-play carousel
+		setInterval(nextSlide, 5000);
+
+		// Initialize
+		updateCarousel();
+	</script>
+
+	<style>
+		.gradient-bg {
+			background: linear-gradient(135deg, #1e3a8a 0%, #059669 100%);
+		}
+
+		.hero-pattern {
+			background-image:
+				radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.1) 2px, transparent 0),
+				radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.05) 2px, transparent 0);
+			background-size: 100px 100px;
+		}
+
+		.glass-effect {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.font-arabic {
+			font-family: 'Amiri', serif;
+			font-size: 1.2em;
+		}
+
+		.text-accent {
+			color: #fbbf24;
+		}
+
+		.bg-accent {
+			background-color: #fbbf24;
+		}
+
+		.text-dark {
+			color: #1f2937;
+		}
+
+		.text-primary {
+			color: #1e3a8a;
+		}
+
+		.slide-up {
+			animation: slideUp 1s ease-out;
+		}
+
+		.animate-float {
+			animation: float 6s ease-in-out infinite;
+		}
+	</style>
 
 	<!-- Stats Section -->
 	<section class="py-16 bg-white">

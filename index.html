@@ -850,7 +850,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
 						Mashhur
 					</div>
 				</div>
@@ -893,7 +893,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
 						Eng yaxshi
 					</div>
 				</div>
@@ -936,7 +936,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
 						Yangi
 					</div>
 				</div>
@@ -979,7 +979,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
 						Chegirma
 					</div>
 				</div>
@@ -1008,109 +1008,88 @@
 		<div class="h-screen overflow-y-auto">
 			<div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
 				<!-- Enhanced Modal Header Navigation -->
-				<nav class="bg-white/95 backdrop-blur-lg shadow-xl sticky top-0 z-50 border-b-2 border-[#00D084]/20">
+				<nav class="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-primary/10">
 					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div class="flex justify-between items-center h-20">
 							<div class="flex items-center">
 								<div
-									class="bg-gradient-to-br from-[#00D084] to-[#00B070] text-white p-3 rounded-2xl mr-4 shadow-lg">
+									class="bg-gradient-to-br from-primary to-secondary text-white p-3 rounded-2xl mr-4 shadow-lg">
 									<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
 										<path
 											d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9l-11-6zM18.82 9L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
 									</svg>
 								</div>
 								<div>
-									<div
-										class="text-2xl font-bold bg-gradient-to-r from-[#00D084] to-[#00B070] bg-clip-text text-transparent">
-										MUHIB ACADEMY
+									<div class="text-2xl font-bold text-gradient">MUHIB ACADEMY</div>
+									<div class="text-sm text-primary font-medium">Yaratgan Robbing nomi bilan o'qi!
 									</div>
-									<div class="text-sm text-[#00D084] font-medium">Din va Dunyo Ilmi</div>
 								</div>
 							</div>
 
 							<!-- Desktop Menu -->
 							<div class="hidden md:block">
 								<div class="ml-10 flex items-center space-x-6">
-									<a href="#bosh" onclick="closeCourseDetail()"
-										class="text-gray-700 hover:text-[#00D084] px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-[#00D084]/5">
-										Bosh sahifa
-									</a>
-									<a href="#kurslar" onclick="closeCourseDetail()"
-										class="text-gray-700 hover:text-[#00D084] px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-[#00D084]/5">
-										Kurslar
-									</a>
-									<a href="#biz-haqimizda" onclick="closeCourseDetail()"
-										class="text-gray-700 hover:text-[#00D084] px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-[#00D084]/5">
-										Biz haqimizda
-									</a>
-									<a href="#aloqa" onclick="closeCourseDetail()"
-										class="text-gray-700 hover:text-[#00D084] px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-[#00D084]/5">
-										Aloqa
-									</a>
-									<button onclick="scrollToModalForm()"
-										class="bg-gradient-to-r from-[#00D084] to-[#00B070] text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 hover:scale-105">
+									<a href="#bosh"
+										class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Bosh
+										sahifa</a>
+									<a href="#kurslar"
+										class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Kurslar</a>
+									<a href="#biz-haqimizda"
+										class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Biz
+										haqimizda</a>
+									<a href="#aloqa"
+										class="text-gray-700 hover:text-primary px-4 py-2 rounded-xl font-medium transition duration-300 hover:bg-primary/5">Aloqa</a>
+									<button onclick="scrollToForm()"
+										class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
 										Kurs sotib olish
-									</button>
-									<button onclick="closeCourseDetail()"
-										class="bg-red-500/20 hover:bg-red-500/40 text-red-600 backdrop-blur-sm rounded-full p-3 transition-all duration-300 ml-4 hover:rotate-90">
-										<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M6 18L18 6M6 6l12 12"></path>
-										</svg>
 									</button>
 								</div>
 							</div>
 
-							<!-- Mobile Menu Button and Close -->
-							<div class="md:hidden flex items-center space-x-2">
-								<button id="modal-mobile-menu-button"
-									class="text-gray-700 hover:text-[#00D084] focus:outline-none">
+							<!-- Mobile Menu Button -->
+							<div class="md:hidden">
+								<button id="mobile-menu-button"
+									class="text-gray-700 hover:text-primary focus:outline-none">
 									<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 											d="M4 6h16M4 12h16M4 18h16"></path>
 									</svg>
 								</button>
-								<button onclick="closeCourseDetail()"
-									class="bg-red-500/20 hover:bg-red-500/40 text-red-600 backdrop-blur-sm rounded-full p-2 transition-all duration-300 hover:rotate-90">
-									<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-											d="M6 18L18 6M6 6l12 12"></path>
-									</svg>
-								</button>
 							</div>
 						</div>
+					</div>
 
-						<!-- Enhanced Mobile Menu -->
-						<div id="modal-mobile-menu"
-							class="md:hidden hidden bg-white/95 backdrop-blur-lg border-t border-[#00D084]/20">
-							<div class="px-4 pt-4 pb-6 space-y-2">
-								<a href="#bosh" onclick="closeCourseDetail()"
-									class="block px-4 py-3 rounded-xl text-gray-700 hover:text-[#00D084] hover:bg-[#00D084]/5 transition duration-300">
-									Bosh sahifa
-								</a>
-								<a href="#kurslar" onclick="closeCourseDetail()"
-									class="block px-4 py-3 rounded-xl text-gray-700 hover:text-[#00D084] hover:bg-[#00D084]/5 transition duration-300">
-									Kurslar
-								</a>
-								<a href="#biz-haqimizda" onclick="closeCourseDetail()"
-									class="block px-4 py-3 rounded-xl text-gray-700 hover:text-[#00D084] hover:bg-[#00D084]/5 transition duration-300">
-									Biz haqimizda
-								</a>
-								<a href="#aloqa" onclick="closeCourseDetail()"
-									class="block px-4 py-3 rounded-xl text-gray-700 hover:text-[#00D084] hover:bg-[#00D084]/5 transition duration-300">
-									Aloqa
-								</a>
-								<button onclick="scrollToModalForm()"
-									class="w-full mt-4 bg-gradient-to-r from-[#00D084] to-[#00B070] text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition duration-300">
-									Kurs sotib olish
-								</button>
-							</div>
+					<!-- Mobile Menu -->
+					<div id="mobile-menu"
+						class="md:hidden hidden bg-white/98 backdrop-blur-lg border-t border-primary/10 shadow-2xl">
+						<div class="px-4 pt-4 pb-6 space-y-3">
+							<a href="#bosh"
+								class="block text-gray-700 hover:text-primary px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-primary/5 border border-transparent hover:border-primary/20">
+								Bosh sahifa
+							</a>
+							<a href="#kurslar"
+								class="block text-gray-700 hover:text-primary px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-primary/5 border border-transparent hover:border-primary/20">
+								Kurslar
+							</a>
+							<a href="#biz-haqimizda"
+								class="block text-gray-700 hover:text-primary px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-primary/5 border border-transparent hover:border-primary/20">
+								Biz haqimizda
+							</a>
+							<a href="#aloqa"
+								class="block text-gray-700 hover:text-primary px-4 py-3 rounded-xl font-medium transition duration-300 hover:bg-primary/5 border border-transparent hover:border-primary/20">
+								Aloqa
+							</a>
+							<button onclick="scrollToForm()"
+								class="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 mt-4">
+								Kurs sotib olish
+							</button>
 						</div>
 					</div>
 				</nav>
 
+
 				<!-- Enhanced Course Hero Section -->
-				<div class="relative bg-gradient-to-r from-[#00D084] to-[#00B070] text-white overflow-hidden">
+				<div class="relative bg-[#00D084] text-white overflow-hidden">
 					<div class="absolute inset-0 bg-black/20"></div>
 					<div class="absolute inset-0 opacity-10">
 						<svg class="w-full h-full" viewBox="0 0 100 20" fill="none">
@@ -1149,7 +1128,7 @@
 										<span id="detailLevel"></span>
 									</div>
 								</div>
-								<div class="text-5xl font-bold mb-4 text-yellow-300">
+								<div class="text-5xl font-bold mb-4 text-[#FFD700]">
 									<span id="detailPrice"></span>
 								</div>
 								<p class="text-white/90 text-lg">
@@ -1163,7 +1142,7 @@
 									<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 								</div>
 								<div
-									class="absolute -top-4 -right-4 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold shadow-lg animate-pulse">
+									class="absolute -top-4 -right-4 bg-[#FFD700] text-black px-4 py-2 rounded-full font-bold shadow-lg animate-pulse">
 									Eng mashhur! 🔥
 								</div>
 							</div>

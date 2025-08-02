@@ -837,84 +837,421 @@
 	</script>
 
 
-	<section class="py-16 px-6 max-w-7xl mx-auto">
-		<h2 class="text-4xl font-bold text-emerald-600 mb-10">Diniy Fanlar</h2>
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+	<!-- Modern Course Cards Section -->
+	<section class="py-20 px-6 max-w-7xl mx-auto">
+		<div class="text-center mb-16">
+			<h2
+				class="text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">
+				Diniy Fanlar</h2>
+			<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
+		</div>
 
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 			<!-- Qur'on Card -->
-			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+			<div class="group relative overflow-hidden bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
 				onclick="showCourseDetail({
-             title: `Qur'on Tilovat va Tajvid`,
-             price: `300,000 so'm`,
-             description: `Qur'onni to'g'ri o'qish, tajvid qoidalari va tilovatni o'rganasiz.`,
-             image: 'images/quron.jpg'
-           })">
-				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Qur'on Tilovat"
-					class="rounded-xl w-full h-40 object-cover mb-4">
-				<h3 class="text-xl font-bold mb-2">Qur'on Tilovat va Tajvid</h3>
-				<p class="text-gray-600 mb-2">300,000 so'm</p>
-				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+                title: 'Qur\'on Tilovat va Tajvid',
+                price: '300,000 so\'m',
+                duration: '6 oy',
+                lessons: '48 dars',
+                students: '150+ talaba',
+                level: 'Boshlang\'ich',
+                instructor: 'Ustoz Ahmad Qori',
+                description: 'Qur\'onni to\'g\'ri o\'qish, tajvid qoidalari va tilovatni mukammal o\'rganasiz. Harflarning makhraji, sifatlari va Qur\'on qiraat uslublari bo\'yicha to\'liq bilim beriladi.',
+                features: ['Tajvid qoidalari', 'Makhrij va sifatlar', 'Qiraat uslublari', 'Amaliy mashqlar', 'Sertifikat'],
+                image: './al-masjed-alharam-1_crop-760x570.webp'
+            })">
+				<div class="relative overflow-hidden">
+					<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Qur'on Tilovat"
+						class="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110">
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					</div>
+					<div
+						class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						Mashhur
+					</div>
+				</div>
+				<div class="p-6">
+					<h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors">
+						Qur'on Tilovat va Tajvid
+					</h3>
+					<p class="text-gray-600 text-sm mb-4">6 oy • 48 dars • Boshlang'ich</p>
+					<div class="flex items-center justify-between">
+						<span class="text-2xl font-bold text-emerald-600">300,000 so'm</span>
+						<div class="bg-emerald-50 p-3 rounded-full group-hover:bg-emerald-500 transition-colors">
+							<svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none"
+								stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+								</path>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<!-- Arab Tili -->
-			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+			<!-- Arab Tili Card -->
+			<div class="group relative overflow-hidden bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
 				onclick="showCourseDetail({
-             title: `Arab Tili (Sarf, Nahv)`,
-             price: `450,000 so'm`,
-             description: `Arab tili grammatikasi, sarf va nahv asoslari o'qitiladi.`,
-             image: 'images/arab.jpg'
-           })">
-				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Arab Tili"
-					class="rounded-xl w-full h-40 object-cover mb-4">
-				<h3 class="text-xl font-bold mb-2">Arab Tili (Sarf, Nahv)</h3>
-				<p class="text-gray-600 mb-2">450,000 so'm</p>
-				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+                title: 'Arab Tili (Sarf, Nahv)',
+                price: '450,000 so\'m',
+                duration: '8 oy',
+                lessons: '64 dars',
+                students: '200+ talaba',
+                level: 'O\'rta',
+                instructor: 'Ustoz Muhammad Ali',
+                description: 'Arab tili grammatikasi, sarf va nahv asoslarini mukammal o\'rganing. Klassik arab adabiyotini tushunish va Qur\'on matnlarini tahlil qilish qobiliyatini rivojlantiring.',
+                features: ['Sarf va nahv', 'Grammatika asoslari', 'Matn tahlili', 'Klassik adabiyot', 'Sertifikat'],
+                image: './al-masjed-alharam-1_crop-760x570.webp'
+            })">
+				<div class="relative overflow-hidden">
+					<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Arab Tili"
+						class="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110">
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					</div>
+					<div
+						class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						Eng yaxshi
+					</div>
+				</div>
+				<div class="p-6">
+					<h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors">
+						Arab Tili (Sarf, Nahv)
+					</h3>
+					<p class="text-gray-600 text-sm mb-4">8 oy • 64 dars • O'rta</p>
+					<div class="flex items-center justify-between">
+						<span class="text-2xl font-bold text-emerald-600">450,000 so'm</span>
+						<div class="bg-emerald-50 p-3 rounded-full group-hover:bg-emerald-500 transition-colors">
+							<svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none"
+								stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+								</path>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<!-- Hadis va Fiqh -->
-			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+			<!-- Hadis va Fiqh Card -->
+			<div class="group relative overflow-hidden bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
 				onclick="showCourseDetail({
-             title: `Hadis va Fiqh`,
-             price: `400,000 so'm`,
-             description: `Hadis ilmi va fiqh asoslari bo'yicha chuqur bilim beriladi.`,
-             image: 'images/hadis.jpg'
-           })">
-				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Hadis va Fiqh"
-					class="rounded-xl w-full h-40 object-cover mb-4">
-				<h3 class="text-xl font-bold mb-2">Hadis va Fiqh</h3>
-				<p class="text-gray-600 mb-2">400,000 so'm</p>
-				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+                title: 'Hadis va Fiqh',
+                price: '400,000 so\'m',
+                duration: '7 oy',
+                lessons: '56 dars',
+                students: '180+ talaba',
+                level: 'O\'rta',
+                instructor: 'Ustoz Abdulaziz Faqih',
+                description: 'Hadis ilmi va fiqh asoslari bo\'yicha chuqur bilim oling. Islom huquqshunosligining asosiy qoidalarini o\'rganing va amaliy masalalarga yechim toping.',
+                features: ['Hadis ilmi', 'Fiqh asoslari', 'Amaliy masalalar', 'Huquqshunoslik', 'Sertifikat'],
+                image: './al-masjed-alharam-1_crop-760x570.webp'
+            })">
+				<div class="relative overflow-hidden">
+					<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Hadis va Fiqh"
+						class="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110">
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					</div>
+					<div
+						class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						Yangi
+					</div>
+				</div>
+				<div class="p-6">
+					<h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors">
+						Hadis va Fiqh
+					</h3>
+					<p class="text-gray-600 text-sm mb-4">7 oy • 56 dars • O'rta</p>
+					<div class="flex items-center justify-between">
+						<span class="text-2xl font-bold text-emerald-600">400,000 so'm</span>
+						<div class="bg-emerald-50 p-3 rounded-full group-hover:bg-emerald-500 transition-colors">
+							<svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none"
+								stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+								</path>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<!-- Siyrat -->
-			<div class="course-card bg-white rounded-xl shadow-lg p-6 cursor-pointer hover:shadow-xl transition"
+			<!-- Siyrat Card -->
+			<div class="group relative overflow-hidden bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer border border-gray-100"
 				onclick="showCourseDetail({
-             title: `Siyrat va Islom Tarixi`,
-             price: `350,000 so'm`,
-             description: `Payg'ambarimiz (s.a.v.) hayoti va Islom tarixi chuqur o'rganiladi.`,
-             image: 'images/siyrat.jpg'
-           })">
-				<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Siyrat"
-					class="rounded-xl w-full h-40 object-cover mb-4">
-				<h3 class="text-xl font-bold mb-2">Siyrat va Islom Tarixi</h3>
-				<p class="text-gray-600 mb-2">350,000 so'm</p>
-				<button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600">Learn More</button>
+                title: 'Siyrat va Islom Tarixi',
+                price: '350,000 so\'m',
+                duration: '5 oy',
+                lessons: '40 dars',
+                students: '120+ talaba',
+                level: 'Boshlang\'ich',
+                instructor: 'Ustoz Umar Muarrix',
+                description: 'Payg\'ambarimiz (s.a.v.) hayoti va Islom tarixini chuqur o\'rganing. Siyr-magozy, sahobalar tarixi va Islom tsivilizatsiyasining rivojlanishi haqida bilim oling.',
+                features: ['Sirat an-Nabiy', 'Sahobalar tarixi', 'Islom tsivilizatsiyasi', 'Tarixiy tadqiqot', 'Sertifikat'],
+                image: './al-masjed-alharam-1_crop-760x570.webp'
+            })">
+				<div class="relative overflow-hidden">
+					<img src="./al-masjed-alharam-1_crop-760x570.webp" alt="Siyrat"
+						class="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110">
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					</div>
+					<div
+						class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						Chegirma
+					</div>
+				</div>
+				<div class="p-6">
+					<h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors">
+						Siyrat va Islom Tarixi
+					</h3>
+					<p class="text-gray-600 text-sm mb-4">5 oy • 40 dars • Boshlang'ich</p>
+					<div class="flex items-center justify-between">
+						<span class="text-2xl font-bold text-emerald-600">350,000 so'm</span>
+						<div class="bg-emerald-50 p-3 rounded-full group-hover:bg-emerald-500 transition-colors">
+							<svg class="w-5 h-5 text-emerald-600 group-hover:text-white transition-colors" fill="none"
+								stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+								</path>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
-
 		</div>
 	</section>
 
-	<!-- Detail Modal -->
-	<div id="courseDetailModal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center">
-		<div class="bg-white rounded-2xl max-w-3xl w-full p-6 relative">
-			<button onclick="closeCourseDetail()" class="absolute top-4 right-6 text-gray-600 text-3xl">&times;</button>
-			<img id="detailImage" src="" class="rounded-xl w-full h-64 object-cover mb-6">
-			<h2 id="detailTitle" class="text-3xl font-bold mb-4"></h2>
-			<p id="detailDescription" class="text-gray-700 mb-4"></p>
-			<div class="text-xl font-semibold text-primary" id="detailPrice"></div>
+	<!-- Full-Screen Course Detail Modal -->
+	<div id="courseDetailModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm">
+		<div class="h-screen overflow-y-auto">
+			<div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+				<!-- Header -->
+				<div class="relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+					<button onclick="closeCourseDetail()"
+						class="absolute top-6 right-6 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-300 z-10">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M6 18L18 6M6 6l12 12"></path>
+						</svg>
+					</button>
+
+					<div class="container mx-auto px-6 py-16">
+						<div class="grid lg:grid-cols-2 gap-12 items-center">
+							<div>
+								<h1 id="detailTitle" class="text-5xl font-bold mb-6"></h1>
+								<p id="detailDescription" class="text-xl text-emerald-100 mb-8 leading-relaxed"></p>
+								<div class="flex flex-wrap gap-4 mb-8">
+									<div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+										<span class="font-semibold">Davomiyligi: </span>
+										<span id="detailDuration"></span>
+									</div>
+									<div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+										<span class="font-semibold">Darslar: </span>
+										<span id="detailLessons"></span>
+									</div>
+									<div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+										<span class="font-semibold">Daraja: </span>
+										<span id="detailLevel"></span>
+									</div>
+								</div>
+								<div class="text-4xl font-bold mb-2">
+									<span id="detailPrice"></span>
+								</div>
+								<p class="text-emerald-200">
+									<span id="detailStudents"></span> • Ustoz: <span id="detailInstructor"></span>
+								</p>
+							</div>
+							<div class="relative">
+								<img id="detailImage" src="" class="rounded-2xl shadow-2xl w-full h-80 object-cover">
+								<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Main Content -->
+				<div class="container mx-auto px-6 py-16">
+					<div class="grid lg:grid-cols-3 gap-12">
+						<!-- Course Features -->
+						<div class="lg:col-span-2">
+							<div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+								<h3 class="text-2xl font-bold text-gray-800 mb-6">Kurs tarkibi</h3>
+								<div id="detailFeatures" class="grid sm:grid-cols-2 gap-4">
+									<!-- Features will be populated by JavaScript -->
+								</div>
+							</div>
+
+							<!-- Additional Info -->
+							<div class="bg-white rounded-2xl shadow-lg p-8">
+								<h3 class="text-2xl font-bold text-gray-800 mb-6">Kurs haqida</h3>
+								<div class="space-y-6 text-gray-600">
+									<p>Bu kurs diniy ta'lim sohasidagi eng zamonaviy va samarali dastur asosida
+										tuzilgan. Tajribali ustozlar tomonidan o'qitiladigan bu kursda nazariy bilimlar
+										bilan bir qatorda amaliy ko'nikmalar ham beriladi.</p>
+									<p>Kurs oxirida talabalar rasmiy sertifikat olishadi va keyingi bosqichlarga o'tish
+										imkoniyatiga ega bo'lishadi.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Registration Form -->
+						<div class="lg:col-span-1">
+							<div class="bg-white rounded-2xl shadow-lg p-8 sticky top-6">
+								<h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+									So'rov qoldiring va biz sizga javob beramiz
+								</h3>
+
+								<form class="space-y-6" onsubmit="handleFormSubmit(event)">
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Ism *
+										</label>
+										<input type="text" required
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+											placeholder="Ismingizni kiriting">
+									</div>
+
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Familiya *
+										</label>
+										<input type="text" required
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+											placeholder="Familiyangizni kiriting">
+									</div>
+
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Telefon raqami *
+										</label>
+										<input type="tel" required
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+											placeholder="+998 90 123 45 67">
+									</div>
+
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Yosh
+										</label>
+										<select
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors">
+											<option value="">Yoshingizni tanlang</option>
+											<option value="16-20">16-20</option>
+											<option value="21-30">21-30</option>
+											<option value="31-40">31-40</option>
+											<option value="41-50">41-50</option>
+											<option value="50+">50+</option>
+										</select>
+									</div>
+
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Bilim darajasi
+										</label>
+										<select
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors">
+											<option value="">Darajangizni tanlang</option>
+											<option value="boshlangich">Boshlang'ich</option>
+											<option value="orta">O'rta</option>
+											<option value="yuqori">Yuqori</option>
+										</select>
+									</div>
+
+									<div>
+										<label class="block text-sm font-semibold text-gray-700 mb-2">
+											Qo'shimcha ma'lumot
+										</label>
+										<textarea rows="3"
+											class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
+											placeholder="Savollaringiz yoki qo'shimcha ma'lumotlar..."></textarea>
+									</div>
+
+									<button type="submit"
+										class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold py-4 rounded-xl hover:from-emerald-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+										Ariza qoldirish
+									</button>
+
+									<p class="text-xs text-gray-500 text-center">
+										Ariza qoldirib, biz bilan bog'lanishga rozi bo'lasiz
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
+	<script>
+		function showCourseDetail(course) {
+			// Populate modal with course data
+			document.getElementById('detailTitle').textContent = course.title;
+			document.getElementById('detailDescription').textContent = course.description;
+			document.getElementById('detailPrice').textContent = course.price;
+			document.getElementById('detailDuration').textContent = course.duration;
+			document.getElementById('detailLessons').textContent = course.lessons;
+			document.getElementById('detailStudents').textContent = course.students;
+			document.getElementById('detailLevel').textContent = course.level;
+			document.getElementById('detailInstructor').textContent = course.instructor;
+			document.getElementById('detailImage').src = course.image;
+
+			// Populate features
+			const featuresContainer = document.getElementById('detailFeatures');
+			featuresContainer.innerHTML = '';
+			course.features.forEach(feature => {
+				const featureDiv = document.createElement('div');
+				featureDiv.className = 'flex items-center space-x-3 p-4 bg-emerald-50 rounded-xl';
+				featureDiv.innerHTML = `
+            <div class="bg-emerald-500 p-2 rounded-full">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <span class="font-medium text-gray-800">${feature}</span>
+        `;
+				featuresContainer.appendChild(featureDiv);
+			});
+
+			// Show modal
+			document.getElementById('courseDetailModal').classList.remove('hidden');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeCourseDetail() {
+			document.getElementById('courseDetailModal').classList.add('hidden');
+			document.body.style.overflow = 'auto';
+		}
+
+		function handleFormSubmit(event) {
+			event.preventDefault();
+
+			// Get form data
+			const formData = new FormData(event.target);
+			const data = Object.fromEntries(formData);
+
+			// Show success message
+			alert('Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.');
+
+			// Reset form
+			event.target.reset();
+		}
+
+		// Close modal when clicking outside
+		document.getElementById('courseDetailModal').addEventListener('click', function (e) {
+			if (e.target === this) {
+				closeCourseDetail();
+			}
+		});
+
+		// Close modal with Escape key
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') {
+				closeCourseDetail();
+			}
+		});
+	</script>
 	<!-- Why Choose Us -->
 	<section id="biz-haqimizda" class="py-20 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

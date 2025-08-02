@@ -6,6 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Muhib Academy - Din va Dunyo Ilmi</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Font Awesome 6.5.0 Free CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		integrity="sha512-...yada-yada..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 	<script>
 		tailwind.config = {
 			theme: {
@@ -810,53 +814,14 @@
 		}
 	</style>
 
-	<!-- Stats Section -->
-	<section class="py-16 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-				<div class="bounce-in" style="animation-delay: 0.1s;">
-					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">1000+</div>
-					<div class="text-gray-600 font-medium">Faol O'quvchilar</div>
-				</div>
-				<div class="bounce-in" style="animation-delay: 0.2s;">
-					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">50+</div>
-					<div class="text-gray-600 font-medium">Mutaxassis Ustozlar</div>
-				</div>
-				<div class="bounce-in" style="animation-delay: 0.3s;">
-					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">15+</div>
-					<div class="text-gray-600 font-medium">Ta'lim Yo'nalishlari</div>
-				</div>
-				<div class="bounce-in" style="animation-delay: 0.4s;">
-					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">99%</div>
-					<div class="text-gray-600 font-medium">Muvaffaqiyat Darajasi</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Courses Section -->
-	<script defer>
-		function showCourseDetail(course) {
-			document.getElementById('detailTitle').textContent = course.title;
-			document.getElementById('detailPrice').textContent = course.price;
-			document.getElementById('detailDescription').textContent = course.description;
-			document.getElementById('detailImage').src = course.image;
-			document.getElementById('courseDetailModal').classList.remove('hidden');
-		}
-
-		function closeCourseDetail() {
-			document.getElementById('courseDetailModal').classList.add('hidden');
-		}
-	</script>
-
 
 	<!-- Modern Course Cards Section -->
 	<section class="py-20 px-6 max-w-7xl mx-auto">
 		<div class="text-center mb-16">
-			<h2
-				class="text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">
-				Diniy Fanlar</h2>
-			<div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
+			<h2 class="text-5xl lg:text-6xl font-bold text-[#00D084] mb-6">
+				Diniy Fanlar
+			</h2>
+
 		</div>
 
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -924,7 +889,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold">
 						Eng yaxshi
 					</div>
 				</div>
@@ -967,7 +932,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold">
 						Yangi
 					</div>
 				</div>
@@ -1010,7 +975,7 @@
 						class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 					</div>
 					<div
-						class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+						class="absolute top-4 right-4 bg-[#00D084] text-white px-3 py-1 rounded-full text-sm font-semibold">
 						Chegirma
 					</div>
 				</div>
@@ -1491,13 +1456,201 @@
 			}
 		}
 	</script>
+	<section id="biz-haqimizda" class="py-20 relative overflow-hidden">
+		<!-- Background Elements -->
+		<div class="absolute top-0 left-0 w-96 h-96  rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+		</div>
+		<div class="absolute bottom-0 right-0 w-96 h-96  rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+		</div>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			<!-- Header -->
+			<div class="text-center mb-16">
+				<div class="relative inline-block">
+					<h2 class="text-5xl lg:text-6xl font-bold text-[#00D084] mb-6">
+						Biz haqimizda
+					</h2>
+
+				</div>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+					Muhib Academy — ilm, hunar va axloq mujassamlashgan maskan
+				</p>
+			</div>
+
+			<!-- Main Content Grid -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+				<!-- Academy Description -->
+				<div class="space-y-8">
+					<div class="bg-white rounded-3xl p-8 shadow-xl card-hover feature-card">
+						<div class="flex items-center mb-6">
+							<div
+								class="bg-gradient-to-br from-primary to-secondary w-12 h-12 rounded-2xl flex items-center justify-center mr-4">
+								<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold text-gray-800">Ta'lim Uslubimiz</h3>
+						</div>
+						<p class="text-gray-600 leading-relaxed text-lg">
+							Akademiyamizda diniy va dunyoviy bilimlar uyg'un holda o'qitiladi. Har bir fan — Qur'on va
+							hadis asoslariga tayanadi, shu bilan birga zamonaviy o'qitish metodlaridan foydalanamiz.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-3xl p-8  card-hover feature-card">
+						<div class="flex items-center mb-6">
+							<div
+								class="bg-gradient-to-br from-primary to-secondary w-12 h-12 rounded-2xl flex items-center justify-center mr-4">
+								<i style="color: white; font-size: 20px;" class="fa-solid fa-person-chalkboard"></i>
+							</div>
+							<h3 class="text-2xl font-bold text-gray-800">Ustozlarimiz</h3>
+						</div>
+						<p class="text-gray-600 leading-relaxed text-lg">
+							Ustozlarimiz — 6 yillik tajribaga ega, tajvid, aqida, fiqh, arab tili va dunyoviy fanlarda
+							chuqur bilimga ega mutaxassislar.
+						</p>
+					</div>
+				</div>
+
+				<!-- Visual Element -->
+				<div class="flex items-center justify-center">
+					<div class="relative">
+						<div
+							class="w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full animate-float">
+						</div>
+						<div class="absolute inset-0 flex items-center justify-center">
+							<div class="bg-white rounded-3xl p-8 shadow-2xl text-center max-w-xs">
+								<div
+									class="bg-gradient-to-br from-primary to-secondary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+									<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+									</svg>
+								</div>
+								<h4 class="text-lg font-bold text-gray-800 mb-2">6+ Yillik Tajriba</h4>
+								<p class="text-sm text-gray-600">Professional ustozlar jamoasi</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mission Section -->
+			<div class=" rounded-3xl p-12  feature-card">
+				<div class="text-center mb-12">
+					<div class="relative inline-block">
+						<h2 class="text-5xl lg:text-6xl font-bold text-[#00D084] mb-6">
+							Maqsadimiz
+						</h2>
+						<div class="section-divider"></div>
+					</div>
+					<p class="text-xl text-gray-600 max-w-4xl mx-auto mt-6 leading-relaxed">
+						Bizning maqsadimiz — har bir qalbga Qur'on nuri tushishini ta'minlash. Siz dunyoning qaysi bir
+						manzilida boʻlmang, yoshingiz va ijtimoiy holatingiz qanday boʻlmasin Qur'onni o'rganishga hech
+						qachon kech emas!
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+					<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
+						<div
+							class="bg-gradient-to-br from-primary to-secondary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+							</svg>
+						</div>
+						<h4 class="text-lg font-bold text-gray-800 mb-2">Qur'onga Muhabbat</h4>
+						<p class="text-gray-600 text-sm">O'quvchilar qalbida Qur'onga boʻlgan muhabbatni paydo qilish
+						</p>
+					</div>
+
+					<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
+						<div
+							class="bg-gradient-to-br from-primary to-secondary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+							<i style="color: white; font-size: 20px;" class="fa-solid fa-chalkboard"></i>
+						</div>
+						<h4 class="text-lg font-bold text-gray-800 mb-2">Zamonaviy Metodlar</h4>
+						<p class="text-gray-600 text-sm">Arab tili va boshqa tillarni tushunarli va zamonaviy metodlarda
+							o'rgatish</p>
+					</div>
+
+					<div class="text-center p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
+						<div
+							class="bg-gradient-to-br from-primary to-secondary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+							<i style="color: white; font-size: 20px;" class="fa-solid fa-chart-line"></i>
+						</div>
+						<h4 class="text-lg font-bold text-gray-800 mb-2">Faol Avlod</h4>
+						<p class="text-gray-600 text-sm">Axloqli, ilmli, kasb-hunarli, jamiyatda faol avlodni
+							tarbiyalash</p>
+					</div>
+				</div>
+
+				<!-- Call to Action -->
+				<div class="text-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
+					<h4 class="text-2xl font-bold text-gray-800 mb-4">
+						Qur'on yo'liga biz bilan chiqing
+					</h4>
+					<p class="text-gray-600 text-lg mb-6 max-w-2xl mx-auto">
+						Biz har bir qalbga ezgulik urug'ini qadamoqchimiz. Sizdan esa biz tarafga bir qadam tashlash
+						qolgan xolos.
+					</p>
+					<button
+						class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+						Biz Bilan Bog'laning
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+				<div class="bounce-in" style="animation-delay: 0.1s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">1000+</div>
+					<div class="text-gray-600 font-medium">Faol O'quvchilar</div>
+				</div>
+				<div class="bounce-in" style="animation-delay: 0.2s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">50+</div>
+					<div class="text-gray-600 font-medium">Mutaxassis Ustozlar</div>
+				</div>
+				<div class="bounce-in" style="animation-delay: 0.3s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">15+</div>
+					<div class="text-gray-600 font-medium">Ta'lim Yo'nalishlari</div>
+				</div>
+				<div class="bounce-in" style="animation-delay: 0.4s;">
+					<div class="text-4xl lg:text-5xl font-bold text-gradient mb-3">99%</div>
+					<div class="text-gray-600 font-medium">Muvaffaqiyat Darajasi</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Courses Section -->
+	<script defer>
+		function showCourseDetail(course) {
+			document.getElementById('detailTitle').textContent = course.title;
+			document.getElementById('detailPrice').textContent = course.price;
+			document.getElementById('detailDescription').textContent = course.description;
+			document.getElementById('detailImage').src = course.image;
+			document.getElementById('courseDetailModal').classList.remove('hidden');
+		}
+
+		function closeCourseDetail() {
+			document.getElementById('courseDetailModal').classList.add('hidden');
+		}
+	</script>
+
 	<!-- Why Choose Us -->
 	<section id="biz-haqimizda" class="py-20 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
 				<div class="relative inline-block">
-					<h2 class="text-4xl lg:text-6xl font-bold text-gradient mb-4">Nima uchun Muhib Academy?</h2>
-					<div class="section-divider"></div>
+					<h2 class="text-4xl lg:text-6xl font-bold text-[#00D084] mb-4">Nima uchun Muhib Academy?</h2>
+
 				</div>
 				<p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
 					Zamonaviy ta'lim usullari bilan diniy va dunyoviy ilmlarni uyg'unlashtirgan holda ta'lim beramiz
@@ -1597,10 +1750,10 @@
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<!-- Header -->
 			<div class="text-center mb-20">
-				<h2 class="text-5xl lg:text-6xl font-bold text-[#059669] mb-6">
+				<h2 class="text-5xl lg:text-6xl font-bold text-[#00D084] mb-6">
 					O'quvchilarimiz Fikri
 				</h2>
-				<div class="w-20 h-1 bg-[#059669] rounded-full mx-auto mb-6"></div>
+
 				<p class="text-xl text-gray-600 max-w-2xl mx-auto">
 					Muvaffaqiyatli o'quvchilarning fikr-mulohazalari
 				</p>
@@ -1614,12 +1767,12 @@
 					<!-- User Info -->
 					<div class="flex items-center mb-6">
 						<div
-							class="w-14 h-14 bg-[#059669] rounded-full flex items-center justify-center text-white font-bold text-lg">
+							class="w-14 h-14 bg-[#00D084] rounded-full flex items-center justify-center text-white font-bold text-lg">
 							AF
 						</div>
 						<div class="ml-4">
 							<h4 class="font-bold text-gray-800 text-lg">Aziza Fayzullayeva</h4>
-							<p class="text-[#059669] font-medium text-sm">Arab tili o'quvchisi</p>
+							<p class="text-[#00D084] font-medium text-sm">Arab tili o'quvchisi</p>
 						</div>
 					</div>
 
@@ -1631,7 +1784,7 @@
 
 					<!-- Rating -->
 					<div class="flex items-center justify-between">
-						<div class="flex text-[#059669] text-lg">
+						<div class="flex text-[#00D084] text-lg">
 							★★★★★
 						</div>
 						<span class="text-gray-400 text-sm">6 oy oldin</span>
@@ -1644,12 +1797,12 @@
 					<!-- User Info -->
 					<div class="flex items-center mb-6">
 						<div
-							class="w-14 h-14 bg-[#059669] rounded-full flex items-center justify-center text-white font-bold text-lg">
+							class="w-14 h-14 bg-[#00D084]  rounded-full flex items-center justify-center text-white font-bold text-lg">
 							MR
 						</div>
 						<div class="ml-4">
 							<h4 class="font-bold text-gray-800 text-lg">Muhammad Rahmonov</h4>
-							<p class="text-[#059669] font-medium text-sm">IT o'quvchisi</p>
+							<p class="text-[#00D084]font-medium text-sm">IT o'quvchisi</p>
 						</div>
 					</div>
 
@@ -1661,7 +1814,7 @@
 
 					<!-- Rating -->
 					<div class="flex items-center justify-between">
-						<div class="flex text-[#059669] text-lg">
+						<div class="flex text-[#00D084]text-lg">
 							★★★★★
 						</div>
 						<span class="text-gray-400 text-sm">3 oy oldin</span>
@@ -1674,12 +1827,12 @@
 					<!-- User Info -->
 					<div class="flex items-center mb-6">
 						<div
-							class="w-14 h-14 bg-[#059669] rounded-full flex items-center justify-center text-white font-bold text-lg">
+							class="w-14 h-14 bg-[#00D084]  rounded-full flex items-center justify-center text-white font-bold text-lg">
 							ZS
 						</div>
 						<div class="ml-4">
 							<h4 class="font-bold text-gray-800 text-lg">Zarina Saidova</h4>
-							<p class="text-[#059669] font-medium text-sm">Ingliz tili o'quvchisi</p>
+							<p class="text-[#00D084] font-medium text-sm">Ingliz tili o'quvchisi</p>
 						</div>
 					</div>
 
@@ -1691,7 +1844,7 @@
 
 					<!-- Rating -->
 					<div class="flex items-center justify-between">
-						<div class="flex text-[#059669] text-lg">
+						<div class="flex text-[#00D084] text-lg">
 							★★★★★
 						</div>
 						<span class="text-gray-400 text-sm">2 oy oldin</span>
@@ -1699,38 +1852,9 @@
 				</div>
 			</div>
 
-			<!-- Stats Section -->
-			<div class="bg-gray-50 rounded-3xl p-12 mb-12">
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-					<div>
-						<div class="text-4xl font-bold text-[#059669] mb-2">1,200+</div>
-						<p class="text-gray-600">Mamnun o'quvchilar</p>
-					</div>
-					<div>
-						<div class="text-4xl font-bold text-[#059669] mb-2">98%</div>
-						<p class="text-gray-600">Muvaffaqiyat darajasi</p>
-					</div>
-					<div>
-						<div class="text-4xl font-bold text-[#059669] mb-2">4.9/5</div>
-						<p class="text-gray-600">O'rtacha baho</p>
-					</div>
-					<div>
-						<div class="text-4xl font-bold text-[#059669] mb-2">24/7</div>
-						<p class="text-gray-600">Yordam xizmati</p>
-					</div>
-				</div>
-			</div>
 
-			<!-- Call to Action -->
-			<div class="text-center">
-				<p class="text-xl text-gray-600 mb-8">
-					Siz ham muvaffaqiyat hikoyangizni yozing!
-				</p>
-				<button
-					class="bg-[#059669] hover:bg-[#059669]/90 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
-					Bepul konsultatsiya olish
-				</button>
-			</div>
+
+
 		</div>
 	</section>
 

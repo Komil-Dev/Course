@@ -204,8 +204,7 @@
 </head>
 
 <body class="bg-lightGray font-uzbek">
-
-
+	<!-- Navigation -->
 	<nav class="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-primary/10">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-20">
@@ -282,15 +281,7 @@
 		</div>
 	</nav>
 
-	<style>
-		.text-primary {
-			color: var(--primary);
-		}
 
-		.bg-primary {
-			background-color: var(--primary);
-		}
-	</style>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
@@ -441,7 +432,7 @@
 									"وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ"
 								</p>
 								<p class="text-green-100 text-center mt-2 text-sm">
-									"Darhaqiqat, Qur'onni zikr uchun oson qildik. Bas, zikr qiluvchi bormi?!
+									“Darhaqiqat, Qur’onni zikr uchun oson qildik. Bas, zikr qiluvchi bormi?!
 									(Qamar surasi: 17)
 								</p>
 							</div>
@@ -523,11 +514,7 @@
 				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 						<div class="slide-up">
-							<div class="mb-6">
-								<span class="bg-accent text-dark px-4 py-2 rounded-full text-sm font-semibold">
-									🇸🇦 Arab Tili va Adabiyoti Kurslari
-								</span>
-							</div>
+
 							<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
 								ARAB TILI<br>
 								<span class="text-accent">SARF VA NAHV</span>
@@ -535,7 +522,7 @@
 
 							<div class="glass-effect rounded-2xl p-6 mb-8">
 								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
-									<br>
+									بسم الله الرحمن الرحيم<br>
 									"إِنَّا أَنزَلْنَاهُ قُرْآنًا عَرَبِيًّا لَّعَلَّكُمْ تَعْقِلُونَ"
 								</p>
 								<p class="text-green-100 text-center mt-2 text-sm">
@@ -710,12 +697,15 @@
 		</div>
 
 		<button id="prevBtn"
-			class="absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full backdrop-blur-sm transition duration-300 z-20">
+			class="absolute left-4 top-1/2 transform -translate-y-1/2  rounded-full backdrop-blur-sm transition duration-300 z-20">
+
 		</button>
 
 		<button id="nextBtn"
-			class="absolute right-4 top-1/2 transform -translate-y-1/2 rounded-full backdrop-blur-sm transition duration-300 z-20">
+			class="absolute right-4 top-1/2 transform -translate-y-1/2  rounded-full backdrop-blur-sm transition duration-300 z-20">
+
 		</button>
+
 
 		<!-- Dots Indicator -->
 		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
@@ -731,45 +721,6 @@
 	</div>
 
 	<script>
-		// Mobile menu functionality
-		const mobileMenuButton = document.getElementById('mobile-menu-button');
-		const mobileMenu = document.getElementById('mobile-menu');
-		const menuOverlay = document.getElementById('menu-overlay');
-		const closeMenuButton = document.getElementById('close-menu');
-		const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-		function openMobileMenu() {
-			mobileMenu.classList.remove('-translate-x-full');
-			mobileMenu.classList.add('translate-x-0');
-			menuOverlay.classList.remove('hidden');
-			document.body.style.overflow = 'hidden';
-		}
-
-		function closeMobileMenu() {
-			mobileMenu.classList.add('-translate-x-full');
-			mobileMenu.classList.remove('translate-x-0');
-			menuOverlay.classList.add('hidden');
-			document.body.style.overflow = 'auto';
-		}
-
-		// Event listeners
-		mobileMenuButton.addEventListener('click', openMobileMenu);
-		closeMenuButton.addEventListener('click', closeMobileMenu);
-		menuOverlay.addEventListener('click', closeMobileMenu);
-
-		// Close menu when clicking on menu links
-		mobileMenuLinks.forEach(link => {
-			link.addEventListener('click', closeMobileMenu);
-		});
-
-		// Close menu on escape key
-		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Escape') {
-				closeMobileMenu();
-			}
-		});
-
-		// Carousel functionality
 		let currentSlide = 0;
 		const totalSlides = 4;
 		const carousel = document.getElementById('carousel');
@@ -864,78 +815,6 @@
 
 		.animate-float {
 			animation: float 6s ease-in-out infinite;
-		}
-
-		.text-gradient {
-			background: linear-gradient(135deg, #3B82F6, #8B5CF6);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-		}
-
-		@keyframes slideUp {
-			from {
-				opacity: 0;
-				transform: translateY(30px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		@keyframes float {
-
-			0%,
-			100% {
-				transform: translateY(0px);
-			}
-
-			50% {
-				transform: translateY(-20px);
-			}
-		}
-
-		.animate-pulse-slow {
-			animation: pulse 3s ease-in-out infinite;
-		}
-
-		@keyframes pulse {
-
-			0%,
-			100% {
-				opacity: 1;
-			}
-
-			50% {
-				opacity: 0.7;
-			}
-		}
-
-		.bounce-in {
-			animation: bounceIn 0.8s ease-out;
-		}
-
-		@keyframes bounceIn {
-			0% {
-				opacity: 0;
-				transform: scale(0.3);
-			}
-
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-
-			70% {
-				transform: scale(0.9);
-			}
-
-			100% {
-				opacity: 1;
-				transform: scale(1);
-			}
 		}
 	</style>
 

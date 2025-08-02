@@ -217,7 +217,7 @@
 					</div>
 					<div>
 						<div class="text-2xl font-bold text-gradient">MUHIB ACADEMY</div>
-						<div class="text-sm text-primary font-medium">Din va Dunyo Ilmi</div>
+						<div class="text-sm text-primary font-medium">Yaratgan Robbing nomi bilan o'qi!</div>
 					</div>
 				</div>
 
@@ -388,11 +388,11 @@
 
 							<div class="glass-effect rounded-2xl p-6 mb-8">
 								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
-									بسم الله الرحمن الرحيم<br>
+									<br>
 									"وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ"
 								</p>
 								<p class="text-green-100 text-center mt-2 text-sm">
-									"Biz Qur'onni eslatish uchun oson qildik. Shunday ekan, kimdir o'ylab ko'radimi?"
+									“Darhaqiqat, Qur’onni zikr uchun oson qildik. Bas, zikr qiluvchi bormi?!
 									(Qamar surasi: 17)
 								</p>
 							</div>
@@ -486,7 +486,7 @@
 
 							<div class="glass-effect rounded-2xl p-6 mb-8">
 								<p class="text-lg sm:text-xl font-arabic text-center leading-relaxed">
-									بسم الله الرحمن الرحيم<br>
+									<br>
 									"إِنَّا أَنزَلْنَاهُ قُرْآنًا عَرَبِيًّا لَّعَلَّكُمْ تَعْقِلُونَ"
 								</p>
 								<p class="text-green-100 text-center mt-2 text-sm">
@@ -660,6 +660,15 @@
 
 		</div>
 
+		<button id="prevBtn"
+			class="absolute left-4 top-1/2 transform -translate-y-1/2  rounded-full backdrop-blur-sm transition duration-300 z-20">
+
+		</button>
+
+		<button id="nextBtn"
+			class="absolute right-4 top-1/2 transform -translate-y-1/2  rounded-full backdrop-blur-sm transition duration-300 z-20">
+
+		</button>
 
 
 		<!-- Dots Indicator -->
@@ -718,8 +727,8 @@
 			});
 		});
 
-		// Auto-play carousel
-		setInterval(nextSlide, 10000);
+		// Auto-play carousel every 5 seconds
+		setInterval(nextSlide, 5000);
 
 		// Initialize
 		updateCarousel();

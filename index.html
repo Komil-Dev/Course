@@ -1411,152 +1411,126 @@
 
 
 	<!-- Buy Course Form Section -->
-	<section id="kurs-sotib-olish" class="py-20 bg-white">
+	<section id="kurs-sotib-olish" class="py-8 md:py-20 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center mb-12">
+			<div class="text-center mb-8 md:mb-12">
 				<div class="relative inline-block">
-					<h2 class="text-4xl lg:text-6xl font-bold bg-[#00D084] bg-clip-text text-transparent mb-4">
-						Kurs Sotib Olish</h2>
-
+					<h2
+						class="text-3xl md:text-4xl lg:text-6xl font-bold bg-[#00D084] bg-clip-text text-transparent mb-4">
+						Kurs Sotib Olish
+					</h2>
 				</div>
-				<p class="text-xl text-gray-600 mt-6">
-					Quyidagi formani to'ldiring va biz siz bilan Telegram orqali
-					bog'lanamiz
+				<p class="text-lg md:text-xl text-gray-600 mt-4 md:mt-6">
+					Quyidagi formani to'ldiring va biz siz bilan Telegram orqali bog'lanamiz
 				</p>
 			</div>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
 				<!-- Contact Form -->
-				<div class="bg-gray-50 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
-					<form id="courseForm" class="space-y-6">
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="bg-gray-50 rounded-2xl md:rounded-3xl shadow-xl p-6 md:p-8 lg:p-12 border border-gray-100">
+					<form id="courseForm" class="space-y-4 md:space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 							<div>
-								<label for="firstName" class="block text-sm font-bold text-gray-700 mb-3">Ism
+								<label for="firstName" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Ism
 									*</label>
 								<input type="text" id="firstName" name="firstName" required
-									class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-[#059669] focus:outline-none transition duration-300 text-lg bg-white"
+									class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#059669] focus:outline-none transition duration-300 text-base md:text-lg bg-white"
 									placeholder="Ismingizni kiriting">
 							</div>
 							<div>
-								<label for="lastName" class="block text-sm font-bold text-gray-700 mb-3">Familiya
-									*</label>
+								<label for="lastName"
+									class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Familiya *</label>
 								<input type="text" id="lastName" name="lastName" required
-									class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-lg bg-white"
+									class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white"
 									placeholder="Familiyangizni kiriting">
 							</div>
 						</div>
 
 						<div>
-							<label for="phone" class="block text-sm font-bold text-gray-700 mb-3">Telefon
-								raqam
+							<label for="phone" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Telefon raqam
 								*</label>
 							<input type="tel" id="phone" name="phone" required
-								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-lg bg-white"
+								class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white"
 								placeholder="+998 90 123 45 67">
 						</div>
 
 						<div>
-							<label for="courseType" class="block text-sm font-bold text-gray-700 mb-3">Kurs
-								tanlang
-								*</label>
+							<label for="courseType" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Kurs
+								tanlang *</label>
 							<select id="courseType" name="courseType" required
-								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-lg bg-white">
+								class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white">
 								<option value="">Kurs kategoriyasini tanlang</option>
 								<optgroup label="📿 Diniy Fanlar">
-									<option value="quran-tilovat">Qur'on Tilovat va
-										Tajvid - 300,000 so'm</option>
-									<option value="arab-tili">Arab Tili (Sarf, Nahv) -
-										450,000 so'm</option>
-									<option value="hadis-fiqh">Hadis va Fiqh - 400,000
-										so'm</option>
-									<option value="siyrat">Siyrat va Islom Tarixi -
-										350,000 so'm</option>
+									<option value="quran-tilovat">Qur'on Tilovat va Tajvid - 300,000 so'm</option>
+									<option value="arab-tili">Arab Tili (Sarf, Nahv) - 450,000 so'm</option>
+									<option value="hadis-fiqh">Hadis va Fiqh - 400,000 so'm</option>
+									<option value="siyrat">Siyrat va Islom Tarixi - 350,000 so'm</option>
 								</optgroup>
 								<optgroup label="🗣️ Zamonaviy Tillar">
-									<option value="ingliz-tili">Ingliz Tili (A1-A2) -
-										250,000 so'm</option>
-									<option value="turk-tili">Turk Tili (A1-B2) -
-										300,000 so'm</option>
-									<option value="rus-tili">Rus Tili Asoslari - 200,000
-										so'm</option>
+									<option value="ingliz-tili">Ingliz Tili (A1-A2) - 250,000 so'm</option>
+									<option value="turk-tili">Turk Tili (A1-B2) - 300,000 so'm</option>
+									<option value="rus-tili">Rus Tili Asoslari - 200,000 so'm</option>
 								</optgroup>
 								<optgroup label="🤖 Texnologiya">
-									<option value="robotika">Robotika Asoslari - 500,000
-										so'm</option>
-									<option value="dasturlash">Dasturlash Tillari -
-										600,000 so'm</option>
-									<option value="web-development">Web Dasturlash -
-										550,000 so'm</option>
+									<option value="robotika">Robotika Asoslari - 500,000 so'm</option>
+									<option value="dasturlash">Dasturlash Tillari - 600,000 so'm</option>
+									<option value="web-development">Web Dasturlash - 550,000 so'm</option>
 								</optgroup>
 								<optgroup label="🔬 Aniq Fanlar">
-									<option value="matematika">Matematika - 200,000 so'm
-									</option>
-									<option value="fizika">Fizika - 250,000 so'm
-									</option>
-									<option value="biologiya">Biologiya - 220,000 so'm
-									</option>
+									<option value="matematika">Matematika - 200,000 so'm</option>
+									<option value="fizika">Fizika - 250,000 so'm</option>
+									<option value="biologiya">Biologiya - 220,000 so'm</option>
 									<option value="kimyo">Kimyo - 240,000 so'm</option>
 								</optgroup>
 								<optgroup label="🌍 Ijtimoiy Fanlar">
-									<option value="tarix">Jahon Tarixi - 180,000 so'm
-									</option>
-									<option value="geografiya">Geografiya - 150,000 so'm
-									</option>
-									<option value="iqtisod">Iqtisod Asoslari - 250,000
-										so'm</option>
+									<option value="tarix">Jahon Tarixi - 180,000 so'm</option>
+									<option value="geografiya">Geografiya - 150,000 so'm</option>
+									<option value="iqtisod">Iqtisod Asoslari - 250,000 so'm</option>
 								</optgroup>
 								<optgroup label="🎨 San'at">
-									<option value="xattotlik">Arab Xattotligi - 300,000
-										so'm</option>
-									<option value="tasviriy-san-at">Tasviriy San'at -
-										200,000 so'm</option>
-									<option value="qol-san-ati">Qo'l San'ati - 180,000
-										so'm</option>
+									<option value="xattotlik">Arab Xattotligi - 300,000 so'm</option>
+									<option value="tasviriy-san-at">Tasviriy San'at - 200,000 so'm</option>
+									<option value="qol-san-ati">Qo'l San'ati - 180,000 so'm</option>
 								</optgroup>
 							</select>
 						</div>
 
 						<div>
-							<label for="age" class="block text-sm font-bold text-gray-700 mb-3">Yosh
-								*</label>
+							<label for="age" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Yosh *</label>
 							<input type="number" id="age" name="age" required min="5" max="100"
-								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-lg bg-white"
+								class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white"
 								placeholder="Yoshingizni kiriting">
 						</div>
 
 						<div>
-							<label for="message" class="block text-sm font-bold text-gray-700 mb-3">Qo'shimcha
-								xabar
-								(ixtiyoriy)</label>
-							<textarea id="message" name="message" rows="4"
-								class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-lg bg-white"
+							<label for="message" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Qo'shimcha
+								xabar (ixtiyoriy)</label>
+							<textarea id="message" name="message" rows="3" class="md:rows-4"
+								class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white"
 								placeholder="Maxsus talablar yoki savollaringiz bormi?"></textarea>
 						</div>
 
 						<button type="submit"
-							class="w-full bg-[#00D084] text-white py-5 px-8 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+							class="w-full bg-[#00D084] text-white py-4 md:py-5 px-6 md:px-8 rounded-lg md:rounded-xl font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 active:scale-95 md:active:scale-100 transition duration-300">
 							Kurs sotib olish
 						</button>
 					</form>
 
-					<div class="mt-8 p-6 bg-green-50 rounded-2xl border border-green-200">
+					<div class="mt-6 md:mt-8 p-4 md:p-6 bg-green-50 rounded-xl md:rounded-2xl border border-green-200">
 						<div class="flex items-start">
-							<svg class="w-6 h-6 text-[#059669] mr-3 mt-1 flex-shrink-0" fill="currentColor"
-								viewBox="0 0 20 20">
+							<svg class="w-5 md:w-6 h-5 md:h-6 text-[#059669] mr-2 md:mr-3 mt-1 flex-shrink-0"
+								fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd"
 									d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
 									clip-rule="evenodd" />
 							</svg>
 							<div>
-								<p class="text-[#059669] font-semibold mb-2">💡 Muhim
+								<p class="text-[#059669] font-semibold mb-1 md:mb-2 text-sm md:text-base">💡 Muhim
 									ma'lumot:</p>
-								<p class="text-[#044d3b] text-sm leading-relaxed">
-									Formani yuborganingizdan so'ng, bizning jamoamiz 24
-									soat ichida Telegram orqali siz
-									bilan bog'lanadi
-									va kurs ro'yxatga olish hamda to'lov jarayonini
-									yakunlaydi. Barcha kurslar 1 yillik
-									ta'lim rejasi asosida tashkil etilgan.
+								<p class="text-[#044d3b] text-xs md:text-sm leading-relaxed">
+									Formani yuborganingizdan so'ng, bizning jamoamiz 24 soat ichida Telegram orqali siz
+									bilan bog'lanadi va kurs ro'yxatga olish hamda to'lov jarayonini yakunlaydi. Barcha
+									kurslar 1 yillik ta'lim rejasi asosida tashkil etilgan.
 								</p>
 							</div>
 						</div>
@@ -1564,126 +1538,128 @@
 				</div>
 
 				<!-- Map Section -->
-				<div class="bg-gray-50 rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-					<div class="p-8 pb-0">
-						<h3 class="text-2xl font-bold text-gray-800 mb-2">📍 Bizning
-							Manzil</h3>
-						<p class="text-gray-600 mb-6">Ta'lim markazimizga tashrif
-							buyuring</p>
+				<div class="bg-gray-50 rounded-2xl md:rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+					<div class="p-6 md:p-8 pb-0">
+						<h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-1 md:mb-2">📍 Bizning Manzil</h3>
+						<p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Ta'lim markazimizga tashrif buyuring
+						</p>
 					</div>
 
 					<!-- Interactive Map -->
-					<div class="h-96 bg-gradient-to-br from-green-100 to-purple-100 relative overflow-hidden">
+					<div class="h-48 md:h-96 bg-gradient-to-br from-green-100 to-purple-100 relative overflow-hidden">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.5555555555555!2d66.2666667!3d38.8666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDUyJzAwLjAiTiA2NsKwMTYnMDAuMCJF!5e0!3m2!1sen!2s!4v1638360000000!5m2!1sen!2s"
 							width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade" class="rounded-b-3xl">
+							referrerpolicy="no-referrer-when-downgrade" class="rounded-b-2xl md:rounded-b-3xl">
 						</iframe>
 
 						<!-- Overlay with contact info -->
 						<div
-							class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
-							<div class="space-y-3">
+							class="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 bg-white/95 backdrop-blur-sm rounded-lg md:rounded-2xl p-3 md:p-4 shadow-lg">
+							<div class="space-y-2 md:space-y-3">
 								<div class="flex items-center">
-									<svg class="w-5 h-5 text-[#059669] mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<svg class="w-4 md:w-5 h-4 md:h-5 text-[#059669] mr-2 md:mr-3" fill="currentColor"
+										viewBox="0 0 20 20">
 										<path fill-rule="evenodd"
 											d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
 											clip-rule="evenodd" />
 									</svg>
-									<span class="text-sm font-medium text-gray-800">Qarshi
-										shahar, O'zbekiston</span>
+									<span class="text-xs md:text-sm font-medium text-gray-800">Qarshi shahar,
+										O'zbekiston</span>
 								</div>
 								<div class="flex items-center">
-									<svg class="w-5 h-5 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<svg class="w-4 md:w-5 h-4 md:h-5 text-green-600 mr-2 md:mr-3" fill="currentColor"
+										viewBox="0 0 20 20">
 										<path
 											d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
 									</svg>
-									<span class="text-sm font-medium text-gray-800">+998
-										90 123 45 67</span>
+									<span class="text-xs md:text-sm font-medium text-gray-800">+998 90 123 45 67</span>
 								</div>
 								<div class="flex items-center">
-									<svg class="w-5 h-5 text-[#059669] mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<svg class="w-4 md:w-5 h-4 md:h-5 text-[#059669] mr-2 md:mr-3" fill="currentColor"
+										viewBox="0 0 20 20">
 										<path
 											d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 										<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 									</svg>
-									<span class="text-sm font-medium text-gray-800">info@talimmarkazi.uz</span>
+									<span
+										class="text-xs md:text-sm font-medium text-gray-800">info@talimmarkazi.uz</span>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Additional Info -->
-					<div class="p-8 pt-6">
-						<div class="grid grid-cols-2 gap-4">
-							<div class="text-center p-4 bg-white rounded-xl border border-gray-200">
-								<div class="text-2xl font-bold text-[#00D084]">24/7
-								</div>
-								<div class="text-sm text-gray-600">Online Yordam</div>
+					<div class="p-4 md:p-8 pt-4 md:pt-6">
+						<div class="grid grid-cols-2 gap-3 md:gap-4">
+							<div
+								class="text-center p-3 md:p-4 bg-white rounded-lg md:rounded-xl border border-gray-200">
+								<div class="text-xl md:text-2xl font-bold text-[#00D084]">24/7</div>
+								<div class="text-xs md:text-sm text-gray-600">Online Yordam</div>
 							</div>
-							<div class="text-center p-4 bg-white rounded-xl border border-gray-200">
-								<div class="text-2xl font-bold text-[#00D084]">1000+
-								</div>
-								<div class="text-sm text-gray-600">Mamnun Talabalar
-								</div>
+							<div
+								class="text-center p-3 md:p-4 bg-white rounded-lg md:rounded-xl border border-gray-200">
+								<div class="text-xl md:text-2xl font-bold text-[#00D084]">1000+</div>
+								<div class="text-xs md:text-sm text-gray-600">Mamnun Talabalar</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<style>
-			/* Custom animations */
-			@keyframes float {
+	<style>
+		/* Custom animations */
+		@keyframes float {
 
-				0%,
-				100% {
-					transform: translateY(0px);
-				}
-
-				50% {
-					transform: translateY(-10px);
-				}
+			0%,
+			100% {
+				transform: translateY(0px);
 			}
 
-			.float-animation {
-				animation: float 3s ease-in-out infinite;
+			50% {
+				transform: translateY(-10px);
 			}
+		}
 
-			/* Hover effects */
-			.hover-scale:hover {
-				transform: scale(1.05);
-			}
+		.float-animation {
+			animation: float 3s ease-in-out infinite;
+		}
 
-			/* Focus states */
-			input:focus,
-			select:focus,
-			textarea:focus {
-				box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
-			}
-		</style>
+		/* Hover effects */
+		.hover-scale:hover {
+			transform: scale(1.05);
+		}
 
-		<script>
-			// Form submission handler
-			document.getElementById('courseForm').addEventListener('submit', function (e) {
-				e.preventDefault();
+		/* Focus states */
+		input:focus,
+		select:focus,
+		textarea:focus {
+			box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+		}
+	</style>
 
-				// Get form data
-				const formData = new FormData(this);
-				const firstName = formData.get('firstName');
-				const lastName = formData.get('lastName');
-				const phone = formData.get('phone');
-				const courseType = formData.get('courseType');
-				const age = formData.get('age');
-				const message = formData.get('message') || 'Qo\'shimcha xabar yo\'q';
+	<script>
+		// Form submission handler
+		document.getElementById('courseForm').addEventListener('submit', function (e) {
+			e.preventDefault();
 
-				// Get selected course text
-				const courseSelect = document.getElementById('courseType');
-				const courseText = courseSelect.options[courseSelect.selectedIndex].text;
+			// Get form data
+			const formData = new FormData(this);
+			const firstName = formData.get('firstName');
+			const lastName = formData.get('lastName');
+			const phone = formData.get('phone');
+			const courseType = formData.get('courseType');
+			const age = formData.get('age');
+			const message = formData.get('message') || 'Qo\'shimcha xabar yo\'q';
 
-				// Create Telegram message
-				const telegramMessage = `
+			// Get selected course text
+			const courseSelect = document.getElementById('courseType');
+			const courseText = courseSelect.options[courseSelect.selectedIndex].text;
+
+			// Create Telegram message
+			const telegramMessage = `
 🎓 Yangi kurs so'rovi!
 
 👤 Ism-Familiya: ${firstName} ${lastName}
@@ -1695,44 +1671,44 @@
 📅 Vaqt: ${new Date().toLocaleString('uz-UZ')}
 			`.trim();
 
-				// Telegram bot URL (replace with actual bot token and chat ID)
-				const telegramBotToken = 'YOUR_BOT_TOKEN';
-				const chatId = 'YOUR_CHAT_ID';
-				const telegramURL = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+			// Telegram bot URL (replace with actual bot token and chat ID)
+			const telegramBotToken = 'YOUR_BOT_TOKEN';
+			const chatId = 'YOUR_CHAT_ID';
+			const telegramURL = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
 
-				// For demo purposes, we'll show an alert
-				alert('Formangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.');
+			// For demo purposes, we'll show an alert
+			alert('Formangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.');
 
-				// Reset form
-				this.reset();
-			});
+			// Reset form
+			this.reset();
+		});
 
-			// Phone number formatting
-			document.getElementById('phone').addEventListener('input', function (e) {
-				let value = e.target.value.replace(/\D/g, '');
-				if (value.startsWith('998')) {
-					value = value.substring(3);
+		// Phone number formatting
+		document.getElementById('phone').addEventListener('input', function (e) {
+			let value = e.target.value.replace(/\D/g, '');
+			if (value.startsWith('998')) {
+				value = value.substring(3);
+			}
+			if (value.length > 0) {
+				value = '+998 ' + value.match(/.{1,2}/g)?.join(' ') || value;
+				if (value.length > 17) {
+					value = value.substring(0, 17);
 				}
-				if (value.length > 0) {
-					value = '+998 ' + value.match(/.{1,2}/g)?.join(' ') || value;
-					if (value.length > 17) {
-						value = value.substring(0, 17);
-					}
-				}
-				e.target.value = value;
+			}
+			e.target.value = value;
+		});
+
+		// Add smooth scroll effect for better UX
+		document.querySelectorAll('input, select, textarea').forEach(element => {
+			element.addEventListener('focus', function () {
+				this.parentElement.classList.add('scale-105');
 			});
 
-			// Add smooth scroll effect for better UX
-			document.querySelectorAll('input, select, textarea').forEach(element => {
-				element.addEventListener('focus', function () {
-					this.parentElement.classList.add('scale-105');
-				});
-
-				element.addEventListener('blur', function () {
-					this.parentElement.classList.remove('scale-105');
-				});
+			element.addEventListener('blur', function () {
+				this.parentElement.classList.remove('scale-105');
 			});
-		</script>
+		});
+	</script>
 	</section>
 
 	<style>

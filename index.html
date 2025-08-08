@@ -1312,44 +1312,138 @@
 						</div>
 
 						<div>
-							<label for="courseType" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Kurs
-								tanlang *</label>
-							<select id="courseType" name="courseType" required
-								class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white">
-								<option value="">Kurs kategoriyasini tanlang</option>
-								<optgroup label="📿 Diniy Fanlar">
-									<option value="quran-tilovat">Qur'on Tilovat va Tajvid - 300,000 so'm</option>
-									<option value="arab-tili">Arab Tili (Sarf, Nahv) - 450,000 so'm</option>
-									<option value="hadis-fiqh">Hadis va Fiqh - 400,000 so'm</option>
-									<option value="siyrat">Siyrat va Islom Tarixi - 350,000 so'm</option>
-								</optgroup>
-								<optgroup label="🗣️ Zamonaviy Tillar">
-									<option value="ingliz-tili">Ingliz Tili (A1-A2) - 250,000 so'm</option>
-									<option value="turk-tili">Turk Tili (A1-B2) - 300,000 so'm</option>
-									<option value="rus-tili">Rus Tili Asoslari - 200,000 so'm</option>
-								</optgroup>
-								<optgroup label="🤖 Texnologiya">
-									<option value="robotika">Robotika Asoslari - 500,000 so'm</option>
-									<option value="dasturlash">Dasturlash Tillari - 600,000 so'm</option>
-									<option value="web-development">Web Dasturlash - 550,000 so'm</option>
-								</optgroup>
-								<optgroup label="🔬 Aniq Fanlar">
-									<option value="matematika">Matematika - 200,000 so'm</option>
-									<option value="fizika">Fizika - 250,000 so'm</option>
-									<option value="biologiya">Biologiya - 220,000 so'm</option>
-									<option value="kimyo">Kimyo - 240,000 so'm</option>
-								</optgroup>
-								<optgroup label="🌍 Ijtimoiy Fanlar">
-									<option value="tarix">Jahon Tarixi - 180,000 so'm</option>
-									<option value="geografiya">Geografiya - 150,000 so'm</option>
-									<option value="iqtisod">Iqtisod Asoslari - 250,000 so'm</option>
-								</optgroup>
-								<optgroup label="🎨 San'at">
-									<option value="xattotlik">Arab Xattotligi - 300,000 so'm</option>
-									<option value="tasviriy-san-at">Tasviriy San'at - 200,000 so'm</option>
-									<option value="qol-san-ati">Qo'l San'ati - 180,000 so'm</option>
-								</optgroup>
-							</select>
+							<label for="courseType" class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Darslik
+								Tanlash</label>
+							<div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
+								<div class="mb-6">
+									<label for="courseType"
+										class="block text-sm font-bold text-gray-700 mb-2 md:mb-3">Darslik
+										Tanlash</label>
+									<select id="courseType" name="courseType" required
+										class="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-blue-500 focus:outline-none transition duration-300 text-base md:text-lg bg-white">
+										<option value="" disabled selected>Darslik turini tanlang...</option>
+										<option value="online">Online (Video-kurs va zoom shaklda.)</option>
+										<option value="offline">Offline (Istanbulda akademiyada o'tiladi.)</option>
+									</select>
+								</div>
+
+								<!-- Description Container -->
+								<div id="courseDescription"
+									class="hidden mt-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border-l-4 border-blue-500">
+									<div class="flex items-start space-x-3">
+										<div class="flex-shrink-0">
+											<div
+												class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+												<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+													viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														stroke-width="2"
+														d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+													</path>
+												</svg>
+											</div>
+										</div>
+										<div class="flex-1">
+											<h3 id="descriptionTitle" class="text-lg font-semibold text-gray-800 mb-2">
+											</h3>
+											<div id="descriptionContent" class="text-gray-600 space-y-2"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<script>
+								const courseSelect = document.getElementById('courseType');
+								const descriptionContainer = document.getElementById('courseDescription');
+								const descriptionTitle = document.getElementById('descriptionTitle');
+								const descriptionContent = document.getElementById('descriptionContent');
+
+								// Course descriptions
+								const courseDescriptions = {
+									online: {
+										title: "Online Ta'lim Tafsilotlari",
+										content: [
+											"📚 Barcha darslar onlayn formatda o'tiladi",
+											"💻 Video-kurslar va Zoom orqali jonli darslar",
+											"👨‍🏫 Ustoz tomonidan muntazam testlar va nazorat",
+											"📱 Har qanday vaqt va joydan kirish imkoniyati",
+											"📊 Individual o'qish jarayonini kuzatish",
+											"🎯 Interaktiv mashqlar va amaliy topshiriqlar",
+											"💬 Ustoz bilan to'g'ridan-to'g'ri muloqot",
+											"📈 O'quvchining rivojlanishini doimiy monitoring qilish"
+										]
+									},
+									offline: {
+										title: "Offline Ta'lim Tafsilotlari",
+										content: [
+											"🏢 Istanbul akademiyasida to'g'ridan-to'g'ri darslar",
+											"👥 Kichik guruhlarda intensiv ta'lim",
+											"📖 Amaliy mashg'ulotlar va seminarlar",
+											"🎓 Professional muhitda ta'lim olish",
+											"🤝 Boshqa o'quvchilar bilan bevosita muloqot",
+											"📚 Kutubxona va qo'shimcha resurslardan foydalanish",
+											"🏆 Muntazam baholash va sertifikatlashtirish",
+											"🌟 To'liq immersiv ta'lim tajribasi"
+										]
+									}
+								};
+
+								// Handle course selection change
+								courseSelect.addEventListener('change', function () {
+									const selectedCourse = this.value;
+
+									if (selectedCourse && courseDescriptions[selectedCourse]) {
+										const description = courseDescriptions[selectedCourse];
+
+										// Update title
+										descriptionTitle.textContent = description.title;
+
+										// Update content
+										descriptionContent.innerHTML = description.content
+											.map(item => `<div class="flex items-start space-x-2">
+                        <span class="text-blue-500 font-medium">${item.substring(0, 2)}</span>
+                        <span>${item.substring(3)}</span>
+                    </div>`)
+											.join('');
+
+										// Show description with animation
+										descriptionContainer.classList.remove('hidden');
+										descriptionContainer.classList.add('animate-fade-in');
+
+										// Add smooth scroll to description
+										setTimeout(() => {
+											descriptionContainer.scrollIntoView({
+												behavior: 'smooth',
+												block: 'nearest'
+											});
+										}, 100);
+
+									} else {
+										// Hide description
+										descriptionContainer.classList.add('hidden');
+										descriptionContainer.classList.remove('animate-fade-in');
+									}
+								});
+							</script>
+
+							<style>
+								.animate-fade-in {
+									animation: fadeIn 0.5s ease-in-out;
+								}
+
+								@keyframes fadeIn {
+									from {
+										opacity: 0;
+										transform: translateY(-10px);
+									}
+
+									to {
+										opacity: 1;
+										transform: translateY(0);
+									}
+								}
+							</style>
+
 						</div>
 
 						<div>

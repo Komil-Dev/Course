@@ -250,409 +250,143 @@
 		}
 	</script>
 	<!-- Complete Carousel Section -->
-	<div class="relative overflow-hidden gradient-bg">
-		<!-- Enhanced Carousel Container -->
-		<div class="carousel-container flex overflow-x-hidden snap-x snap-mandatory " id="carousel">
+	<div class="relative overflow-hidden overflow-x-hidden overflow-y-hidden min-h-screen bg-gray-50">
+		<!-- Background Texture -->
+		<div class="absolute inset-0 bg-[url('./bgimg.png')] bg-cover opacity-10"></div>
 
-			<!-- Slide 1 - Main Introduction -->
-			<section class="carousel-slide min-w-full flex items-center text-white py-8 md:py-12 relative">
-				<!-- Animated Background Elements -->
-				<div class="absolute inset-0 overflow-hidden pointer-events-none">
-					<div
-						class="floating-elements absolute top-10 md:top-20 left-5 md:left-10 w-12 md:w-32 h-12 md:h-32 bg-white/10 rounded-full">
-					</div>
-					<div class="floating-elements absolute bottom-10 md:bottom-20 right-10 md:right-20 w-8 md:w-24 h-8 md:h-24 bg-white/5 rounded-full"
-						style="animation-delay: 0.5s;"></div>
-					<div class="floating-elements absolute top-1/2 left-1/4 w-6 md:w-16 h-6 md:h-16 bg-white/8 rounded-full"
-						style="animation-delay: 1s;"></div>
-					<div class="absolute top-1/3 right-1/3 w-4 md:w-12 h-4 md:h-12 bg-yellow-300/20 rotate-45"></div>
-				</div>
+		<!-- Carousel Container -->
+		<div class="carousel-container flex overflow-x-hidden snap-x snap-mandatory h-full" id="carousel">
 
-				<div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-						<!-- Left Content -->
-						<div class="space-y-6 md:space-y-8 order-2 lg:order-1">
-							<div class="space-y-4 md:space-y-6">
-								<!-- Main Heading -->
-								<h1 class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-shadow">
-									<span class="text-white">ARAB TILI</span><br>
-									<span class="text-yellow-300">VA QUR'ON</span><br>
-									<span
-										class="text-white/95 text-xl md:text-3xl lg:text-4xl font-semibold">DARSLARI</span>
-								</h1>
+			<!-- Slide 1 - Online Courses -->
+			<section class="carousel-slide min-w-full h-[100vh] flex items-center py-12 md:py-24 relative">
+				<div
+					class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10 w-full">
+					<!-- Left Content -->
+					<div class="md:w-1/2 space-y-8">
+						<h1 class="text-4xl md:text-5xl font-medium text-gray-900 leading-tight">
+							<span class="block">ONLAYN</span>
+							<span class="block text-[#00D084]">QUR'ON DARSLARI</span>
+						</h1>
 
-								<div
-									class="bg-white/15 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 shadow-2xl">
-									<p class="text-base md:text-xl text-white leading-relaxed font-medium mb-3">
-										<strong class="text-yellow-300">Muhib academy</strong> – Ilm, tarbiya va e'tiqod
-										uyg'unligidagi makon!
-									</p>
-									<p class="text-sm md:text-base text-white/90 leading-relaxed">
-										Men <strong class="text-yellow-300">Muhibulloh Noʻmonov</strong>, sizni bu yerda
-										ko'rib turganimdan xursandman! Dunyoning qaysi nuqtasida bo'lishingizdan qat'iy
-										nazar, sizga Qur'onni o'rgatishga tayyorman.
-									</p>
-								</div>
-							</div>
+						<div class="space-y-6">
+							<p class="text-gray-700 text-lg leading-relaxed">
+								Dunyoning istalgan nuqtasidan turib Qur'on va arab tilini o'rganing. Malakali ustozlar
+								bilan 2 oy ichida to'g'ri o'qishni o'rganasiz.
+							</p>
 
-							<!-- Course Information Card -->
-							<div
-								class="rounded-2xl p-4 md:p-8 border-2 border-yellow-300/60 shadow-2xl bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl pulse-glow">
-								<div class="flex items-center gap-3 mb-4">
-									<div class="w-3 h-3 bg-yellow-300 rounded-full animate-pulse"></div>
-									<span class="text-yellow-300 font-bold text-sm md:text-base tracking-wide">📚 ONLAYN
-										KURS!</span>
-								</div>
-								<p class="text-sm md:text-base leading-relaxed mb-4 text-white font-semibold">
-									<strong>2 oy ichida onlayn darslar orqali Qur'onni to'g'ri o'qishni
-										o'rganasiz.</strong>
-								</p>
-								<p class="text-white/90 leading-relaxed text-sm md:text-base mb-3">
-									Darslarimiz sizga ma'qul kelishiga ishonaman, inshAllah.
-								</p>
-								<p class="text-white/90 leading-relaxed text-sm md:text-base">
-									<strong class="text-yellow-300">Agar ma'qul kelmasa, 7 kun ichida to'lovingiz
-										qaytariladi.</strong>
-								</p>
-							</div>
-
-							<!-- Call to Action Button -->
-							<div class="flex justify-center lg:justify-start">
-								<button
-									class="group bg-yellow-400 text-gray-900 px-6 md:px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border-2 border-yellow-300">
-									<span class="flex items-center gap-2">
-										📹 Birinchi Bepul Darsni Ko'rish
-										<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-											stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M9 5l7 7-7 7" />
+							<div class="space-y-4">
+								<div class="flex items-start gap-4">
+									<div
+										class="mt-1 w-5 h-5 rounded-full bg-[#00D084] flex items-center justify-center flex-shrink-0">
+										<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clip-rule="evenodd" />
 										</svg>
-									</span>
-								</button>
-							</div>
-						</div>
-
-						<!-- Right Content -->
-						<div class="relative order-1 lg:order-2">
-							<!-- Special Badge -->
-							<div
-								class="absolute -top-4 -left-4 bg-yellow-400 text-gray-900 rounded-full px-4 py-2 md:px-6 md:py-4 shadow-2xl z-20 animate-bounce">
-								<span class="font-black text-sm md:text-xl">YANGI!</span>
-								<p class="text-xs font-bold">Darslar boshlandi</p>
-							</div>
-
-							<!-- Teacher Card -->
-							<!-- Enhanced Teacher Card -->
-							<div
-								class="relative z-10 rounded-2xl sm:rounded-3xl p-3 sm:p-8 bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-xl border-2 border-white/40 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500">
-								<div class="text-center space-y-3 sm:space-y-6">
-									<!-- Enhanced Teacher Image -->
-									<div
-										class="relative mx-auto w-full sm:w-[380px] h-[40vh] sm:h-[350px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
-										<img src="./hero.png" alt="Muhibulloh Ustoz"
-											class="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500" />
-
-										<!-- Enhanced Gradient Overlay -->
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-										</div>
-
-										<!-- Enhanced Teacher Info -->
-										<div class="absolute bottom-0 left-0 right-0 p-2 sm:p-6 text-white z-10">
-											<h2 class="text-sm sm:text-xl font-black mb-1 drop-shadow-lg">Muhibulloh
-												Noʻmonov</h2>
-
-											<div class="flex items-center justify-center gap-1 mt-1 sm:mt-2">
-
-											</div>
-										</div>
 									</div>
+									<p class="text-gray-700">Har bir dars 60 daqiqa davom etadi</p>
+								</div>
+
+								<div class="flex items-start gap-4">
+									<div
+										class="mt-1 w-5 h-5 rounded-full bg-[#00D084] flex items-center justify-center flex-shrink-0">
+										<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clip-rule="evenodd" />
+										</svg>
+									</div>
+									<p class="text-gray-700">Individual dastur va yondashuv</p>
 								</div>
 							</div>
 						</div>
-			</section>
 
-			<!-- Slide 2 - Why Muhib Academy -->
-			<section class="carousel-slide min-w-full flex items-center text-white py-8 md:py-12 relative">
-				<!-- Background Elements -->
-				<div class="absolute inset-0 overflow-hidden pointer-events-none">
-					<div
-						class="floating-elements absolute top-10 left-10 w-16 md:w-32 h-16 md:h-32 bg-white/10 rounded-full">
+						<button
+							class="bg-[#00D084] hover:bg-[#00B877] text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 shadow-md hover:shadow-lg">
+							Ro'yxatdan o'tish
+						</button>
 					</div>
-					<div class="floating-elements absolute bottom-10 right-10 w-12 md:w-24 h-12 md:h-24 bg-white/5 rounded-full"
-						style="animation-delay: 0.3s;"></div>
-				</div>
 
-				<div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-						<!-- Left Content -->
-						<div class="space-y-6 md:space-y-8">
-							<h1 class="text-3xl md:text-4xl lg:text-6xl font-black leading-tight text-shadow">
-								<span class="text-white">NEGA AYNAN</span><br>
-								<span class="text-yellow-300">MUHIB</span><br>
-								<span
-									class="text-white/95 text-xl md:text-2xl lg:text-4xl font-semibold">ACADEMY?</span>
-							</h1>
-
-							<div
-								class="bg-white/15 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl">
-								<p class="text-base md:text-lg text-white leading-relaxed font-medium">
-									<strong class="text-yellow-300">Dunyoning istalgan nuqtasidan</strong> turib biz
-									bilan bog'laning va Qur'on va arab tilini o'rganishni boshlang.
-								</p>
+					<!-- Right Content - Interactive Image -->
+					<div class="md:w-1/2 h-full">
+						<div class="relative group interactive-image h-full">
+							<div class="absolute -inset-3 rotate-1 transition-all duration-500 group-hover:rotate-2">
 							</div>
-
-							<!-- Features List -->
-							<div
-								class="rounded-2xl p-4 md:p-6 border-2 border-yellow-300/60 shadow-2xl bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl">
-								<div class="flex items-center gap-3 mb-4">
-									<div class="w-3 h-3 bg-yellow-300 rounded-full animate-pulse"></div>
-									<span class="text-yellow-300 font-bold text-base md:text-lg">Biz
-										kafolatlaymiz:</span>
-								</div>
-								<div class="space-y-3">
-									<div class="flex items-center gap-3">
-										<div
-											class="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center bg-yellow-300">
-											<svg class="w-3 h-3 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-												<path fill-rule="evenodd"
-													d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-													clip-rule="evenodd" />
-											</svg>
-										</div>
-										<span class="text-white font-medium text-sm md:text-base">2 oyda Qur'onni
-											o'qishni o'rganasiz</span>
-									</div>
-									<div class="flex items-center gap-3">
-										<div
-											class="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center bg-yellow-300">
-											<svg class="w-3 h-3 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-												<path fill-rule="evenodd"
-													d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-													clip-rule="evenodd" />
-											</svg>
-										</div>
-										<span class="text-white font-medium text-sm md:text-base">Har bir o'quvchiga
-											individual reja va yondashuv</span>
-									</div>
-									<div class="flex items-center gap-3">
-										<div
-											class="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center bg-yellow-300">
-											<svg class="w-3 h-3 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-												<path fill-rule="evenodd"
-													d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-													clip-rule="evenodd" />
-											</svg>
-										</div>
-										<span class="text-white font-medium text-sm md:text-base">6+ yillik tajribaga
-											ega ustozlar</span>
-									</div>
-									<div class="flex items-center gap-3">
-										<div
-											class="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center bg-yellow-300">
-											<svg class="w-3 h-3 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-												<path fill-rule="evenodd"
-													d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-													clip-rule="evenodd" />
-											</svg>
-										</div>
-										<span class="text-white font-medium text-sm md:text-base">Interaktiv, samarali,
-											zamonaviy metodlar</span>
-									</div>
+							<div class="relative overflow-hidden">
+								<img src="./hero.png" alt="Online darslar"
+									class="w-full h-full object-cover transition-all duration-500">
+								<div class="absolute inset-0"></div>
+								<div class="absolute bottom-6 left-6 right-6 text-white">
+									<h3 class="text-xl font-medium">Ustoz Muhammadjon</h3>
+									<p class="text-white/90">10 yillik tajriba</p>
 								</div>
 							</div>
-
-							<!-- Bonus Section -->
-							<div
-								class="rounded-2xl p-4 md:p-6 border-2 border-yellow-300/60 bg-gradient-to-r from-yellow-400/20 to-orange-400/15 backdrop-blur-sm">
-								<div class="flex items-center gap-2 mb-2">
-									<div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
-									<span class="text-yellow-300 font-semibold text-sm md:text-base">🕋 BONUS
-										MUKOFOT!</span>
-								</div>
-								<p class="text-white text-sm md:text-base font-medium">
-									Eng faol o'quvchilarga <strong class="text-yellow-300">Umra safariga
-										yo'llanma</strong>
-								</p>
-							</div>
-						</div>
-
-						<!-- Right Content -->
-						<div class="relative">
-							<!-- Badge -->
-							<div
-								class="absolute -top-4 -left-4 bg-yellow-400 text-gray-900 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-xl z-20 animate-bounce">
-								<span class="font-black text-sm md:text-lg">6+</span>
-								<p class="text-xs font-bold">yil tajriba</p>
-							</div>
-
-							<!-- Features Card -->
-							<div
-								class="relative z-10 rounded-2xl sm:rounded-3xl p-3 sm:p-8 bg-gradient-to-br from-white/25 to-white/15 backdrop-blur-xl border-2 border-white/40 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500">
-								<div class="text-center space-y-3 sm:space-y-6">
-									<!-- Enhanced Teacher Image -->
-									<div
-										class="relative mx-auto w-full sm:w-[380px] h-[40vh] sm:h-[350px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
-										<img src="./hero2.png" alt="Muhibulloh Ustoz"
-											class="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500" />
-
-										<!-- Enhanced Gradient Overlay -->
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-										</div>
-
-										<!-- Enhanced Teacher Info -->
-										<div class="absolute bottom-0 left-0 right-0 p-2 sm:p-6 text-white z-10">
-											<h2 class="text-sm sm:text-xl font-black mb-1 drop-shadow-lg">Muhibulloh
-												Noʻmonov</h2>
-
-											<div class="flex items-center justify-center gap-1 mt-1 sm:mt-2">
-
-											</div>
-										</div>
-									</div>
-									<div class="space-y-3">
-										<p class="text-white font-semibold text-sm sm:text-base">Tanlang:</p>
-										<div class="flex flex-col gap-3">
-											<button
-												class="group bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-base shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-												🔘 Onlayn darslarda qatnashish
-											</button>
-											<button
-												class="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-base hover:bg-white hover:text-green-600 transition-all duration-300 backdrop-blur-sm">
-												🔘 Oflayn mashg'ulotlarga yozilish
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Slide 3 - Mobile Learning -->
-			<section class="carousel-slide min-w-full flex items-center text-white py-8 md:py-12 relative">
-				<!-- Background Elements -->
-				<div class="absolute inset-0 overflow-hidden pointer-events-none">
-					<div
-						class="floating-elements absolute top-10 left-10 w-16 md:w-32 h-16 md:h-32 bg-white/10 rounded-full">
-					</div>
-					<div class="floating-elements absolute bottom-10 right-10 w-12 md:w-24 h-12 md:h-24 bg-white/5 rounded-full"
-						style="animation-delay: 0.7s;"></div>
-				</div>
+			<!-- Slide 2 - Offline Academy -->
+			<section class="carousel-slide min-w-full h-[100vh] flex items-center py-12 md:py-24 relative">
+				<div
+					class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-24 relative z-10 w-full">
+					<!-- Left Content -->
+					<div class="md:w-1/2 space-y-8">
+						<h1 class="text-4xl md:text-5xl font-medium text-gray-900 leading-tight">
+							<span class="block">MUHIB</span>
+							<span class="block text-[#00D084]">ACADEMY</span>
+						</h1>
 
-				<div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 w-full">
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-						<!-- Left Content -->
-						<div class="space-y-6 md:space-y-8">
-							<h1 class="text-3xl md:text-4xl lg:text-6xl font-black leading-tight text-shadow">
-								<span class="text-white">USTOZ -</span><br>
-								<span class="text-yellow-300">TELEFONINGIZDA!</span>
-							</h1>
+						<div class="space-y-6">
+							<p class="text-gray-700 text-lg leading-relaxed">
+								Zamonaviy darsxonalarda shaxsan darslar. Qur'on, arab tili va islomiy fanlar bo'yicha
+								malakali ustozlar.
+							</p>
 
-							<div
-								class="bg-white/15 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl">
-								<div class="space-y-3">
-									<p class="text-base md:text-lg text-white leading-relaxed font-medium">
-										<strong class="text-yellow-300">Endi Qur'onni o'rganish uchun madrasaga
-											borishingiz shart emas.</strong>
-									</p>
-									<p class="text-base md:text-lg text-white/90 leading-relaxed font-medium">
-										Siz qayerda bo'lsangiz, darslar o'sha yerda bo'ladi.
-									</p>
-								</div>
-							</div>
-
-							<!-- Special Offer -->
-							<div
-								class="rounded-2xl p-4 md:p-6 border-2 border-yellow-300/60 bg-gradient-to-r from-red-400/20 to-orange-400/15 backdrop-blur-xl shadow-2xl">
-								<div class="flex items-center gap-3 mb-3">
-									<div class="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-									<span class="text-yellow-300 font-bold text-sm md:text-base">🎁 MAXSUS
-										TAKLIF!</span>
-								</div>
-								<div class="space-y-2">
-									<p class="text-white text-sm md:text-base font-bold">
-										Ayni damda <span class="text-yellow-300">40% chegirma</span> amal qilmoqda!
-									</p>
-									<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-										<div class="text-center p-2 bg-white/20 rounded-lg">
-											<p class="text-yellow-300 line-through text-sm">999,000 so'm</p>
-											<p class="text-white text-xs">Oylik narx</p>
-										</div>
-										<div class="text-center p-2 bg-yellow-400/20 rounded-lg">
-											<p class="text-yellow-300 font-bold text-lg">699,000 so'm</p>
-											<p class="text-white text-xs">Aksiyadagi narx</p>
-										</div>
+							<div class="space-y-4">
+								<div class="flex items-start gap-4">
+									<div
+										class="mt-1 w-5 h-5 rounded-full bg-[#00D084] flex items-center justify-center flex-shrink-0">
+										<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clip-rule="evenodd" />
+										</svg>
 									</div>
+									<p class="text-gray-700">Qulay va zamonaviy darsxonalar</p>
 								</div>
-							</div>
 
-							<!-- Urgency -->
-							<div
-								class="rounded-2xl p-4 md:p-6 border-2 border-yellow-400/60 bg-red-400/10 backdrop-blur-sm">
-								<div class="text-center space-y-2">
-									<p class="text-yellow-300 font-bold text-sm md:text-base">⏰ Qabul muddati:
-										15-sentabrgacha</p>
-									<p class="text-white font-semibold text-xs md:text-sm">🔥 Joylar soni cheklangan!
-									</p>
+								<div class="flex items-start gap-4">
+									<div
+										class="mt-1 w-5 h-5 rounded-full bg-[#00D084] flex items-center justify-center flex-shrink-0">
+										<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clip-rule="evenodd" />
+										</svg>
+									</div>
+									<p class="text-gray-700">Tajribali o'qituvchilar bilan shaxsan darslar</p>
 								</div>
-							</div>
-
-							<!-- Action Button -->
-							<div class="flex justify-center lg:justify-start">
-								<button
-									class="group bg-yellow-400 text-gray-900 px-6 md:px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 animate-pulse">
-									🚀 Hoziroq Ro'yxatdan O'ting!
-								</button>
 							</div>
 						</div>
 
-						<!-- Right Content -->
-						<div class="relative">
-							<!-- Discount Badge -->
-							<div
-								class="absolute -top-4 -left-4 bg-yellow-300 text-gray-900 rounded-full px-4 py-2 md:px-6 md:py-3 shadow-xl z-20 animate-bounce">
-								<span class="font-black text-sm md:text-lg">40%</span>
-								<p class="text-xs font-bold">CHEGIRMA</p>
-							</div>
+						<button
+							class="bg-[#00D084] hover:bg-[#00B877] text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 shadow-md hover:shadow-lg">
+							Bog'lanish
+						</button>
+					</div>
 
-							<!-- Mobile Learning Card -->
-							<div
-								class="relative z-10 rounded-3xl p-6 md:p-8 bg-white/20 backdrop-blur-xl border border-white/30 shadow-2xl">
-								<div class="text-center space-y-6">
-									<!-- Mobile Icon -->
-									<div
-										class="w-20 h-20 md:w-32 md:h-32 mx-auto rounded-2xl flex items-center justify-center shadow-2xl bg-yellow-400">
-										<svg class="w-10 h-10 md:w-16 md:h-16 text-gray-900" fill="none"
-											stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-												d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-										</svg>
-									</div>
-
-									<div class="space-y-2">
-										<h3 class="text-lg md:text-xl font-black text-white text-shadow">MOBIL TA'LIM
-										</h3>
-										<p class="text-white/90 text-sm font-medium">Har yerda, har vaqt</p>
-									</div>
-
-									<!-- Features Grid -->
-									<div class="grid grid-cols-1 gap-3">
-										<div
-											class="rounded-lg p-3 text-center bg-white/25 backdrop-blur-sm border border-white/30">
-											<p class="font-black text-base md:text-lg text-yellow-300 text-shadow">
-												Yuzlab O'quvchi</p>
-											<p class="text-white/90 text-xs font-medium">Muvaffaqiyatli bitiruvchilar
-											</p>
-										</div>
-										<div class="rounded-lg p-3 text-center bg-yellow-300">
-											<p class="font-black text-base md:text-lg text-gray-900">Chegirma</p>
-											<p class="text-gray-900 text-xs font-medium">Cheklangan vaqt</p>
-										</div>
-									</div>
+					<!-- Right Content - Interactive Image -->
+					<div class="md:w-1/2 h-full">
+						<div class="relative group interactive-image h-full">
+							<div class="absolute -inset-3 transition-all duration-500"></div>
+							<div class="relative overflow-hidden h-full">
+								<img src="./hero2.png" alt="Offline darslar"
+									class="w-full h-full object-cover transition-all duration-500">
+								<div class="absolute inset-0 rounded-xl"></div>
+								<div class="absolute bottom-6 left-6 right-6 text-white">
+									<h3 class="text-xl font-medium">Ustoz Abdulaziz</h3>
+									<p class="text-white/90">8 yillik tajriba</p>
 								</div>
 							</div>
 						</div>
@@ -662,53 +396,66 @@
 		</div>
 
 		<!-- Navigation Indicators -->
-		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-			<button class="indicator w-3 h-3 rounded-full bg-yellow-400 transition-all duration-300"
+		<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+			<button class="indicator w-2.5 h-2.5 rounded-full bg-[#00D084] transition-all duration-300"
 				data-slide="0"></button>
-			<button class="indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300"
+			<button class="indicator w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300"
 				data-slide="1"></button>
-			<button class="indicator w-3 h-3 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300"
-				data-slide="2"></button>
 		</div>
 
-		<!-- Navigation Arrows (Hidden on Mobile) -->
+		<!-- Navigation Arrows - Desktop -->
 		<button id="prevBtn"
-			class="hidden md:flex absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-20 group">
-			<svg class="w-6 h-6 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
-				viewBox="0 0 24 24">
+			class="hidden md:flex absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-[#00D084] p-3 rounded-full transition-all duration-300 z-20 shadow-lg hover:shadow-xl">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 			</svg>
 		</button>
 
 		<button id="nextBtn"
-			class="hidden md:flex absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-20 group">
-			<svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-				viewBox="0 0 24 24">
+			class="hidden md:flex absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-[#00D084] p-3 rounded-full transition-all duration-300 z-20 shadow-lg hover:shadow-xl">
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+			</svg>
+		</button>
+
+		<!-- Navigation Arrows - Mobile -->
+		<button id="prevBtnMobile"
+			class="md:hidden absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-[#00D084] p-2 rounded-full transition-all duration-300 z-20 shadow-lg hover:shadow-xl">
+			<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+			</svg>
+		</button>
+
+		<button id="nextBtnMobile"
+			class="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-[#00D084] p-2 rounded-full transition-all duration-300 z-20 shadow-lg hover:shadow-xl">
+			<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 			</svg>
 		</button>
 	</div>
 
-	<!-- JavaScript for Carousel Functionality -->
 	<script>
 		const carousel = document.getElementById('carousel');
 		const indicators = document.querySelectorAll('.indicator');
 		const slides = document.querySelectorAll('.carousel-slide');
 		const nextBtn = document.getElementById('nextBtn');
 		const prevBtn = document.getElementById('prevBtn');
+		const nextBtnMobile = document.getElementById('nextBtnMobile');
+		const prevBtnMobile = document.getElementById('prevBtnMobile');
 
 		let currentSlide = 0;
 		let isScrolling = false;
+		let autoPlayInterval;
 
 		// Update indicators
 		function updateIndicators() {
 			indicators.forEach((indicator, index) => {
 				if (index === currentSlide) {
-					indicator.classList.remove('bg-white/40');
-					indicator.classList.add('bg-yellow-400', 'scale-125');
+					indicator.classList.remove('bg-gray-300');
+					indicator.classList.add('bg-[#00D084]');
 				} else {
-					indicator.classList.remove('bg-yellow-400', 'scale-125');
-					indicator.classList.add('bg-white/40');
+					indicator.classList.remove('bg-[#00D084]');
+					indicator.classList.add('bg-gray-300');
 				}
 			});
 		}
@@ -745,114 +492,91 @@
 			goToSlide(prevIndex);
 		}
 
-		// Event listeners for navigation buttons
+		// Event listeners
 		nextBtn?.addEventListener('click', nextSlide);
 		prevBtn?.addEventListener('click', prevSlide);
+		nextBtnMobile?.addEventListener('click', nextSlide);
+		prevBtnMobile?.addEventListener('click', prevSlide);
 
-		// Event listeners for indicators
 		indicators.forEach((indicator, index) => {
 			indicator.addEventListener('click', () => goToSlide(index));
 		});
 
-		// Auto-play functionality
-		let autoPlayInterval = setInterval(nextSlide, 10000);
-
-		// Pause auto-play on hover (desktop only)
-		if (window.innerWidth >= 768) {
-			carousel.addEventListener('mouseenter', () => {
-				clearInterval(autoPlayInterval);
-			});
-
-			carousel.addEventListener('mouseleave', () => {
-				autoPlayInterval = setInterval(nextSlide, 10000);
-			});
+		// Auto-play
+		function startAutoPlay() {
+			autoPlayInterval = setInterval(nextSlide, 10000);
 		}
 
-		// Keyboard navigation
-		document.addEventListener('keydown', (e) => {
-			if (e.key === 'ArrowLeft') prevSlide();
-			if (e.key === 'ArrowRight') nextSlide();
+		// Pause on hover/touch
+		carousel.addEventListener('mouseenter', () => {
+			clearInterval(autoPlayInterval);
 		});
 
-		// Touch/swipe support for mobile
+		carousel.addEventListener('mouseleave', startAutoPlay);
+
+		// Touch support for mobile
 		let startX = 0;
 		let endX = 0;
-		let startY = 0;
-		let endY = 0;
+		let isDragging = false;
 
 		carousel.addEventListener('touchstart', (e) => {
 			startX = e.touches[0].clientX;
-			startY = e.touches[0].clientY;
+			isDragging = true;
+			clearInterval(autoPlayInterval);
 		}, { passive: true });
 
-		carousel.addEventListener('touchend', (e) => {
-			endX = e.changedTouches[0].clientX;
-			endY = e.changedTouches[0].clientY;
+		carousel.addEventListener('touchmove', (e) => {
+			if (!isDragging) return;
+			endX = e.touches[0].clientX;
+		}, { passive: true });
+
+		carousel.addEventListener('touchend', () => {
+			if (!isDragging) return;
+			isDragging = false;
 			handleSwipe();
+			startAutoPlay();
 		}, { passive: true });
 
 		function handleSwipe() {
-			const swipeThreshold = 50;
 			const diffX = startX - endX;
-			const diffY = Math.abs(startY - endY);
-
-			// Only handle horizontal swipes (ignore vertical scrolling)
-			if (Math.abs(diffX) > swipeThreshold && diffY < 100) {
-				if (diffX > 0) {
-					nextSlide(); // Swipe left - go to next
-				} else {
-					prevSlide(); // Swipe right - go to previous
-				}
+			if (Math.abs(diffX) > 50) { // threshold of 50px
+				if (diffX > 0) nextSlide();
+				else prevSlide();
 			}
 		}
 
-		// Scroll-based slide detection for better mobile experience
-		let scrollTimeout;
-		carousel.addEventListener('scroll', () => {
-			clearTimeout(scrollTimeout);
-			scrollTimeout = setTimeout(() => {
-				const slideWidth = slides[0].offsetWidth;
-				const scrollLeft = carousel.scrollLeft;
-				const newSlideIndex = Math.round(scrollLeft / slideWidth);
+		// Interactive images - Apple-like hover effect
+		document.querySelectorAll('.interactive-image').forEach(image => {
+			const img = image.querySelector('img');
 
-				if (newSlideIndex !== currentSlide) {
-					currentSlide = newSlideIndex;
-					updateIndicators();
-				}
-			}, 1000);
+			// For desktop
+			image.addEventListener('mousemove', (e) => {
+				const { left, top, width, height } = image.getBoundingClientRect();
+				const x = (e.clientX - left) / width;
+				const y = (e.clientY - top) / height;
+
+				img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+			});
+
+			// For mobile - subtle scale effect on tap
+			image.addEventListener('touchstart', () => {
+				img.style.transform = 'scale(0.98)';
+			}, { passive: true });
+
+			image.addEventListener('touchend', () => {
+				img.style.transform = 'scale(1)';
+			}, { passive: true });
 		});
 
 		// Initialize
 		updateIndicators();
+		startAutoPlay();
 
 		// Handle window resize
 		window.addEventListener('resize', () => {
 			goToSlide(currentSlide);
 		});
-
-		// Intersection Observer for better performance
-		const observerOptions = {
-			root: carousel,
-			threshold: 0.5
-		};
-
-		const slideObserver = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const slideIndex = Array.from(slides).indexOf(entry.target);
-					if (slideIndex !== currentSlide && !isScrolling) {
-						currentSlide = slideIndex;
-						updateIndicators();
-					}
-				}
-			});
-		}, observerOptions);
-
-		slides.forEach(slide => {
-			slideObserver.observe(slide);
-		});
 	</script>
-
 
 
 	<section id="biz-haqimizda" class="py-12 sm:py-20 relative overflow-hidden">
